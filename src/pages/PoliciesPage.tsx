@@ -22,16 +22,16 @@ export const PoliciesPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-12 sm:py-20">
+    <div className="bg-[#F4EBDD] min-h-screen py-12 sm:py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#856338] font-bold">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#8E7356] font-bold">
             Transparency & Trust
           </span>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e] mt-2 mb-3">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mt-2 mb-3">
             Business Policies & Guidelines
           </h1>
-          <p className="font-serif-luxury text-base text-neutral-600">
+          <p className="font-serif-luxury text-base text-[#56443E]">
             Clear, transparent commitments regarding shipping, returns, privacy, and service terms.
           </p>
         </div>
@@ -42,8 +42,8 @@ export const PoliciesPage: React.FC = () => {
             onClick={() => handleTabChange('shipping')}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
               activeTab === 'shipping'
-                ? 'bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] shadow-sm'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                ? 'bg-[#C87552] text-white shadow-sm'
+                : 'bg-white text-[#30231F] hover:text-[#C87552] border border-[#B69B7D]/50'
             }`}
           >
             <Truck className="w-3.5 h-3.5" />
@@ -54,8 +54,8 @@ export const PoliciesPage: React.FC = () => {
             onClick={() => handleTabChange('returns')}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
               activeTab === 'returns'
-                ? 'bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] shadow-sm'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                ? 'bg-[#C87552] text-white shadow-sm'
+                : 'bg-white text-[#30231F] hover:text-[#C87552] border border-[#B69B7D]/50'
             }`}
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -66,8 +66,8 @@ export const PoliciesPage: React.FC = () => {
             onClick={() => handleTabChange('terms')}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
               activeTab === 'terms'
-                ? 'bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] shadow-sm'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                ? 'bg-[#C87552] text-white shadow-sm'
+                : 'bg-white text-[#30231F] hover:text-[#C87552] border border-[#B69B7D]/50'
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
@@ -78,8 +78,8 @@ export const PoliciesPage: React.FC = () => {
             onClick={() => handleTabChange('privacy')}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
               activeTab === 'privacy'
-                ? 'bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] shadow-sm'
-                : 'bg-white text-neutral-600 hover:text-neutral-900 border border-neutral-200'
+                ? 'bg-[#C87552] text-white shadow-sm'
+                : 'bg-white text-[#30231F] hover:text-[#C87552] border border-[#B69B7D]/50'
             }`}
           >
             <Lock className="w-3.5 h-3.5" />
@@ -88,33 +88,33 @@ export const PoliciesPage: React.FC = () => {
         </div>
 
         {/* Content Box */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-neutral-200/80 shadow-sm font-sans text-sm text-neutral-700 leading-relaxed space-y-6">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#B69B7D]/45 shadow-sm font-sans text-sm text-[#56443E] leading-relaxed space-y-6">
           {activeTab === 'shipping' && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="font-display text-2xl font-bold text-[#07241e] border-b pb-4">
+              <h2 className="font-display text-2xl font-bold text-[#30231F] border-b border-[#B69B7D]/30 pb-4">
                 Shipping & Packaging Policy
               </h2>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">1. Dedicated Protective Packaging</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">1. Dedicated Protective Packaging</h3>
                 <p>
                   Every Rohan Craft House creation, especially our oversized geode wall clocks and ceremonial platters, is packaged with extreme care. Clocks are housed inside custom high-density protective foam molds and reinforced wooden shipping crates to prevent any flex or glass impact during transit.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">2. Processing & Dispatch Timelines</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">2. Processing & Dispatch Timelines</h3>
                 <ul className="list-disc pl-5 space-y-1">
                   <li><strong>Ready-to-Ship Inventory:</strong> Dispatched within 24 to 48 hours of order confirmation.</li>
                   <li><strong>Custom Commissions & Made-to-Order Pieces:</strong> Require 7 to 10 working days of crafting and curing before dispatch.</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">3. Shipping Fees & Delivery Windows</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">3. Shipping Fees & Delivery Windows</h3>
                 <p>
                   We offer complimentary express shipping across India on all orders valued above ₹1,999. For orders below this threshold, a standard packaging and courier fee of ₹149 applies. Transit typically takes 3 to 5 business days depending on destination PIN code.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">4. Transit Insurance</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">4. Transit Insurance</h3>
                 <p>
                   All shipments dispatched by Rohan Craft House are fully covered by comprehensive transit insurance. In the unlikely circumstance of damage during delivery, your piece is 100% protected.
                 </p>
@@ -124,17 +124,17 @@ export const PoliciesPage: React.FC = () => {
 
           {activeTab === 'returns' && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="font-display text-2xl font-bold text-[#07241e] border-b pb-4">
+              <h2 className="font-display text-2xl font-bold text-[#30231F] border-b border-[#B69B7D]/30 pb-4">
                 Return, Replacement & Refund Policy
               </h2>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">1. Handcrafted Nature & Bespoke Originals</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">1. Handcrafted Nature & Bespoke Originals</h3>
                 <p>
                   Due to the bespoke, artistic, and fragile nature of hand-poured epoxy resin artworks, all pieces are non-returnable for simple change of mind once received. Slight organic variations in color swirls, mica flows, and botanical petals are intended aesthetic characteristics.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">2. Damaged or Defective in Transit (Immediate Replacement)</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">2. Damaged or Defective in Transit (Immediate Replacement)</h3>
                 <p>
                   If your package arrives with visible physical damage:
                 </p>
@@ -145,7 +145,7 @@ export const PoliciesPage: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">3. Refund Processing</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">3. Refund Processing</h3>
                 <p>
                   Approved refunds are processed within 5 to 7 business days directly to the original bank account, UPI ID, or card used during checkout.
                 </p>
@@ -155,23 +155,23 @@ export const PoliciesPage: React.FC = () => {
 
           {activeTab === 'terms' && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="font-display text-2xl font-bold text-[#07241e] border-b pb-4">
+              <h2 className="font-display text-2xl font-bold text-[#30231F] border-b border-[#B69B7D]/30 pb-4">
                 Terms and Conditions
               </h2>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">1. Artisan Agreement</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">1. Artisan Agreement</h3>
                 <p>
                   By accessing and placing an order on the Rohan Craft House platform, you acknowledge and agree that each artwork is hand-poured and individually crafted by human artisans.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">2. Intellectual Property</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">2. Intellectual Property</h3>
                 <p>
                   All proprietary product photography, brand imagery, logos, descriptive copy, and unique clock designs featured on this website are the intellectual property of Rohan Craft House. Reproduction without prior written authorization is strictly prohibited.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">3. Pricing and Stock Availability</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">3. Pricing and Stock Availability</h3>
                 <p>
                   Prices are displayed in Indian Rupees (INR) and are inclusive of all applicable statutory taxes. We reserve the right to revise pricing or retire specific product molds without prior notification.
                 </p>
@@ -181,17 +181,17 @@ export const PoliciesPage: React.FC = () => {
 
           {activeTab === 'privacy' && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="font-display text-2xl font-bold text-[#07241e] border-b pb-4">
+              <h2 className="font-display text-2xl font-bold text-[#30231F] border-b border-[#B69B7D]/30 pb-4">
                 Privacy & Data Security Policy
               </h2>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">1. Information Collection</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">1. Information Collection</h3>
                 <p>
                   We collect only the essential personal details required to process, fulfill, and deliver your orders: your full name, shipping address, contact phone number, and email address.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-2">2. Payment Security</h3>
+                <h3 className="font-bold text-[#30231F] mb-2">2. Payment Security</h3>
                 <p>
                   Rohan Craft House never stores raw credit card details, debit card numbers, or banking credentials on our servers. All digital transactions are processed through encrypted, PCI-DSS compliant payment gateways.
                 </p>

@@ -126,18 +126,18 @@ export const ShopPage: React.FC = () => {
   const currentCategory = categories.find((c) => c.slug === categoryParam);
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-10 sm:py-14">
+    <div className="bg-[#F4EBDD] min-h-screen py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="mb-10 text-center sm:text-left">
-          <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#856338] font-bold mb-2">
-            <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
+          <div className="flex items-center justify-center sm:justify-start gap-2 text-xs uppercase tracking-widest text-[#8E7356] font-bold mb-2">
+            <Sparkles className="w-3.5 h-3.5 text-[#C87552]" />
             <span>Rohan Craft House Gallery</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e]">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F]">
             {currentCategory ? currentCategory.name : 'The Complete Collection'}
           </h1>
-          <p className="font-serif-luxury text-base sm:text-lg text-neutral-600 max-w-2xl mt-2">
+          <p className="font-serif-luxury text-base sm:text-lg text-[#56443E] max-w-2xl mt-2">
             {currentCategory
               ? currentCategory.description
               : 'Explore our catalog of handcrafted geode wall clocks, botanical preserved jewelry, ceremonial thalis, and custom commissions.'}
@@ -146,15 +146,15 @@ export const ShopPage: React.FC = () => {
 
         {/* Active Search Notification */}
         {searchParam && (
-          <div className="mb-6 flex items-center justify-between p-3.5 rounded-2xl bg-white border border-[#c5a059]/40 shadow-sm">
-            <div className="flex items-center gap-2 text-sm text-neutral-700">
-              <Search className="w-4 h-4 text-[#856338]" />
+          <div className="mb-6 flex items-center justify-between p-3.5 rounded-2xl bg-white border border-[#B69B7D]/50 shadow-sm">
+            <div className="flex items-center gap-2 text-sm text-[#56443E]">
+              <Search className="w-4 h-4 text-[#C87552]" />
               <span>Showing creations matching:</span>
-              <strong className="text-[#0b3b33] font-bold">"{searchParam}"</strong>
+              <strong className="text-[#30231F] font-bold">"{searchParam}"</strong>
             </div>
             <button
               onClick={clearSearch}
-              className="flex items-center gap-1 text-xs text-neutral-500 hover:text-neutral-900"
+              className="flex items-center gap-1 text-xs text-[#8E7356] hover:text-[#C87552]"
             >
               <span>Clear</span>
               <X className="w-4 h-4" />
@@ -163,31 +163,31 @@ export const ShopPage: React.FC = () => {
         )}
 
         {/* Top Controls Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl border border-neutral-200/80 shadow-sm">
-          <div className="text-xs text-neutral-500 font-medium">
-            Showing <strong className="text-neutral-900 font-bold">{filteredProducts.length}</strong> bespoke works
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl border border-[#B69B7D]/40 shadow-sm">
+          <div className="text-xs text-[#56443E] font-medium">
+            Showing <strong className="text-[#30231F] font-bold">{filteredProducts.length}</strong> bespoke works
           </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
             {/* Mobile Filter Button */}
             <button
               onClick={() => setMobileFiltersOpen(true)}
-              className="lg:hidden flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FAF8F5] text-xs font-semibold text-neutral-700 border border-neutral-300"
+              className="lg:hidden flex items-center gap-2 px-4 py-2 rounded-xl bg-[#F4EBDD] text-xs font-semibold text-[#30231F] border border-[#B69B7D]/50"
             >
-              <Filter className="w-3.5 h-3.5 text-[#856338]" />
+              <Filter className="w-3.5 h-3.5 text-[#C87552]" />
               <span>Filters</span>
             </button>
 
             {/* Sort Dropdown */}
             <div className="flex items-center gap-2">
-              <label htmlFor="sort-select" className="text-xs text-neutral-400 uppercase tracking-wider hidden sm:inline">
+              <label htmlFor="sort-select" className="text-xs text-[#8E7356] uppercase tracking-wider hidden sm:inline">
                 Sort by:
               </label>
               <select
                 id="sort-select"
                 value={sortParam}
                 onChange={(e) => handleSortChange(e.target.value)}
-                className="bg-[#FAF8F5] border border-neutral-300 rounded-xl px-3 py-2 text-xs font-semibold text-neutral-800 focus:outline-none focus:border-[#0b3b33] cursor-pointer"
+                className="bg-[#F9F5EE] border border-[#B69B7D]/50 rounded-xl px-3 py-2 text-xs font-semibold text-[#30231F] focus:outline-none focus:border-[#C87552] cursor-pointer"
               >
                 <option value="featured">Featured Curations</option>
                 <option value="price-asc">Price: Low to High</option>

@@ -82,25 +82,25 @@ export const LoginPage: React.FC = () => {
   const isCheckoutRedirect = searchParams.get('redirect') === '/checkout' || (location.state as any)?.from?.pathname === '/checkout';
 
   return (
-    <div className="bg-[#FAF8F5] min-h-[80vh] flex items-center justify-center py-16 px-4">
-      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-neutral-200/80 shadow-luxury">
+    <div className="bg-[#F4EBDD] min-h-[80vh] flex items-center justify-center py-16 px-4">
+      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-[#B69B7D]/45 shadow-luxury">
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] mb-4 shadow-sm">
-            <Sparkles className="w-6 h-6" />
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] mb-4 shadow-sm">
+            <Sparkles className="w-6 h-6 text-[#C87552]" />
           </div>
-          <h1 className="font-display text-2xl font-bold text-[#07241e]">
+          <h1 className="font-display text-2xl font-bold text-[#30231F]">
             Collector Sign In
           </h1>
-          <p className="font-serif-luxury text-sm text-neutral-500 mt-1">
+          <p className="font-serif-luxury text-sm text-[#56443E] mt-1">
             Access your saved curations, commission history, and priority dispatch updates.
           </p>
         </div>
 
         {/* Notice if redirected from checkout */}
         {isCheckoutRedirect && (
-          <div className="mb-6 p-3.5 rounded-2xl bg-[#0b3b33]/5 border border-[#0b3b33]/20 flex items-center gap-3 text-xs text-[#07241e]">
-            <Sparkles className="w-4 h-4 text-[#856338] shrink-0" />
+          <div className="mb-6 p-3.5 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/50 flex items-center gap-3 text-xs text-[#30231F]">
+            <Sparkles className="w-4 h-4 text-[#C87552] shrink-0" />
             <span>Please sign in to proceed with checkout. Your bag items have been safely preserved.</span>
           </div>
         )}
@@ -119,11 +119,11 @@ export const LoginPage: React.FC = () => {
         {/* 3. Existing Email & Password Form */}
         <form onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Email Address
             </label>
             <div className="relative">
-              <Mail className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+              <Mail className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
               <input
                 type="email"
                 value={email}
@@ -131,25 +131,25 @@ export const LoginPage: React.FC = () => {
                 required
                 autoComplete="off"
                 placeholder="Enter your email"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#B69B7D] focus:outline-none focus:border-[#C87552]"
               />
             </div>
           </div>
 
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F]">
                 Password
               </label>
               <Link
                 to="/forgot-password"
-                className="text-[11px] text-[#856338] hover:text-[#0b3b33] font-medium"
+                className="text-[11px] text-[#C87552] hover:text-[#30231F] font-medium transition-colors"
               >
                 Forgot Password?
               </Link>
             </div>
             <div className="relative">
-              <Lock className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+              <Lock className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
               <input
                 type="password"
                 value={password}
@@ -157,7 +157,7 @@ export const LoginPage: React.FC = () => {
                 required
                 autoComplete="current-password"
                 placeholder="Enter your password"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#B69B7D] focus:outline-none focus:border-[#C87552]"
               />
             </div>
           </div>
@@ -165,30 +165,30 @@ export const LoginPage: React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full mt-4 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#f7f4ee] font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg border border-[#c5a059]/40 disabled:opacity-50"
+            className="w-full mt-4 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg disabled:opacity-50"
           >
             <span>{isSubmitting ? 'Verifying...' : 'Sign In To Account'}</span>
-            <ArrowRight className="w-4 h-4 text-[#dfbe7e]" />
+            <ArrowRight className="w-4 h-4 text-white" />
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-neutral-100 text-center text-xs text-neutral-500">
+        <div className="mt-8 pt-6 border-t border-[#B69B7D]/25 text-center text-xs text-[#56443E]">
           <span>New to Rohan Craft House? </span>
           <Link
             to={searchParams.get('redirect') ? `/register?redirect=${encodeURIComponent(searchParams.get('redirect')!)}` : '/register'}
             state={location.state}
-            className="font-bold text-[#0b3b33] hover:underline"
+            className="font-bold text-[#C87552] hover:text-[#30231F] hover:underline transition-colors"
           >
             Create an Account
           </Link>
         </div>
 
-        <div className="mt-4 pt-4 border-t border-dashed border-neutral-200 text-center">
+        <div className="mt-4 pt-4 border-t border-dashed border-[#B69B7D]/35 text-center">
           <Link
             to="/admin/login"
-            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-[#0b3b33] font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-[#8E7356] hover:text-[#C87552] font-medium transition-colors"
           >
-            <Shield className="w-3.5 h-3.5 text-[#c5a059]" />
+            <Shield className="w-3.5 h-3.5 text-[#B69B7D]" />
             <span>Store Administrator? Sign In to Admin Portal</span>
           </Link>
         </div>

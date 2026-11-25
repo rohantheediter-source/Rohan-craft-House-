@@ -12,7 +12,7 @@ export const CustomerLayout: React.FC = () => {
   }, [pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#1A201E]">
+    <div className="min-h-screen flex flex-col bg-[#F4EBDD] text-[#30231F]">
       <Navbar />
       <main className="flex-1">
         <Outlet />

@@ -74,7 +74,7 @@ export const AdminProtectedRoute: React.FC = () => {
   // Auth context initialization loading
   if (isLoading || isVerifyingServer) {
     return (
-      <div className="min-h-screen bg-[#061411] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F4EBDD] flex items-center justify-center">
         <LoadingSpinner label="Verifying Server Administrative Clearance..." />
       </div>
     );
@@ -94,8 +94,8 @@ export const AdminProtectedRoute: React.FC = () => {
     };
 
     return (
-      <div className="min-h-screen bg-[#061411] flex items-center justify-center p-6 text-white font-sans">
-        <div className="max-w-md w-full bg-[#0d221d] border border-red-500/30 rounded-3xl p-8 shadow-2xl text-center">
+      <div className="min-h-screen bg-[#F4EBDD] flex items-center justify-center p-6 text-[#30231F] font-sans">
+        <div className="max-w-md w-full bg-white border border-red-300 rounded-3xl p-8 shadow-luxury text-center">
           <div className="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/40 text-red-400 flex items-center justify-center mx-auto mb-6">
             <ShieldAlert className="w-8 h-8" />
           </div>
@@ -104,20 +104,20 @@ export const AdminProtectedRoute: React.FC = () => {
             <span>Clearance Denied</span>
           </div>
 
-          <h1 className="font-display text-2xl font-bold text-white mb-2">
+          <h1 className="font-display text-2xl font-bold text-[#30231F] mb-2">
             Restricted Admin Area
           </h1>
 
-          <p className="text-xs text-neutral-300 leading-relaxed mb-6">
-            The authenticated Google identity (<strong className="text-white font-semibold">{user.email}</strong>) is not recognized as an authorized administrator in the server registry.
+          <p className="text-xs text-[#56443E] leading-relaxed mb-6">
+            The authenticated Google identity (<strong className="text-[#30231F] font-semibold">{user.email}</strong>) is not recognized as an authorized administrator in the server registry.
           </p>
 
-          <div className="p-4 rounded-xl bg-black/40 border border-neutral-800 text-left text-xs mb-6 space-y-2">
-            <div className="flex items-center gap-2 text-[#dfbe7e] font-bold">
-              <Shield className="w-4 h-4" />
+          <div className="p-4 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/45 text-left text-xs mb-6 space-y-2">
+            <div className="flex items-center gap-2 text-[#30231F] font-bold">
+              <Shield className="w-4 h-4 text-[#C87552]" />
               <span>Administrative Access Policy</span>
             </div>
-            <p className="text-neutral-400 text-[11px] leading-relaxed">
+            <p className="text-[#56443E] text-[11px] leading-relaxed">
               Rohan Craft House strictly restricts management functions. Access is verified on the backend via server-side database access controls. Only explicitly whitelisted administrator Google accounts can access this portal.
             </p>
           </div>
@@ -125,7 +125,7 @@ export const AdminProtectedRoute: React.FC = () => {
           <div className="flex flex-col gap-3">
             <button
               onClick={handleSwitchAccount}
-              className="w-full py-3 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-[#071915] font-display text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2"
             >
               <LogOut className="w-4 h-4" />
               <span>Sign In with Authorized Google Account</span>
@@ -133,7 +133,7 @@ export const AdminProtectedRoute: React.FC = () => {
 
             <Link
               to="/"
-              className="text-xs text-neutral-400 hover:text-white flex items-center justify-center gap-1.5 pt-2 transition-colors"
+              className="text-xs text-[#8E7356] hover:text-[#C87552] flex items-center justify-center gap-1.5 pt-2 transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Return to Customer Storefront</span>

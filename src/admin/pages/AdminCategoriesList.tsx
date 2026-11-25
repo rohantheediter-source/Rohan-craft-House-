@@ -84,17 +84,17 @@ export const AdminCategoriesList: React.FC = () => {
     <div className="space-y-6 max-w-7xl mx-auto">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#dfbe7e] font-mono">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#8E7356] font-mono">
             COLLECTION TAXONOMY
           </span>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-white mt-1">
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-[#30231F] mt-1">
             Artisan Disciplines & Categories ({categories.length})
           </h1>
         </div>
 
         <button
           onClick={() => setModalOpen(true)}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-[#071915] font-display text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider transition-all shadow-md"
         >
           <Plus className="w-4 h-4" />
           <span>New Category</span>
@@ -107,7 +107,7 @@ export const AdminCategoriesList: React.FC = () => {
           return (
             <div
               key={cat.id}
-              className="bg-[#0b241e] border border-[#c5a059]/30 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between"
+              className="bg-white border border-[#B69B7D]/45 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between"
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-black/40">
                 <img
@@ -115,26 +115,26 @@ export const AdminCategoriesList: React.FC = () => {
                   alt={cat.name}
                   className="w-full h-full object-cover opacity-80"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b241e] via-transparent to-transparent" />
-                <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#071915]/90 border border-[#c5a059]/40 text-[10px] font-bold text-[#dfbe7e]">
+                <div className="absolute inset-0 bg-gradient-to-t from-white/75 via-transparent to-transparent" />
+                <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#30231F]/90 border border-[#B69B7D]/50 text-[10px] font-bold text-[#F4EBDD]">
                   {count} {count === 1 ? 'Creation' : 'Creations'}
                 </span>
               </div>
 
               <div className="p-6">
-                <h3 className="font-display text-base font-bold text-white mb-1.5">{cat.name}</h3>
-                <p className="text-[11px] text-neutral-400 font-mono mb-3">Slug: /{cat.slug}</p>
-                <p className="text-xs text-neutral-300 line-clamp-2 leading-relaxed">
+                <h3 className="font-display text-base font-bold text-[#30231F] mb-1.5">{cat.name}</h3>
+                <p className="text-[11px] text-[#8E7356] font-mono mb-3">Slug: /{cat.slug}</p>
+                <p className="text-xs text-[#56443E] line-clamp-2 leading-relaxed">
                   {cat.description}
                 </p>
               </div>
 
-              <div className="p-4 bg-[#071915]/60 border-t border-[#0f3830] flex items-center justify-between text-xs">
+              <div className="p-4 bg-[#F9F5EE] border-t border-[#B69B7D]/30 flex items-center justify-between text-xs">
                 <a
                   href={`/shop?category=${cat.slug}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-neutral-400 hover:text-[#dfbe7e] flex items-center gap-1"
+                  className="text-[#56443E] hover:text-[#C87552] font-semibold flex items-center gap-1 transition-colors"
                 >
                   <span>View in Storefront</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -152,13 +152,13 @@ export const AdminCategoriesList: React.FC = () => {
             className="fixed inset-0 bg-black/70 backdrop-blur-sm"
             onClick={() => setModalOpen(false)}
           />
-          <div className="relative bg-[#0d221d] border border-[#c5a059]/40 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl z-10 text-white">
-            <h3 className="font-display text-xl font-bold mb-4 pb-2 border-b border-[#0f3830]">
+          <div className="relative bg-white border border-[#B69B7D]/50 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl z-10 text-[#30231F]">
+            <h3 className="font-display text-xl font-bold mb-4 pb-2 border-b border-[#B69B7D]/30 text-[#30231F]">
               Create New Category
             </h3>
             <form onSubmit={handleCreateCategory} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1">
                   Category Name *
                 </label>
                 <input
@@ -167,12 +167,12 @@ export const AdminCategoriesList: React.FC = () => {
                   onChange={(e) => handleNameChange(e.target.value)}
                   required
                   placeholder="e.g. Resin Nameplates & Signages"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1">
                   Slug *
                 </label>
                 <input
@@ -180,24 +180,24 @@ export const AdminCategoriesList: React.FC = () => {
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
                   required
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-neutral-300 focus:outline-none focus:border-[#c5a059]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1">
                   Description
                 </label>
                 <textarea
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   rows={2}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1">
                   Cover Image URL
                 </label>
                 <input
@@ -205,7 +205,7 @@ export const AdminCategoriesList: React.FC = () => {
                   value={imageUrl}
                   onChange={(e) => setImageUrl(e.target.value)}
                   placeholder="/images/products/..."
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-neutral-300 focus:outline-none focus:border-[#c5a059]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
 
@@ -213,14 +213,14 @@ export const AdminCategoriesList: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
-                  className="px-4 py-2 rounded-xl border border-neutral-700 text-xs text-neutral-300 hover:bg-neutral-800"
+                  className="px-4 py-2 rounded-xl border border-[#B69B7D]/60 text-xs font-semibold text-[#30231F] hover:bg-[#F9F5EE]"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-5 py-2 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-xs font-bold text-[#071915] uppercase tracking-wider"
+                  className="px-5 py-2 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-xs font-bold text-white uppercase tracking-wider"
                 >
                   Create Category
                 </button>

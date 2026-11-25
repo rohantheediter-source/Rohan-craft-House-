@@ -115,34 +115,34 @@ export const AdminCustomersList: React.FC = () => {
     <div className="space-y-6 max-w-7xl mx-auto">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-[#dfbe7e] font-mono">
+          <span className="text-[10px] uppercase tracking-[0.25em] text-[#8E7356] font-mono">
             PATRON DIRECTORY
           </span>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-white mt-1">
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-[#30231F] mt-1">
             Registered Patrons & Collectors ({customers.length})
           </h1>
         </div>
       </div>
 
       {/* Search Input */}
-      <div className="bg-[#0b241e] p-4 rounded-2xl border border-[#c5a059]/30">
+      <div className="bg-white p-4 rounded-2xl border border-[#B69B7D]/45 shadow-sm">
         <div className="relative w-full">
-          <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+          <Search className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search patron by name, email, or city..."
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white placeholder-neutral-400 focus:outline-none focus:border-[#c5a059]"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
           />
         </div>
       </div>
 
       {/* Patrons Table */}
-      <div className="bg-[#0b241e] border border-[#c5a059]/30 rounded-2xl overflow-hidden shadow-sm">
+      <div className="bg-white border border-[#B69B7D]/45 rounded-2xl overflow-hidden shadow-sm">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs text-neutral-300">
-            <thead className="uppercase tracking-wider text-[10px] text-neutral-400 bg-[#071915] border-b border-[#0f3830]">
+          <table className="w-full text-left text-xs text-[#56443E]">
+            <thead className="uppercase tracking-wider text-[10px] text-[#8E7356] bg-[#F9F5EE] border-b border-[#B69B7D]/30">
               <tr>
                 <th className="py-3.5 px-4">Patron Name</th>
                 <th className="py-3.5 px-4">Email</th>
@@ -153,27 +153,27 @@ export const AdminCustomersList: React.FC = () => {
                 <th className="py-3.5 px-4 text-right">Latest Order</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#0f3830]">
+            <tbody className="divide-y divide-[#B69B7D]/25">
               {filtered.map((c) => (
-                <tr key={c.id} className="hover:bg-[#071915]/50 transition-colors">
-                  <td className="py-3.5 px-4 font-bold text-white flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#071915] border border-[#c5a059]/40 flex items-center justify-center text-[10px] text-[#dfbe7e]">
+                <tr key={c.id} className="hover:bg-[#F9F5EE] transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-[#30231F] flex items-center gap-2.5">
+                    <div className="w-7 h-7 rounded-full bg-[#30231F] border border-[#B69B7D]/60 flex items-center justify-center text-[10px] text-[#F4EBDD]">
                       {c.name[0].toUpperCase()}
                     </div>
                     <span>{c.name}</span>
                   </td>
-                  <td className="py-3.5 px-4 text-neutral-300">{c.email}</td>
-                  <td className="py-3.5 px-4 text-neutral-300">{c.phone}</td>
-                  <td className="py-3.5 px-4 text-neutral-300">{c.city}</td>
+                  <td className="py-3.5 px-4 text-[#56443E]">{c.email}</td>
+                  <td className="py-3.5 px-4 text-[#56443E]">{c.phone}</td>
+                  <td className="py-3.5 px-4 text-[#56443E]">{c.city}</td>
                   <td className="py-3.5 px-4 text-center">
-                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#071915] border border-neutral-700 text-[10px] font-bold text-white">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#F9F5EE] border border-[#B69B7D]/50 text-[10px] font-bold text-[#30231F]">
                       {c.orderCount}
                     </span>
                   </td>
-                  <td className="py-3.5 px-4 text-right font-display font-bold text-[#dfbe7e]">
+                  <td className="py-3.5 px-4 text-right font-display font-bold text-[#30231F]">
                     {formatCurrency(c.totalSpent)}
                   </td>
-                  <td className="py-3.5 px-4 text-right text-neutral-400">
+                  <td className="py-3.5 px-4 text-right text-[#8E7356]">
                     {formatDate(c.lastOrderDate)}
                   </td>
                 </tr>

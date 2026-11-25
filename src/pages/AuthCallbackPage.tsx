@@ -91,36 +91,36 @@ export const AuthCallbackPage: React.FC = () => {
   }, [location, navigate, user, refreshProfile, success, error]);
 
   return (
-    <div className="bg-[#FAF8F5] min-h-[75vh] flex items-center justify-center py-20 px-4">
-      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-neutral-200/80 shadow-luxury text-center">
+    <div className="bg-[#F4EBDD] min-h-[75vh] flex items-center justify-center py-20 px-4">
+      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-[#B69B7D]/45 shadow-luxury text-center">
         {errorMessage ? (
           <div className="animate-fade-in">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-red-50 text-red-600 border border-red-200 mb-4">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#F4EBDD] text-[#C87552] border border-[#C87552]/40 mb-4">
               <AlertCircle className="w-7 h-7" />
             </div>
-            <h1 className="font-display text-xl font-bold text-neutral-900 mb-2">
+            <h1 className="font-display text-xl font-bold text-[#30231F] mb-2">
               Authentication Notice
             </h1>
-            <p className="text-xs text-neutral-600 mb-6 leading-relaxed">
+            <p className="text-xs text-[#56443E] mb-6 leading-relaxed">
               {errorMessage}
             </p>
-            <p className="text-[11px] text-neutral-400">
+            <p className="text-[11px] text-[#8E7356]">
               Redirecting you to the sign-in page...
             </p>
           </div>
         ) : (
           <div className="animate-fade-in">
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] mb-4 shadow-sm relative">
-              <Sparkles className="w-6 h-6" />
-              <Loader2 className="w-8 h-8 text-[#c5a059] animate-spin absolute -top-1 -right-1" />
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] mb-4 shadow-sm relative">
+              <Sparkles className="w-6 h-6 text-[#C87552]" />
+              <Loader2 className="w-8 h-8 text-[#C87552] animate-spin absolute -top-1 -right-1" />
             </div>
-            <h1 className="font-display text-2xl font-bold text-[#07241e] mb-2">
+            <h1 className="font-display text-2xl font-bold text-[#30231F] mb-2">
               Authenticating With Google
             </h1>
-            <p className="font-serif-luxury text-sm text-neutral-500 mb-6">
+            <p className="font-serif-luxury text-sm text-[#56443E] mb-6">
               Verifying your collector credentials and synchronizing your atelier preferences...
             </p>
-            <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#856338]">
+            <div className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#C87552]">
               <Loader2 className="w-3.5 h-3.5 animate-spin" />
               <span>Finalizing Session</span>
             </div>

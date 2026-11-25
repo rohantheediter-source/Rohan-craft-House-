@@ -36,26 +36,26 @@ export const ForgotPasswordPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F5] min-h-[75vh] flex items-center justify-center py-16 px-4">
-      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-neutral-200/80 shadow-luxury">
+    <div className="bg-[#F4EBDD] min-h-[75vh] flex items-center justify-center py-16 px-4">
+      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-[#B69B7D]/45 shadow-luxury">
         <Link
           to="/login"
-          className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-900 mb-6"
+          className="inline-flex items-center gap-1.5 text-xs text-[#8E7356] hover:text-[#C87552] mb-6 transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Back to Sign In</span>
         </Link>
 
-        <h1 className="font-display text-2xl font-bold text-[#07241e] mb-2">
+        <h1 className="font-display text-2xl font-bold text-[#30231F] mb-2">
           Reset Password
         </h1>
-        <p className="font-serif-luxury text-sm text-neutral-500 mb-6">
+        <p className="font-serif-luxury text-sm text-[#56443E] mb-6">
           Enter the email associated with your Rohan Craft House account. We will transmit a secure password reset link.
         </p>
 
         {isSent ? (
-          <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="p-4 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/50 text-[#30231F] text-xs flex items-start gap-3">
+            <CheckCircle2 className="w-5 h-5 text-[#C87552] shrink-0 mt-0.5" />
             <div>
               <p className="font-bold">Instructions Sent</p>
               <p className="mt-1">
@@ -66,11 +66,11 @@ export const ForgotPasswordPage: React.FC = () => {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Email Address
               </label>
               <div className="relative">
-                <Mail className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+                <Mail className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
                 <input
                   type="email"
                   value={email}
@@ -78,7 +78,7 @@ export const ForgotPasswordPage: React.FC = () => {
                   required
                   autoComplete="off"
                   placeholder="Enter your email address"
-                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#B69B7D] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
             </div>
@@ -86,9 +86,9 @@ export const ForgotPasswordPage: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#f7f4ee] font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg border border-[#c5a059]/40 disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg disabled:opacity-50"
             >
-              <Send className="w-4 h-4 text-[#dfbe7e]" />
+              <Send className="w-4 h-4 text-white" />
               <span>{isSubmitting ? 'Transmitting Link...' : 'Send Reset Link'}</span>
             </button>
           </form>

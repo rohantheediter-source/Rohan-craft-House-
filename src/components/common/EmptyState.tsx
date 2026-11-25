@@ -21,23 +21,23 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-center justify-center text-center py-16 px-4">
-      <div className="w-16 h-16 rounded-full bg-aura-100 flex items-center justify-center text-aura-600 mb-4 border border-aura-200">
+      <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#C87552] mb-4 border border-[#B69B7D]/50 shadow-sm">
         <Icon className="w-8 h-8" />
       </div>
-      <h3 className="font-display text-xl font-semibold text-neutral-800 mb-2">{title}</h3>
-      <p className="text-sm text-neutral-500 max-w-md mb-6">{description}</p>
+      <h3 className="font-display text-xl font-semibold text-[#30231F] mb-2">{title}</h3>
+      <p className="text-sm text-[#56443E] max-w-md mb-6">{description}</p>
       {actionLabel && (
         actionHref ? (
           <Link
             to={actionHref}
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#0b3b33] text-[#f7f4ee] hover:bg-[#07241e] text-sm font-medium tracking-wide transition-all shadow-md hover:shadow-lg border border-[#c5a059]/40"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#C87552] text-white hover:bg-[#B05E3D] text-sm font-medium tracking-wide transition-all shadow-md hover:shadow-lg"
           >
             {actionLabel}
           </Link>
         ) : (
           <button
             onClick={onAction}
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#0b3b33] text-[#f7f4ee] hover:bg-[#07241e] text-sm font-medium tracking-wide transition-all shadow-md hover:shadow-lg border border-[#c5a059]/40"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#C87552] text-white hover:bg-[#B05E3D] text-sm font-medium tracking-wide transition-all shadow-md hover:shadow-lg"
           >
             {actionLabel}
           </button>

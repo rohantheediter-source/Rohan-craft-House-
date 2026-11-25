@@ -79,44 +79,44 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#061713] flex flex-col justify-between py-12 px-4 text-white font-sans">
+    <div className="min-h-screen bg-[#F4EBDD] flex flex-col justify-between py-12 px-4 text-[#30231F] font-sans">
       {/* Top Bar */}
       <div className="max-w-md w-full mx-auto flex items-center justify-between">
         <Link
           to="/"
-          className="inline-flex items-center gap-1.5 text-xs text-[#dfbe7e]/70 hover:text-[#dfbe7e] transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8E7356] hover:text-[#C87552] transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>Return to Storefront</span>
         </Link>
-        <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-mono">
+        <span className="text-[10px] uppercase tracking-widest text-[#8E7356] font-mono">
           SECURE_ADMIN_PORTAL
         </span>
       </div>
 
       {/* Main Admin Portal Login Card */}
-      <div className="max-w-md w-full mx-auto bg-[#0d221d] border border-[#c5a059]/40 rounded-3xl p-8 sm:p-10 shadow-2xl">
+      <div className="max-w-md w-full mx-auto bg-white border border-[#B69B7D]/50 rounded-3xl p-8 sm:p-10 shadow-luxury">
         <div className="text-center mb-6">
-          <div className="w-14 h-14 rounded-2xl bg-[#071713] border-2 border-[#c5a059] text-[#dfbe7e] flex items-center justify-center mx-auto mb-4 shadow-gold-glow">
-            <Shield className="w-7 h-7" />
+          <div className="w-14 h-14 rounded-2xl bg-[#30231F] border-2 border-[#B69B7D] text-[#F4EBDD] flex items-center justify-center mx-auto mb-4 shadow-sm">
+            <Shield className="w-7 h-7 text-[#C87552]" />
           </div>
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#dfbe7e] font-bold font-mono">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#8E7356] font-bold font-mono">
             Rohan Craft House Management
           </span>
-          <h1 className="font-display text-2xl font-bold text-white mt-1">
+          <h1 className="font-display text-2xl font-bold text-[#30231F] mt-1">
             Admin Portal
           </h1>
-          <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
+          <p className="text-xs text-[#56443E] mt-2 leading-relaxed">
             Restricted to authorized studio curators and store administrators. Sign in with Google or administrator credentials.
           </p>
         </div>
 
         {/* Informational notice if current session is a customer */}
         {user && !isAdmin && (
-          <div className="mb-6 p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-2.5 text-xs">
-            <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-            <p className="text-neutral-300 text-[11px] leading-relaxed">
-              Currently signed in as customer (<strong className="text-white">{user.email}</strong>). Use your authorized admin Google account or credentials below to access the Admin Portal.
+          <div className="mb-6 p-3.5 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/60 flex items-start gap-2.5 text-xs">
+            <Info className="w-4 h-4 text-[#C87552] shrink-0 mt-0.5" />
+            <p className="text-[#56443E] text-[11px] leading-relaxed">
+              Currently signed in as customer (<strong className="text-[#30231F]">{user.email}</strong>). Use your authorized admin Google account or credentials below to access the Admin Portal.
             </p>
           </div>
         )}
@@ -127,11 +127,11 @@ export const AdminLoginPage: React.FC = () => {
             type="button"
             onClick={handleGoogleAdminLogin}
             disabled={isGoogleProcessing || isSubmitting}
-            className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-white hover:bg-neutral-100 text-neutral-900 font-display text-xs font-bold uppercase tracking-[0.14em] transition-all shadow-md hover:shadow-lg border border-white hover:border-[#dfbe7e] disabled:opacity-60 disabled:cursor-not-allowed group active:scale-[0.99]"
+            className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-white hover:bg-[#F9F5EE] text-[#30231F] font-display text-xs font-bold uppercase tracking-[0.14em] transition-all shadow-sm hover:shadow-md border border-[#B69B7D]/60 hover:border-[#C87552] disabled:opacity-60 disabled:cursor-not-allowed group active:scale-[0.99]"
           >
             {isGoogleProcessing ? (
               <>
-                <Loader2 className="w-4 h-4 text-[#071915] animate-spin shrink-0" />
+                <Loader2 className="w-4 h-4 text-[#C87552] animate-spin shrink-0" />
                 <span>Connecting to Google...</span>
               </>
             ) : (
@@ -144,21 +144,21 @@ export const AdminLoginPage: React.FC = () => {
 
           {/* Visual Divider */}
           <div className="relative flex py-5 items-center">
-            <div className="flex-grow border-t border-neutral-800" />
-            <span className="flex-shrink mx-3 text-[10px] text-neutral-400 uppercase tracking-widest font-mono">
+            <div className="flex-grow border-t border-[#B69B7D]/30" />
+            <span className="flex-shrink mx-3 text-[10px] text-[#8E7356] uppercase tracking-widest font-mono">
               OR SIGN IN WITH ADMIN CREDENTIALS
             </span>
-            <div className="flex-grow border-t border-neutral-800" />
+            <div className="flex-grow border-t border-[#B69B7D]/30" />
           </div>
 
           {/* METHOD 2: Existing Admin Email/Password Form */}
           <form onSubmit={handleEmailPasswordLogin} className="space-y-4" autoComplete="off">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5 font-mono text-[11px]">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5 font-mono text-[11px]">
                 Administrator Email
               </label>
               <div className="relative">
-                <Mail className="w-4 h-4 text-neutral-500 absolute left-3.5 top-3.5" />
+                <Mail className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3.5" />
                 <input
                   type="email"
                   value={email}
@@ -166,17 +166,17 @@ export const AdminLoginPage: React.FC = () => {
                   required
                   autoComplete="off"
                   placeholder="Enter administrator email"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#061713] border border-neutral-700 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#c5a059] transition-colors"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] transition-colors"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5 font-mono text-[11px]">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5 font-mono text-[11px]">
                 Administrator Password
               </label>
               <div className="relative">
-                <Lock className="w-4 h-4 text-neutral-500 absolute left-3.5 top-3.5" />
+                <Lock className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3.5" />
                 <input
                   type="password"
                   value={password}
@@ -184,7 +184,7 @@ export const AdminLoginPage: React.FC = () => {
                   required
                   autoComplete="new-password"
                   placeholder="Enter administrator password"
-                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#061713] border border-neutral-700 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#c5a059] transition-colors"
+                  className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] transition-colors"
                 />
               </div>
             </div>
@@ -192,11 +192,11 @@ export const AdminLoginPage: React.FC = () => {
             <button
               type="submit"
               disabled={isSubmitting || isGoogleProcessing}
-              className="w-full mt-2 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#071915] hover:bg-[#0b241e] text-[#dfbe7e] border border-[#c5a059] font-display text-xs font-bold uppercase tracking-[0.16em] transition-all disabled:opacity-50 shadow-sm hover:shadow-md cursor-pointer"
+              className="w-full mt-2 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-[0.16em] transition-all disabled:opacity-50 shadow-md hover:shadow-lg cursor-pointer"
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="w-4 h-4 text-[#dfbe7e] animate-spin" />
+                  <Loader2 className="w-4 h-4 text-white animate-spin" />
                   <span>Verifying Clearance...</span>
                 </>
               ) : (
@@ -209,18 +209,18 @@ export const AdminLoginPage: React.FC = () => {
           </form>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-neutral-800/80 text-center space-y-2">
-          <div className="flex items-center justify-center gap-2 text-[10px] uppercase tracking-wider text-neutral-400 font-mono">
-            <Shield className="w-3.5 h-3.5 text-[#c5a059]" />
+        <div className="mt-8 pt-6 border-t border-[#B69B7D]/30 text-center space-y-2">
+          <div className="flex items-center justify-center gap-2 text-[10px] uppercase tracking-wider text-[#8E7356] font-mono">
+            <Shield className="w-3.5 h-3.5 text-[#C87552]" />
             <span>Dual-Method Authentication</span>
           </div>
-          <p className="text-[11px] text-neutral-500 leading-normal">
+          <p className="text-[11px] text-[#56443E] leading-normal">
             Supports authorized Google Sign-In and direct administrator credentials. Non-authorized accounts are rejected by server-side authorization controls.
           </p>
         </div>
       </div>
 
-      <div className="text-center text-[11px] text-neutral-500">
+      <div className="text-center text-[11px] text-[#8E7356]">
         Rohan Craft House Security Engine • Server-Side Database RLS Enforcement
       </div>
     </div>

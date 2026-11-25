@@ -63,13 +63,13 @@ export const OrderTrackingPage: React.FC = () => {
   const currentStageIdx = order ? getStageIndex(order.status) : 0;
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-10 sm:py-16">
+    <div className="bg-[#F4EBDD] min-h-screen py-10 sm:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto mb-10">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#856338] font-bold">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#8E7356] font-bold">
             Live Dispatch Radar
           </span>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e] mt-2 mb-3">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mt-2 mb-3">
             Track Your Consignment
           </h1>
           <p className="font-serif-luxury text-base text-neutral-600">
@@ -78,7 +78,7 @@ export const OrderTrackingPage: React.FC = () => {
         </div>
 
         {/* Tracking Input Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm mb-10">
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#B69B7D]/45 shadow-sm mb-10">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -94,13 +94,13 @@ export const OrderTrackingPage: React.FC = () => {
                 onChange={(e) => setOrderNumber(e.target.value.toUpperCase())}
                 placeholder="Enter Consignment Number (e.g. RA-8492-4102)"
                 required
-                className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-[#FAF8F5] border border-neutral-300 text-xs font-mono font-bold text-neutral-900 uppercase focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs font-mono font-bold text-[#30231F] placeholder-[#8E7356]/70 uppercase focus:outline-none focus:border-[#C87552]"
               />
             </div>
             <button
               type="submit"
               disabled={isSearching}
-              className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#dfbe7e] font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md disabled:opacity-50"
+              className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md disabled:opacity-50"
             >
               <Search className="w-4 h-4" />
               <span>{isSearching ? 'Searching...' : 'Locate Docket'}</span>
@@ -122,14 +122,14 @@ export const OrderTrackingPage: React.FC = () => {
             </p>
           </div>
         ) : order ? (
-          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-neutral-200/80 shadow-sm">
+          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#B69B7D]/45 shadow-sm">
             {/* Docket Meta */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-neutral-100 gap-3">
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-neutral-400 block font-bold">
                   Order Docket
                 </span>
-                <span className="font-mono text-lg font-bold text-[#0b3b33]">
+                <span className="font-mono text-lg font-bold text-[#30231F]">
                   {order.order_number}
                 </span>
                 <span className="text-xs text-neutral-500 ml-3">
@@ -141,7 +141,7 @@ export const OrderTrackingPage: React.FC = () => {
                 <span className="text-[10px] uppercase tracking-wider text-neutral-400 block font-bold">
                   Current Status
                 </span>
-                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 border border-emerald-200">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#C87552]/12 text-[#B05E3D] border border-[#C87552]/35">
                   {order.status}
                 </span>
               </div>
@@ -149,9 +149,9 @@ export const OrderTrackingPage: React.FC = () => {
 
             {/* Visual 5-Stage Stepper */}
             <div className="relative mb-12">
-              <div className="hidden sm:block absolute top-1/2 left-0 w-full h-1 bg-neutral-100 -translate-y-1/2 z-0" />
+              <div className="hidden sm:block absolute top-1/2 left-0 w-full h-1 bg-[#F4EBDD] -translate-y-1/2 z-0" />
               <div
-                className="hidden sm:block absolute top-1/2 left-0 h-1 bg-[#0b3b33] -translate-y-1/2 z-0 transition-all duration-700"
+                className="hidden sm:block absolute top-1/2 left-0 h-1 bg-[#C87552] -translate-y-1/2 z-0 transition-all duration-700"
                 style={{ width: `${(currentStageIdx / (stages.length - 1)) * 100}%` }}
               />
 
@@ -164,16 +164,16 @@ export const OrderTrackingPage: React.FC = () => {
                       <div
                         className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs transition-all shrink-0 ${
                           isDone
-                            ? 'bg-[#0b3b33] text-[#dfbe7e] border-2 border-[#c5a059] shadow-md'
-                            : 'bg-white text-neutral-400 border-2 border-neutral-200'
+                            ? 'bg-[#30231F] text-white border-2 border-[#B69B7D] shadow-md'
+                            : 'bg-white text-[#8E7356] border-2 border-[#B69B7D]/40'
                         }`}
                       >
-                        {isDone ? <CheckCircle2 className="w-4 h-4 text-[#dfbe7e]" /> : idx + 1}
+                        {isDone ? <CheckCircle2 className="w-4 h-4 text-[#C87552]" /> : idx + 1}
                       </div>
                       <div>
                         <h4
                           className={`text-xs font-bold ${
-                            isCurrent ? 'text-[#0b3b33]' : isDone ? 'text-neutral-800' : 'text-neutral-400'
+                            isCurrent ? 'text-[#C87552]' : isDone ? 'text-[#30231F]' : 'text-[#8E7356]'
                           }`}
                         >
                           {st.label}
@@ -189,7 +189,7 @@ export const OrderTrackingPage: React.FC = () => {
             </div>
 
             {/* Courier & Transit Details */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-2xl bg-[#FAF8F5] border border-neutral-200 text-xs mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/40 text-xs mb-8">
               <div>
                 <span className="text-[10px] uppercase font-bold text-neutral-400 block mb-1">
                   Destination Address
@@ -210,14 +210,14 @@ export const OrderTrackingPage: React.FC = () => {
                   Waybill Number: <strong className="font-mono text-neutral-900">{order.tracking_number || 'Generated at dispatch'}</strong>
                 </p>
                 <p className="text-neutral-500 text-[11px] mt-1 flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#856338]" /> Transit insurance active
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#8E7356]" /> Transit insurance active
                 </p>
               </div>
             </div>
 
             {/* Items in Consignment */}
             <div>
-              <h4 className="font-display text-xs font-bold uppercase tracking-wider text-[#0b3b33] mb-4">
+              <h4 className="font-display text-xs font-bold uppercase tracking-wider text-[#30231F] mb-4">
                 Consignment Contents
               </h4>
               <div className="divide-y divide-neutral-100">

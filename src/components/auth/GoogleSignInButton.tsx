@@ -36,10 +36,10 @@ export const GoogleLogo: React.FC<{ className?: string }> = ({ className = 'w-5 
 export const AuthDivider: React.FC<{ label?: string }> = ({ label = 'OR CONTINUE WITH EMAIL' }) => (
   <div className="relative my-6 select-none">
     <div className="absolute inset-0 flex items-center" aria-hidden="true">
-      <div className="w-full border-t border-neutral-200" />
+      <div className="w-full border-t border-[#B69B7D]/40" />
     </div>
     <div className="relative flex justify-center text-[10px] uppercase tracking-[0.2em] font-bold">
-      <span className="bg-white px-3 text-neutral-400 font-sans">
+      <span className="bg-white px-3 text-[#8E7356] font-sans">
         {label}
       </span>
     </div>
@@ -91,12 +91,12 @@ export const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({
       onClick={handleClick}
       disabled={disabled || isProcessing}
       aria-label={text}
-      className={`w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-white hover:bg-[#FAF8F5] text-neutral-800 hover:text-neutral-950 font-display text-xs font-bold uppercase tracking-[0.14em] transition-all shadow-sm hover:shadow-md border border-neutral-300 hover:border-[#c5a059] disabled:opacity-60 disabled:cursor-not-allowed group active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#0b3b33]/20 ${className}`}
+      className={`w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-2xl bg-white hover:bg-[#F4EBDD]/50 text-[#30231F] font-display text-xs font-bold uppercase tracking-[0.14em] transition-all shadow-sm hover:shadow-md border border-[#B69B7D]/60 hover:border-[#C87552] disabled:opacity-60 disabled:cursor-not-allowed group active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-[#C87552]/25 ${className}`}
     >
       {isProcessing ? (
         <>
-          <Loader2 className="w-4 h-4 text-[#0b3b33] animate-spin shrink-0" />
-          <span className="text-neutral-600">Connecting to Google...</span>
+          <Loader2 className="w-4 h-4 text-[#C87552] animate-spin shrink-0" />
+          <span className="text-[#56443E]">Connecting to Google...</span>
         </>
       ) : (
         <>

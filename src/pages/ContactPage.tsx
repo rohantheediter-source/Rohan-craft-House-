@@ -31,33 +31,33 @@ export const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-12 sm:py-20">
+    <div className="bg-[#F4EBDD] min-h-screen py-12 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-[#30231F] border border-[#B69B7D]/60 text-xs font-semibold uppercase tracking-[0.2em] mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#C87552]" />
             <span>Artisan Concierge</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e] mb-4">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mb-4">
             Connect With The Atelier
           </h1>
-          <p className="font-serif-luxury text-base sm:text-lg text-neutral-600">
+          <p className="font-serif-luxury text-base sm:text-lg text-[#56443E]">
             For bespoke dimensions, wedding flower preservation inquiries, corporate gifting commissions, or order assistance.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Contact Details */}
-          <div className="lg:col-span-5 bg-white rounded-3xl p-8 sm:p-10 border border-neutral-200/80 shadow-sm space-y-8">
+          <div className="lg:col-span-5 bg-white rounded-3xl p-8 sm:p-10 border border-[#B69B7D]/45 shadow-sm space-y-8">
             <div>
-              <span className="text-[10px] uppercase tracking-widest text-[#856338] font-bold">
+              <span className="text-[10px] uppercase tracking-widest text-[#8E7356] font-bold">
                 Atelier Location
               </span>
-              <h3 className="font-display text-xl font-bold text-neutral-900 mt-1 mb-3">
+              <h3 className="font-display text-xl font-bold text-[#30231F] mt-1 mb-3">
                 Rohan Craft House & Foundry
               </h3>
-              <p className="text-xs text-neutral-600 leading-relaxed flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#856338] shrink-0 mt-0.5" />
+              <p className="text-xs text-[#56443E] leading-relaxed flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-[#C87552] shrink-0 mt-0.5" />
                 <span>
                   Rohan Craft House Atelier & Creative Works<br />
                   Artisan Enclave, Sector 14<br />
@@ -66,68 +66,68 @@ export const ContactPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="space-y-4 pt-4 border-t border-neutral-100 text-xs">
-              <div className="flex items-center gap-3 text-neutral-700">
-                <Phone className="w-4 h-4 text-[#856338] shrink-0" />
+            <div className="space-y-4 pt-4 border-t border-[#B69B7D]/30 text-xs">
+              <div className="flex items-center gap-3 text-[#56443E]">
+                <Phone className="w-4 h-4 text-[#C87552] shrink-0" />
                 <div>
-                  <span className="text-neutral-400 block text-[10px] uppercase">Telephone & WhatsApp</span>
-                  <a href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}`} target="_blank" rel="noopener noreferrer" className="font-bold text-neutral-900 hover:text-[#0b3b33]">
+                  <span className="text-[#8E7356] block text-[10px] uppercase">Telephone & WhatsApp</span>
+                  <a href={`https://wa.me/${WHATSAPP_BUSINESS_NUMBER}`} target="_blank" rel="noopener noreferrer" className="font-bold text-[#30231F] hover:text-[#C87552]">
                     {WHATSAPP_DISPLAY_NUMBER}
                   </a>
                 </div>
 
               </div>
 
-              <div className="flex items-center gap-3 text-neutral-700">
-                <Mail className="w-4 h-4 text-[#856338] shrink-0" />
+              <div className="flex items-center gap-3 text-[#56443E]">
+                <Mail className="w-4 h-4 text-[#C87552] shrink-0" />
                 <div>
-                  <span className="text-neutral-400 block text-[10px] uppercase">Direct Concierge Email</span>
-                  <a href="mailto:concierge@rohancrafthouse.com" className="font-bold text-neutral-900 hover:text-[#0b3b33]">
+                  <span className="text-[#8E7356] block text-[10px] uppercase">Direct Concierge Email</span>
+                  <a href="mailto:concierge@rohancrafthouse.com" className="font-bold text-[#30231F] hover:text-[#C87552]">
                     concierge@rohancrafthouse.com
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200 text-xs text-neutral-600 space-y-1.5">
-              <span className="font-bold text-neutral-900 block">Studio Consultation Hours:</span>
+            <div className="p-4 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/45 text-xs text-[#56443E] space-y-1.5">
+              <span className="font-bold text-[#30231F] block">Studio Consultation Hours:</span>
               <p>Monday – Saturday: 10:00 AM – 7:00 PM IST</p>
               <p>Sundays: Dedicated to quiet curing chamber rituals</p>
             </div>
           </div>
 
           {/* Right Column: Contact & Commission Form */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-neutral-200/80 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-[#B69B7D]/45 shadow-sm">
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#F4EBDD] text-[#C87552] border border-[#B69B7D] flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-neutral-900 mb-2">
+                <h3 className="font-display text-xl font-bold text-[#30231F] mb-2">
                   Inquiry Dispatched to Studio
                 </h3>
-                <p className="text-xs text-neutral-600 max-w-md mx-auto mb-6">
-                  Thank you, <strong className="text-neutral-800">{fullName}</strong>. Our senior artist will review your notes and reach out within 24 hours.
+                <p className="text-xs text-[#56443E] max-w-md mx-auto mb-6">
+                  Thank you, <strong className="text-[#30231F]">{fullName}</strong>. Our senior artist will review your notes and reach out within 24 hours.
                 </p>
                 <button
                   onClick={() => {
                     setSubmitted(false);
                     setMessage('');
                   }}
-                  className="px-6 py-2.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] text-xs font-bold uppercase tracking-wider"
+                  className="px-6 py-2.5 rounded-full bg-[#30231F] hover:bg-[#221815] text-white text-xs font-bold uppercase tracking-wider transition-colors"
                 >
                   Send Another Inquiry
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <h3 className="font-display text-lg font-bold text-neutral-900 pb-3 mb-2 border-b border-neutral-100">
+                <h3 className="font-display text-lg font-bold text-[#30231F] pb-3 mb-2 border-b border-[#B69B7D]/25">
                   Custom Commission & Inquiry Form
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                       Your Name *
                     </label>
                     <input
@@ -136,12 +136,12 @@ export const ContactPage: React.FC = () => {
                       onChange={(e) => setFullName(e.target.value)}
                       required
                       placeholder="e.g. Radhika Sharma"
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                       Email Address *
                     </label>
                     <input
@@ -150,14 +150,14 @@ export const ContactPage: React.FC = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                       placeholder="radhika@example.com"
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                       Contact Phone / WhatsApp
                     </label>
                     <input
@@ -165,18 +165,18 @@ export const ContactPage: React.FC = () => {
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+91 98765 43210"
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                    <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                       Artisan Discipline of Interest
                     </label>
                     <select
                       value={interest}
                       onChange={(e) => setInterest(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33] cursor-pointer"
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552] cursor-pointer"
                     >
                       <option value="Geode Wall Clock">Bespoke Geode Wall Clock</option>
                       <option value="Wedding Flower Preservation">Wedding Flower Preservation</option>
@@ -189,7 +189,7 @@ export const ContactPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                     Your Vision / Dimensions / Questions *
                   </label>
                   <textarea
@@ -197,17 +197,17 @@ export const ContactPage: React.FC = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     rows={4}
-                    placeholder="Tell us about desired color palette (e.g. emerald gold, blush pink, ocean blue), clock diameters, wedding flower delivery dates, or special notes..."
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                    placeholder="Tell us about desired color palette (e.g. espresso cream, terracotta, brushed champagne), clock diameters, wedding flower delivery dates, or special notes..."
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#f7f4ee] font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg border border-[#c5a059]/40 disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg disabled:opacity-50"
                 >
-                  <Send className="w-4 h-4 text-[#dfbe7e]" />
+                  <Send className="w-4 h-4 text-white" />
                   <span>{isSubmitting ? 'Transmitting...' : 'Submit Consultation Request'}</span>
                 </button>
               </form>

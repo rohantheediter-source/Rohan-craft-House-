@@ -40,17 +40,17 @@ export const FAQPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-12 sm:py-20">
+    <div className="bg-[#F4EBDD] min-h-screen py-12 sm:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-[#30231F] border border-[#B69B7D]/60 text-xs font-semibold uppercase tracking-[0.2em] mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#C87552]" />
             <span>Atelier Guidance</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e] mb-4">
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mb-4">
             Frequently Answered Questions
           </h1>
-          <p className="font-serif-luxury text-base sm:text-lg text-neutral-600">
+          <p className="font-serif-luxury text-base sm:text-lg text-[#56443E]">
             Everything you need to know regarding materials, curing rituals, custom orders, and safe transit.
           </p>
         </div>
@@ -61,18 +61,18 @@ export const FAQPage: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-neutral-200/80 shadow-sm overflow-hidden transition-all duration-300"
+                className="bg-white rounded-2xl border border-[#B69B7D]/45 shadow-sm overflow-hidden transition-all duration-300"
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span className="font-display text-base font-bold text-neutral-900 pr-4">
+                  <span className="font-display text-base font-bold text-[#30231F] pr-4">
                     {faq.q}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full bg-[#FAF8F5] flex items-center justify-center text-[#0b3b33] shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-[#0b3b33] text-[#dfbe7e]' : ''
+                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      isOpen ? 'rotate-180 bg-[#C87552] text-white' : 'bg-[#F4EBDD] text-[#30231F]'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -80,7 +80,7 @@ export const FAQPage: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-neutral-600 leading-relaxed font-sans border-t border-neutral-50 animate-fade-in">
+                  <div className="px-6 pb-6 pt-2 text-sm text-[#56443E] leading-relaxed font-sans border-t border-[#B69B7D]/25 animate-fade-in">
                     {faq.a}
                   </div>
                 )}

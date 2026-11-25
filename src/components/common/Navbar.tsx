@@ -51,12 +51,12 @@ export const Navbar: React.FC = () => {
 
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-neutral-100 shadow-sm">
+    <header className="sticky top-0 z-40 w-full bg-[#F4EBDD]/95 backdrop-blur-md border-b border-[#B69B7D]/40 shadow-sm">
       {/* Top Luxury Announcement Bar */}
-      <div className="bg-[#07241e] text-[#dfbe7e] text-[11px] py-1.5 px-4 font-medium tracking-widest uppercase border-b border-[#c5a059]/20 text-center flex items-center justify-center gap-2">
-        <Sparkles className="w-3 h-3 text-[#c5a059]" />
+      <div className="bg-[#30231F] text-[#F4EBDD] text-[11px] py-1.5 px-4 font-medium tracking-widest uppercase border-b border-[#B69B7D]/25 text-center flex items-center justify-center gap-2">
+        <Sparkles className="w-3 h-3 text-[#C87552]" />
         <span>Bespoke Luxury Resin Art • Free Express Shipping on orders over ₹1,999</span>
-        <Sparkles className="w-3 h-3 text-[#c5a059] hidden sm:inline" />
+        <Sparkles className="w-3 h-3 text-[#C87552] hidden sm:inline" />
       </div>
 
       {/* Main Navbar */}
@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-neutral-700 hover:text-[#0b3b33] rounded-lg"
+              className="p-2 text-[#30231F] hover:text-[#C87552] rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -82,10 +82,10 @@ export const Navbar: React.FC = () => {
                 className="w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-105 shrink-0"
               />
               <div className="flex flex-col">
-                <span className="font-display text-sm sm:text-lg xl:text-xl font-bold tracking-[0.06em] sm:tracking-[0.12em] text-[#07241e] group-hover:text-[#0b3b33] transition-colors whitespace-nowrap">
+                <span className="font-display text-sm sm:text-lg xl:text-xl font-bold tracking-[0.06em] sm:tracking-[0.12em] text-[#30231F] group-hover:text-[#C87552] transition-colors whitespace-nowrap">
                   Rohan Craft House
                 </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#856338] font-semibold -mt-0.5 whitespace-nowrap">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#8E7356] font-semibold -mt-0.5 whitespace-nowrap">
                   Artisan Luxury
                 </span>
               </div>
@@ -102,13 +102,13 @@ export const Navbar: React.FC = () => {
                   to={link.href}
                   className={`text-[11px] xl:text-xs uppercase tracking-wider xl:tracking-widest font-semibold transition-all duration-200 py-1 border-b-2 flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
-                      ? 'border-[#c5a059] text-[#0b3b33]'
-                      : 'border-transparent text-neutral-600 hover:text-[#0b3b33] hover:border-[#c5a059]/50'
+                      ? 'border-[#C87552] text-[#C87552]'
+                      : 'border-transparent text-[#30231F] hover:text-[#C87552] hover:border-[#C87552]/50'
                   }`}
                 >
                   <span>{link.name}</span>
                   {(link as any).isSpecial && (
-                    <span className="text-[9px] uppercase px-1.5 py-0.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059]/40 font-bold">
+                    <span className="text-[9px] uppercase px-1.5 py-0.5 rounded-full bg-[#C87552] text-white font-bold">
                       Bespoke
                     </span>
                   )}
@@ -123,7 +123,7 @@ export const Navbar: React.FC = () => {
             {/* Search Toggle */}
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 text-neutral-700 hover:text-[#0b3b33] hover:bg-neutral-50 rounded-full transition-colors"
+              className="p-2 text-[#30231F] hover:text-[#C87552] hover:bg-white/60 rounded-full transition-colors"
               title="Search collection"
               aria-label="Search"
             >
@@ -133,13 +133,13 @@ export const Navbar: React.FC = () => {
             {/* Wishlist Link */}
             <Link
               to="/wishlist"
-              className="p-2 text-neutral-700 hover:text-[#0b3b33] hover:bg-neutral-50 rounded-full transition-colors relative"
+              className="p-2 text-[#30231F] hover:text-[#C87552] hover:bg-white/60 rounded-full transition-colors relative"
               title="Wishlist"
               aria-label="Wishlist"
             >
               <Heart className="w-5 h-5" />
               {totalWishlist > 0 && (
-                <span className="absolute 0 top-1 right-1 w-4 h-4 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute top-1 right-1 w-4 h-4 bg-[#C87552] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                   {totalWishlist}
                 </span>
               )}
@@ -148,13 +148,13 @@ export const Navbar: React.FC = () => {
             {/* Cart Link */}
             <Link
               to="/cart"
-              className="p-2 text-neutral-700 hover:text-[#0b3b33] hover:bg-neutral-50 rounded-full transition-colors relative"
+              className="p-2 text-[#30231F] hover:text-[#C87552] hover:bg-white/60 rounded-full transition-colors relative"
               title="Shopping Cart"
               aria-label="Cart"
             >
               <ShoppingBag className="w-5 h-5" />
               {totalItems > 0 && (
-                <span className="absolute 0 top-1 right-1 w-4 h-4 bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] text-[10px] font-bold rounded-full flex items-center justify-center">
+                <span className="absolute top-1 right-1 w-4 h-4 bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] text-[10px] font-bold rounded-full flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
@@ -164,7 +164,7 @@ export const Navbar: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                className="flex items-center gap-1.5 p-1.5 text-neutral-700 hover:text-[#0b3b33] hover:bg-neutral-50 rounded-full transition-colors"
+                className="flex items-center gap-1.5 p-1.5 text-[#30231F] hover:text-[#C87552] hover:bg-white/60 rounded-full transition-colors"
                 title="Account"
                 aria-label="Account"
               >
@@ -172,25 +172,25 @@ export const Navbar: React.FC = () => {
                   <img
                     src={profile.avatar_url}
                     alt="User"
-                    className="w-5 h-5 rounded-full object-cover border border-[#c5a059]"
+                    className="w-5 h-5 rounded-full object-cover border border-[#B69B7D]"
                     referrerPolicy="no-referrer"
                   />
                 ) : (
                   <UserIcon className="w-5 h-5" />
                 )}
-                <ChevronDown className="w-3 h-3 text-neutral-400" />
+                <ChevronDown className="w-3 h-3 text-[#8E7356]" />
               </button>
 
               {userDropdownOpen && (
                 <div
-                  className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-neutral-100 py-2 z-50 animate-fade-in"
+                  className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-luxury border border-[#B69B7D]/40 py-2 z-50 animate-fade-in"
                   onMouseLeave={() => setUserDropdownOpen(false)}
                 >
                   {user ? (
                     <>
-                      <div className="px-4 py-2 border-b border-neutral-100">
-                        <p className="text-xs text-neutral-400 uppercase tracking-wider font-semibold">Signed in as</p>
-                        <p className="text-sm font-medium text-neutral-900 truncate">
+                      <div className="px-4 py-2 border-b border-[#B69B7D]/25">
+                        <p className="text-xs text-[#8E7356] uppercase tracking-wider font-semibold">Signed in as</p>
+                        <p className="text-sm font-medium text-[#30231F] truncate">
                           {profile?.full_name || user.email}
                         </p>
                       </div>
@@ -198,46 +198,46 @@ export const Navbar: React.FC = () => {
                         <Link
                           to="/admin"
                           onClick={() => setUserDropdownOpen(false)}
-                          className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-[#dfbe7e] bg-[#07241e] hover:bg-[#0b3b33] rounded-lg mx-2 my-1 transition-colors"
+                          className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold text-[#F4EBDD] bg-[#30231F] hover:bg-[#221815] rounded-lg mx-2 my-1 transition-colors"
                         >
-                          <Shield className="w-4 h-4 text-[#c5a059]" />
+                          <Shield className="w-4 h-4 text-[#C87552]" />
                           <span>Admin Console</span>
                         </Link>
                       )}
                       <Link
                         to="/profile"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-neutral-700 hover:bg-neutral-50 hover:text-[#0b3b33]"
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-[#30231F] hover:bg-[#F4EBDD]/60 hover:text-[#C87552] transition-colors"
                       >
-                        <UserIcon className="w-4 h-4 text-neutral-400" />
+                        <UserIcon className="w-4 h-4 text-[#8E7356]" />
                         My Profile & Addresses
                       </Link>
                       <Link
                         to="/profile#orders"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-neutral-700 hover:bg-neutral-50 hover:text-[#0b3b33]"
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-[#30231F] hover:bg-[#F4EBDD]/60 hover:text-[#C87552] transition-colors"
                       >
-                        <Package className="w-4 h-4 text-neutral-400" />
+                        <Package className="w-4 h-4 text-[#8E7356]" />
                         My Order History
                       </Link>
                       <Link
                         to="/track-order"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-neutral-700 hover:bg-neutral-50 hover:text-[#0b3b33]"
+                        className="flex items-center gap-2.5 px-4 py-2.5 text-xs text-[#30231F] hover:bg-[#F4EBDD]/60 hover:text-[#C87552] transition-colors"
                       >
-                        <Sparkles className="w-4 h-4 text-neutral-400" />
+                        <Sparkles className="w-4 h-4 text-[#8E7356]" />
                         Track an Order
                       </Link>
-                      <div className="border-t border-neutral-100 my-1" />
+                      <div className="border-t border-[#B69B7D]/25 my-1" />
                       <button
                         onClick={async () => {
                           setUserDropdownOpen(false);
                           await signOut();
                           navigate('/');
                         }}
-                        className="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs text-red-600 hover:bg-red-50 text-left"
+                        className="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs text-red-700 hover:bg-red-50 text-left"
                       >
-                        <LogOut className="w-4 h-4 text-red-500" />
+                        <LogOut className="w-4 h-4 text-red-600" />
                         Sign Out
                       </button>
                     </>
@@ -246,32 +246,32 @@ export const Navbar: React.FC = () => {
                       <Link
                         to="/login"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="block px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0b3b33] hover:bg-neutral-50"
+                        className="block px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#30231F] hover:bg-[#F4EBDD]/60 hover:text-[#C87552] transition-colors"
                       >
                         Sign In
                       </Link>
                       <Link
                         to="/register"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="block px-4 py-2 text-xs text-neutral-600 hover:bg-neutral-50"
+                        className="block px-4 py-2 text-xs text-[#56443E] hover:bg-[#F4EBDD]/60 hover:text-[#C87552] transition-colors"
                       >
                         Create an Account
                       </Link>
-                      <div className="border-t border-neutral-100 my-1" />
+                      <div className="border-t border-[#B69B7D]/25 my-1" />
                       <Link
                         to="/track-order"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2 px-4 py-2 text-xs text-neutral-600 hover:bg-neutral-50"
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-[#56443E] hover:bg-[#F4EBDD]/60 hover:text-[#C87552] transition-colors"
                       >
-                        <Package className="w-3.5 h-3.5 text-neutral-400" />
+                        <Package className="w-3.5 h-3.5 text-[#8E7356]" />
                         Track Your Order
                       </Link>
                       <Link
                         to="/admin/login"
                         onClick={() => setUserDropdownOpen(false)}
-                        className="flex items-center gap-2 px-4 py-2 text-xs text-[#856338] hover:text-[#0b3b33] hover:bg-neutral-50 font-medium"
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-[#8E7356] hover:text-[#C87552] hover:bg-[#F4EBDD]/60 font-medium transition-colors"
                       >
-                        <Shield className="w-3.5 h-3.5 text-[#c5a059]" />
+                        <Shield className="w-3.5 h-3.5 text-[#B69B7D]" />
                         Admin Login
                       </Link>
                     </>
@@ -285,36 +285,36 @@ export const Navbar: React.FC = () => {
 
       {/* Expandable Search Input Bar */}
       {searchOpen && (
-        <div className="border-t border-neutral-100 bg-[#FAF8F5] py-3 px-4 animate-fade-in shadow-inner">
+        <div className="border-t border-[#B69B7D]/30 bg-white py-3 px-4 animate-fade-in shadow-inner">
           <form onSubmit={handleSearchSubmit} className="max-w-3xl mx-auto flex items-center gap-3">
-            <Search className="w-5 h-5 text-[#856338]" />
+            <Search className="w-5 h-5 text-[#8E7356]" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search resin clocks, preserved floral jhumkas, thalis, pendants..."
-              className="flex-1 bg-transparent border-none text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none"
+              className="flex-1 bg-transparent border-none text-sm text-[#30231F] placeholder-[#B69B7D] focus:outline-none"
               autoFocus
             />
             {searchQuery && (
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="text-xs text-neutral-400 hover:text-neutral-600"
+                className="text-xs text-[#8E7356] hover:text-[#30231F]"
               >
                 Clear
               </button>
             )}
             <button
               type="submit"
-              className="px-4 py-1.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] text-xs font-semibold uppercase tracking-wider hover:bg-[#07241e]"
+              className="px-4 py-1.5 rounded-full bg-[#C87552] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#B05E3D] transition-colors"
             >
               Search
             </button>
             <button
               type="button"
               onClick={() => setSearchOpen(false)}
-              className="p-1 text-neutral-400 hover:text-neutral-600"
+              className="p-1 text-[#8E7356] hover:text-[#30231F]"
             >
               <X className="w-4 h-4" />
             </button>
@@ -324,23 +324,30 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-neutral-100 bg-white px-4 pt-3 pb-6 animate-fade-in">
+        <div className="lg:hidden border-t border-[#B69B7D]/30 bg-[#F4EBDD] px-4 pt-3 pb-6 animate-fade-in">
           <nav className="flex flex-col space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-semibold uppercase tracking-wider text-neutral-700 hover:text-[#0b3b33] py-2 border-b border-neutral-50"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname + location.search === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-sm font-semibold uppercase tracking-wider py-2 border-b border-[#B69B7D]/25 transition-colors ${
+                    isActive
+                      ? 'text-[#C87552]'
+                      : 'text-[#30231F] hover:text-[#C87552]'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
             <div className="pt-2 flex flex-col gap-2">
               <Link
                 to="/track-order"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-xs uppercase tracking-wider font-medium text-neutral-500 py-1.5"
+                className="text-xs uppercase tracking-wider font-medium text-[#56443E] hover:text-[#C87552] py-1.5"
               >
                 Track Your Order
               </Link>
@@ -348,7 +355,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   to="/profile"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs uppercase tracking-wider font-medium text-[#0b3b33] py-1.5"
+                  className="text-xs uppercase tracking-wider font-medium text-[#30231F] hover:text-[#C87552] py-1.5"
                 >
                   My Account ({profile?.full_name || 'Profile'})
                 </Link>
@@ -356,7 +363,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   to="/login"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-xs uppercase tracking-wider font-semibold text-[#0b3b33] py-1.5"
+                  className="text-xs uppercase tracking-wider font-semibold text-[#30231F] hover:text-[#C87552] py-1.5"
                 >
                   Sign In / Register
                 </Link>
@@ -364,9 +371,9 @@ export const Navbar: React.FC = () => {
               <Link
                 to="/admin/login"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-[#856338] hover:text-[#0b3b33] py-2 border-t border-neutral-100 mt-1"
+                className="flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-[#8E7356] hover:text-[#C87552] py-2 border-t border-[#B69B7D]/30 mt-1"
               >
-                <Shield className="w-3.5 h-3.5 text-[#c5a059]" />
+                <Shield className="w-3.5 h-3.5 text-[#B69B7D]" />
                 <span>Admin Login</span>
               </Link>
             </div>

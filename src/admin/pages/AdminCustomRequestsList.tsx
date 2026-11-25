@@ -62,21 +62,21 @@ const STATUS_CONFIG: Record<
   },
   Approved: {
     label: 'Approved',
-    bg: 'bg-emerald-50',
-    text: 'text-emerald-700',
-    border: 'border-emerald-200',
+    bg: 'bg-[#EEF5EF]',
+    text: 'text-[#2F5A39]',
+    border: 'border-[#B8D4BE]',
   },
   'In Production': {
     label: 'In Production',
-    bg: 'bg-teal-50',
-    text: 'text-teal-700',
-    border: 'border-teal-200',
+    bg: 'bg-[#FDF2ED]',
+    text: 'text-[#B05E3D]',
+    border: 'border-[#C87552]/40',
   },
   Completed: {
     label: 'Completed',
-    bg: 'bg-neutral-100',
-    text: 'text-neutral-800',
-    border: 'border-neutral-300',
+    bg: 'bg-[#30231F]',
+    text: 'text-[#F4EBDD]',
+    border: 'border-[#30231F]',
   },
   Rejected: {
     label: 'Rejected',
@@ -86,9 +86,9 @@ const STATUS_CONFIG: Record<
   },
   Cancelled: {
     label: 'Cancelled',
-    bg: 'bg-neutral-50',
-    text: 'text-neutral-500',
-    border: 'border-neutral-200',
+    bg: 'bg-[#F9F5EE]',
+    text: 'text-[#8E7356]',
+    border: 'border-[#B69B7D]/40',
   },
 };
 
@@ -259,15 +259,15 @@ export const AdminCustomRequestsList: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[#dfbe7e] font-mono">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[#8E7356] font-mono">
               BESPOKE ORDERS & COMMISSIONS
             </span>
           </div>
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-wide flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-[#c5a059]" />
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-[#30231F] tracking-wide flex items-center gap-2">
+            <Sparkles className="w-6 h-6 text-[#C87552]" />
             <span>Custom Requests Registry</span>
           </h1>
-          <p className="text-xs text-neutral-400 mt-1">
+          <p className="text-xs text-[#56443E] mt-1">
             Manage custom product inquiries, quote final handcrafted prices, and communicate directly with clients on WhatsApp.
           </p>
         </div>
@@ -276,7 +276,7 @@ export const AdminCustomRequestsList: React.FC = () => {
           <button
             onClick={() => loadRequests(true)}
             disabled={isRefreshing}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0c2c25] hover:bg-[#103a31] text-[#dfbe7e] border border-[#c5a059]/40 text-xs font-bold uppercase tracking-wider transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#30231F] hover:bg-[#221815] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm disabled:opacity-50"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin' : ''}`} />
             <span>Refresh</span>
@@ -286,30 +286,30 @@ export const AdminCustomRequestsList: React.FC = () => {
 
       {/* Metric Badges */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-        <div className="bg-[#0c2c25] p-4 rounded-2xl border border-[#c5a059]/20">
-          <span className="text-[10px] uppercase tracking-wider text-neutral-400 block font-semibold">Total Inquiries</span>
-          <span className="font-display text-2xl font-bold text-white mt-1 block">{requests.length}</span>
+        <div className="bg-white p-4 rounded-2xl border border-[#B69B7D]/45 shadow-sm">
+          <span className="text-[10px] uppercase tracking-wider text-[#8E7356] block font-semibold">Total Inquiries</span>
+          <span className="font-display text-2xl font-bold text-[#30231F] mt-1 block">{requests.length}</span>
         </div>
-        <div className="bg-[#0c2c25] p-4 rounded-2xl border border-amber-500/30">
-          <span className="text-[10px] uppercase tracking-wider text-amber-400 block font-semibold">Pending Review</span>
-          <span className="font-display text-2xl font-bold text-amber-300 mt-1 block">{pendingCount}</span>
+        <div className="bg-white p-4 rounded-2xl border border-amber-300/70 shadow-sm">
+          <span className="text-[10px] uppercase tracking-wider text-amber-700 block font-semibold">Pending Review</span>
+          <span className="font-display text-2xl font-bold text-amber-800 mt-1 block">{pendingCount}</span>
         </div>
-        <div className="bg-[#0c2c25] p-4 rounded-2xl border border-purple-500/30">
+        <div className="bg-white p-4 rounded-2xl border border-purple-300/70 shadow-sm">
           <span className="text-[10px] uppercase tracking-wider text-purple-400 block font-semibold">Price Quoted</span>
           <span className="font-display text-2xl font-bold text-purple-300 mt-1 block">{quotedCount}</span>
         </div>
-        <div className="bg-[#0c2c25] p-4 rounded-2xl border border-emerald-500/30">
-          <span className="text-[10px] uppercase tracking-wider text-emerald-400 block font-semibold">Approved</span>
-          <span className="font-display text-2xl font-bold text-emerald-300 mt-1 block">{approvedCount}</span>
+        <div className="bg-white p-4 rounded-2xl border border-[#B8D4BE] shadow-sm">
+          <span className="text-[10px] uppercase tracking-wider text-[#2F5A39] block font-semibold">Approved</span>
+          <span className="font-display text-2xl font-bold text-[#2F5A39] mt-1 block">{approvedCount}</span>
         </div>
-        <div className="bg-[#0c2c25] p-4 rounded-2xl border border-teal-500/30">
-          <span className="text-[10px] uppercase tracking-wider text-teal-400 block font-semibold">In Production</span>
-          <span className="font-display text-2xl font-bold text-teal-300 mt-1 block">{inProdCount}</span>
+        <div className="bg-white p-4 rounded-2xl border border-[#C87552]/40 shadow-sm">
+          <span className="text-[10px] uppercase tracking-wider text-[#B05E3D] block font-semibold">In Production</span>
+          <span className="font-display text-2xl font-bold text-[#C87552] mt-1 block">{inProdCount}</span>
         </div>
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="bg-[#0c2c25] p-4 sm:p-5 rounded-2xl border border-[#c5a059]/20 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+      <div className="bg-white p-4 sm:p-5 rounded-2xl border border-[#B69B7D]/45 shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
         {/* Search */}
         <div className="relative flex-1">
           <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -318,18 +318,18 @@ export const AdminCustomRequestsList: React.FC = () => {
             placeholder="Search by customer name, phone, request ID, or product..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#071915] border border-[#0f3830] text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#c5a059]"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
           />
         </div>
 
         {/* Filter Selectors */}
         <div className="flex flex-wrap items-center gap-3">
           {/* Type Filter */}
-          <div className="flex items-center gap-1.5 bg-[#071915] p-1 rounded-xl border border-[#0f3830] text-xs">
+          <div className="flex items-center gap-1.5 bg-[#F9F5EE] p-1 rounded-xl border border-[#B69B7D]/45 text-xs">
             <button
               onClick={() => setTypeFilter('all')}
               className={`px-3 py-1.5 rounded-lg transition-colors ${
-                typeFilter === 'all' ? 'bg-[#c5a059] text-[#071915] font-bold' : 'text-neutral-400 hover:text-white'
+                typeFilter === 'all' ? 'bg-[#C87552] text-white font-bold shadow-sm' : 'text-[#56443E] hover:text-[#30231F]'
               }`}
             >
               All Types
@@ -337,7 +337,7 @@ export const AdminCustomRequestsList: React.FC = () => {
             <button
               onClick={() => setTypeFilter('existing_product')}
               className={`px-3 py-1.5 rounded-lg transition-colors ${
-                typeFilter === 'existing_product' ? 'bg-[#c5a059] text-[#071915] font-bold' : 'text-neutral-400 hover:text-white'
+                typeFilter === 'existing_product' ? 'bg-[#C87552] text-white font-bold shadow-sm' : 'text-[#56443E] hover:text-[#30231F]'
               }`}
             >
               Existing Catalog
@@ -345,7 +345,7 @@ export const AdminCustomRequestsList: React.FC = () => {
             <button
               onClick={() => setTypeFilter('new_custom_design')}
               className={`px-3 py-1.5 rounded-lg transition-colors ${
-                typeFilter === 'new_custom_design' ? 'bg-[#c5a059] text-[#071915] font-bold' : 'text-neutral-400 hover:text-white'
+                typeFilter === 'new_custom_design' ? 'bg-[#C87552] text-white font-bold shadow-sm' : 'text-[#56443E] hover:text-[#30231F]'
               }`}
             >
               New Bespoke
@@ -356,7 +356,7 @@ export const AdminCustomRequestsList: React.FC = () => {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-3.5 py-2 rounded-xl bg-[#071915] border border-[#0f3830] text-xs text-white focus:outline-none focus:border-[#c5a059]"
+            className="px-3.5 py-2 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
           >
             <option value="all">All Statuses</option>
             {ALL_STATUSES.map((st) => (
@@ -369,11 +369,11 @@ export const AdminCustomRequestsList: React.FC = () => {
       </div>
 
       {/* Main Table / Requests List */}
-      <div className="bg-[#0c2c25] rounded-3xl border border-[#c5a059]/20 overflow-hidden shadow-xl">
+      <div className="bg-white rounded-3xl border border-[#B69B7D]/45 overflow-hidden shadow-sm">
         {filteredRequests.length === 0 ? (
-          <div className="p-12 text-center text-neutral-400">
-            <Sparkles className="w-10 h-10 text-neutral-600 mx-auto mb-3" />
-            <h4 className="font-display text-sm font-bold text-white uppercase tracking-wider">
+          <div className="p-12 text-center text-[#8E7356]">
+            <Sparkles className="w-10 h-10 text-[#B69B7D] mx-auto mb-3" />
+            <h4 className="font-display text-sm font-bold text-[#30231F] uppercase tracking-wider">
               No Custom Requests Found
             </h4>
             <p className="text-xs text-neutral-500 mt-1">
@@ -385,7 +385,7 @@ export const AdminCustomRequestsList: React.FC = () => {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#071915] text-[#dfbe7e] uppercase tracking-wider text-[10px] font-mono border-b border-[#0f3830]">
+              <thead className="bg-[#F9F5EE] text-[#8E7356] uppercase tracking-wider text-[10px] font-mono border-b border-[#B69B7D]/30">
                 <tr>
                   <th className="py-4 px-6">Request ID</th>
                   <th className="py-4 px-6">Client Info</th>
@@ -396,7 +396,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                   <th className="py-4 px-6 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#0f3830] text-neutral-300">
+              <tbody className="divide-y divide-[#B69B7D]/25 text-[#56443E]">
                 {filteredRequests.map((req) => {
                   const statusBadge = STATUS_CONFIG[req.status] || STATUS_CONFIG.Pending;
                   const isExisting = req.request_type === 'existing_product';
@@ -404,27 +404,27 @@ export const AdminCustomRequestsList: React.FC = () => {
                   return (
                     <tr
                       key={req.id}
-                      className="hover:bg-[#0e352d]/60 transition-colors cursor-pointer"
+                      className="hover:bg-[#F9F5EE] transition-colors cursor-pointer"
                       onClick={() => openManageModal(req)}
                     >
                       {/* Request ID & Date */}
                       <td className="py-4 px-6 whitespace-nowrap">
-                        <span className="font-mono font-bold text-white block">
+                        <span className="font-mono font-bold text-[#30231F] block">
                           {req.request_number}
                         </span>
-                        <span className="text-[10px] text-neutral-400 flex items-center gap-1 mt-0.5">
-                          <Calendar className="w-3 h-3 text-[#c5a059]" />
+                        <span className="text-[10px] text-[#8E7356] flex items-center gap-1 mt-0.5">
+                          <Calendar className="w-3 h-3 text-[#C87552]" />
                           {formatDate(req.created_at)}
                         </span>
                       </td>
 
                       {/* Client Info */}
                       <td className="py-4 px-6">
-                        <span className="font-semibold text-white block">
+                        <span className="font-semibold text-[#30231F] block">
                           {req.customer_name}
                         </span>
-                        <span className="text-neutral-400 text-[11px] flex items-center gap-1 mt-0.5">
-                          <Phone className="w-3 h-3 text-[#dfbe7e]" />
+                        <span className="text-[#8E7356] text-[11px] flex items-center gap-1 mt-0.5">
+                          <Phone className="w-3 h-3 text-[#C87552]" />
                           {req.customer_phone}
                         </span>
                       </td>
@@ -436,28 +436,28 @@ export const AdminCustomRequestsList: React.FC = () => {
                             <img
                               src={req.product_image}
                               alt=""
-                              className="w-10 h-10 rounded-lg object-cover border border-[#0f3830] shrink-0"
+                              className="w-10 h-10 rounded-lg object-cover border border-[#B69B7D]/40 shrink-0"
                             />
                           ) : req.reference_image_url ? (
                             <img
                               src={req.reference_image_url}
                               alt=""
-                              className="w-10 h-10 rounded-lg object-cover border border-[#0f3830] shrink-0"
+                              className="w-10 h-10 rounded-lg object-cover border border-[#B69B7D]/40 shrink-0"
                             />
                           ) : (
-                            <div className="w-10 h-10 rounded-lg bg-[#071915] border border-[#0f3830] flex items-center justify-center text-[#dfbe7e] shrink-0">
+                            <div className="w-10 h-10 rounded-lg bg-[#F9F5EE] border border-[#B69B7D]/45 flex items-center justify-center text-[#C87552] shrink-0">
                               <Sparkles className="w-4 h-4" />
                             </div>
                           )}
                           <div className="min-w-0 max-w-[200px]">
-                            <span className="font-medium text-white truncate block">
+                            <span className="font-medium text-[#30231F] truncate block">
                               {req.product_name}
                             </span>
                             <span
                               className={`text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded-full inline-block mt-0.5 ${
                                 isExisting
-                                  ? 'bg-amber-900/40 text-amber-300 border border-amber-700/40'
-                                  : 'bg-emerald-900/40 text-emerald-300 border border-emerald-700/40'
+                                  ? 'bg-[#F4EBDD] text-[#8E7356] border border-[#B69B7D]/50'
+                                  : 'bg-[#C87552]/12 text-[#B05E3D] border border-[#C87552]/35'
                               }`}
                             >
                               {isExisting ? 'Catalog Custom' : 'New Bespoke'}
@@ -468,10 +468,10 @@ export const AdminCustomRequestsList: React.FC = () => {
 
                       {/* Palette & Specs */}
                       <td className="py-4 px-6 max-w-[220px]">
-                        <span className="text-neutral-200 block truncate font-medium">
+                        <span className="text-[#30231F] block truncate font-medium">
                           {req.customization_details?.colors || 'Standard'}
                         </span>
-                        <span className="text-neutral-400 text-[10px] block truncate mt-0.5">
+                        <span className="text-[#8E7356] text-[10px] block truncate mt-0.5">
                           {req.customization_details?.size || 'Custom size'} • Qty: {req.quantity}
                         </span>
                       </td>
@@ -488,7 +488,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                       {/* Final Quoted Price */}
                       <td className="py-4 px-6 whitespace-nowrap">
                         {req.final_price ? (
-                          <span className="font-display font-bold text-[#dfbe7e] text-sm">
+                          <span className="font-display font-bold text-[#30231F] text-sm">
                             {formatCurrency(req.final_price)}
                           </span>
                         ) : (
@@ -497,7 +497,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                           </span>
                         )}
                         {req.estimated_delivery && (
-                          <span className="text-[10px] text-neutral-400 block mt-0.5 truncate max-w-[140px]">
+                          <span className="text-[10px] text-[#8E7356] block mt-0.5 truncate max-w-[140px]">
                             {req.estimated_delivery}
                           </span>
                         )}
@@ -518,7 +518,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                           </button>
                           <button
                             onClick={() => openManageModal(req)}
-                            className="px-3 py-1.5 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-[#071915] text-xs font-bold uppercase tracking-wider transition-colors"
+                            className="px-3 py-1.5 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-white text-xs font-bold uppercase tracking-wider transition-colors"
                           >
                             Manage
                           </button>
@@ -536,11 +536,11 @@ export const AdminCustomRequestsList: React.FC = () => {
       {/* MANAGE CUSTOM REQUEST MODAL */}
       {selectedRequest && (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-fadeIn">
-          <div className="relative w-full max-w-3xl bg-[#0c2c25] rounded-3xl shadow-2xl border border-[#c5a059]/40 overflow-hidden my-8 max-h-[92vh] flex flex-col text-white">
+          <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-[#B69B7D]/50 overflow-hidden my-8 max-h-[92vh] flex flex-col text-[#30231F]">
             {/* Modal Header */}
-            <div className="bg-[#071915] px-6 py-5 flex items-center justify-between border-b border-[#0f3830] shrink-0">
+            <div className="bg-[#30231F] px-6 py-5 flex items-center justify-between border-b border-[#B69B7D]/40 shrink-0 text-[#F4EBDD]">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#0b3b33] border border-[#c5a059] flex items-center justify-center text-[#dfbe7e] shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-[#221815] border border-[#B69B7D] flex items-center justify-center text-[#C87552] shadow-sm">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
@@ -556,7 +556,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                       {selectedRequest.status}
                     </span>
                   </div>
-                  <p className="text-[10px] text-neutral-400 font-mono mt-0.5">
+                  <p className="text-[10px] text-[#B69B7D] font-mono mt-0.5">
                     Submitted on {formatDateTime(selectedRequest.created_at)}
                   </p>
                 </div>
@@ -564,7 +564,7 @@ export const AdminCustomRequestsList: React.FC = () => {
 
               <button
                 onClick={closeManageModal}
-                className="p-2 rounded-full text-neutral-400 hover:text-white hover:bg-white/10 transition-colors"
+                className="p-2 rounded-full text-[#F4EBDD]/75 hover:text-white hover:bg-white/10 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -573,22 +573,22 @@ export const AdminCustomRequestsList: React.FC = () => {
             {/* Modal Scrollable Body */}
             <div className="p-6 sm:p-8 overflow-y-auto flex-1 space-y-6 text-xs">
               {/* Customer Contact & Quick WhatsApp Action Banner */}
-              <div className="bg-[#071915] rounded-2xl p-4 sm:p-5 border border-[#0f3830] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="bg-[#F9F5EE] rounded-2xl p-4 sm:p-5 border border-[#B69B7D]/45 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
-                  <span className="text-[10px] uppercase tracking-wider text-[#dfbe7e] font-bold block">
+                  <span className="text-[10px] uppercase tracking-wider text-[#8E7356] font-bold block">
                     Client Details
                   </span>
-                  <h4 className="font-display text-base font-bold text-white">
+                  <h4 className="font-display text-base font-bold text-[#30231F]">
                     {selectedRequest.customer_name}
                   </h4>
-                  <div className="flex flex-wrap items-center gap-4 text-neutral-300 text-xs pt-1">
+                  <div className="flex flex-wrap items-center gap-4 text-[#56443E] text-xs pt-1">
                     <span className="flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-[#25D366]" />
                       <strong>{selectedRequest.customer_phone}</strong>
                     </span>
                     {selectedRequest.customer_email && (
                       <span className="flex items-center gap-1.5">
-                        <Mail className="w-3.5 h-3.5 text-[#dfbe7e]" />
+                        <Mail className="w-3.5 h-3.5 text-[#C87552]" />
                         <span>{selectedRequest.customer_email}</span>
                       </span>
                     )}
@@ -606,59 +606,59 @@ export const AdminCustomRequestsList: React.FC = () => {
               </div>
 
               {/* Commission Specifications */}
-              <div className="bg-[#071915] rounded-2xl p-5 border border-[#0f3830] space-y-3">
-                <span className="text-[10px] uppercase tracking-wider text-[#dfbe7e] font-bold block">
+              <div className="bg-[#F9F5EE] rounded-2xl p-5 border border-[#B69B7D]/45 space-y-3">
+                <span className="text-[10px] uppercase tracking-wider text-[#8E7356] font-bold block">
                   Artisan Specifications
                 </span>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-3 border-b border-[#0f3830]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-3 border-b border-[#B69B7D]/30">
                   <div>
-                    <span className="text-neutral-400 block text-[10px]">Product / Commission Title:</span>
-                    <span className="font-bold text-white text-sm">{selectedRequest.product_name}</span>
+                    <span className="text-[#8E7356] block text-[10px]">Product / Commission Title:</span>
+                    <span className="font-bold text-[#30231F] text-sm">{selectedRequest.product_name}</span>
                   </div>
                   <div>
-                    <span className="text-neutral-400 block text-[10px]">Quantity:</span>
-                    <span className="font-bold text-white text-sm">{selectedRequest.quantity} Unit(s)</span>
+                    <span className="text-[#8E7356] block text-[10px]">Quantity:</span>
+                    <span className="font-bold text-[#30231F] text-sm">{selectedRequest.quantity} Unit(s)</span>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-3 border-b border-[#0f3830]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-3 border-b border-[#B69B7D]/30">
                   <div>
-                    <span className="text-neutral-400 block text-[10px]">Selected Colors:</span>
-                    <span className="font-semibold text-white">
+                    <span className="text-[#8E7356] block text-[10px]">Selected Colors:</span>
+                    <span className="font-semibold text-[#30231F]">
                       {selectedRequest.customization_details?.colors || 'Default'}
                     </span>
                   </div>
                   <div>
-                    <span className="text-neutral-400 block text-[10px]">Requested Dimensions:</span>
-                    <span className="font-semibold text-white">
+                    <span className="text-[#8E7356] block text-[10px]">Requested Dimensions:</span>
+                    <span className="font-semibold text-[#30231F]">
                       {selectedRequest.customization_details?.size || 'Standard'}
                     </span>
                   </div>
                 </div>
 
                 {selectedRequest.customization_details?.custom_text && (
-                  <div className="pb-3 border-b border-[#0f3830]">
-                    <span className="text-neutral-400 block text-[10px]">Custom Inscription / Name:</span>
-                    <span className="font-serif-luxury text-sm text-[#dfbe7e]">
+                  <div className="pb-3 border-b border-[#B69B7D]/30">
+                    <span className="text-[#8E7356] block text-[10px]">Custom Inscription / Name:</span>
+                    <span className="font-serif-luxury text-sm text-[#C87552]">
                       "{selectedRequest.customization_details.custom_text}"
                     </span>
                   </div>
                 )}
 
                 {selectedRequest.customization_details?.design_preferences && (
-                  <div className="pb-3 border-b border-[#0f3830]">
-                    <span className="text-neutral-400 block text-[10px]">Creative Vision / Design Preferences:</span>
-                    <p className="text-neutral-200 mt-0.5 leading-relaxed bg-[#0c2c25] p-3 rounded-xl border border-[#0f3830]">
+                  <div className="pb-3 border-b border-[#B69B7D]/30">
+                    <span className="text-[#8E7356] block text-[10px]">Creative Vision / Design Preferences:</span>
+                    <p className="text-[#30231F] mt-0.5 leading-relaxed bg-white p-3 rounded-xl border border-[#B69B7D]/40">
                       {selectedRequest.customization_details.design_preferences}
                     </p>
                   </div>
                 )}
 
                 {selectedRequest.customization_details?.additional_notes && (
-                  <div className="pb-3 border-b border-[#0f3830]">
-                    <span className="text-neutral-400 block text-[10px]">Special Instructions:</span>
-                    <p className="text-neutral-300 mt-0.5">
+                  <div className="pb-3 border-b border-[#B69B7D]/30">
+                    <span className="text-[#8E7356] block text-[10px]">Special Instructions:</span>
+                    <p className="text-[#56443E] mt-0.5">
                       {selectedRequest.customization_details.additional_notes}
                     </p>
                   </div>
@@ -667,11 +667,11 @@ export const AdminCustomRequestsList: React.FC = () => {
                 {/* Reference Images */}
                 {(selectedRequest.reference_image_url || selectedRequest.product_image) && (
                   <div className="pt-2">
-                    <span className="text-neutral-400 block text-[10px] mb-2">Attached Imagery:</span>
+                    <span className="text-[#8E7356] block text-[10px] mb-2">Attached Imagery:</span>
                     <div className="flex items-center gap-4">
                       {selectedRequest.reference_image_url && (
                         <div className="space-y-1">
-                          <span className="text-[9px] text-neutral-400 uppercase tracking-wider block">Customer Reference:</span>
+                          <span className="text-[9px] text-[#8E7356] uppercase tracking-wider block">Customer Reference:</span>
                           <a
                             href={selectedRequest.reference_image_url}
                             target="_blank"
@@ -681,7 +681,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                             <img
                               src={selectedRequest.reference_image_url}
                               alt="Customer Reference"
-                              className="w-24 h-24 rounded-xl object-cover border border-[#c5a059]/40 group-hover:opacity-80 transition-opacity"
+                              className="w-24 h-24 rounded-xl object-cover border border-[#B69B7D]/50 group-hover:opacity-80 transition-opacity"
                             />
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 rounded-xl transition-opacity">
                               <ExternalLink className="w-5 h-5 text-white" />
@@ -691,11 +691,11 @@ export const AdminCustomRequestsList: React.FC = () => {
                       )}
                       {selectedRequest.product_image && (
                         <div className="space-y-1">
-                          <span className="text-[9px] text-neutral-400 uppercase tracking-wider block">Catalog Product:</span>
+                          <span className="text-[9px] text-[#8E7356] uppercase tracking-wider block">Catalog Product:</span>
                           <img
                             src={selectedRequest.product_image}
                             alt="Catalog Product"
-                            className="w-24 h-24 rounded-xl object-cover border border-[#0f3830]"
+                            className="w-24 h-24 rounded-xl object-cover border border-[#B69B7D]/30"
                           />
                         </div>
                       )}
@@ -706,23 +706,23 @@ export const AdminCustomRequestsList: React.FC = () => {
 
               {/* Order Processing Flow: Converted Order Status or Move to Active Orders */}
               {selectedRequest.converted_order_number ? (
-                <div className="p-4 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="p-4 rounded-2xl bg-[#EEF5EF] border border-[#B8D4BE] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-xl bg-emerald-900/60 text-emerald-400">
+                    <div className="p-2 rounded-xl bg-white border border-[#B8D4BE] text-[#2F5A39]">
                       <ShoppingBag className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-white block">
+                      <span className="text-xs font-bold text-[#30231F] block">
                         Commission Converted to Official Store Order
                       </span>
-                      <span className="text-[11px] text-emerald-300 font-mono">
+                      <span className="text-[11px] text-[#2F5A39] font-semibold font-mono">
                         Store Order #{selectedRequest.converted_order_number}
                       </span>
                     </div>
                   </div>
                   <Link
                     to={`/admin/orders/${selectedRequest.converted_order_id}`}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-display text-[10px] font-bold uppercase tracking-wider shrink-0 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#2F6846] hover:bg-[#245136] text-white font-display text-[10px] font-bold uppercase tracking-wider shrink-0 transition-colors"
                   >
                     <span>View In Orders</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -730,13 +730,13 @@ export const AdminCustomRequestsList: React.FC = () => {
                 </div>
               ) : (
                 (selectedRequest.status === 'Approved' || editStatus === 'Approved') && (
-                  <div className="p-4 rounded-2xl bg-[#0b3b33] border border-[#c5a059]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="p-4 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="space-y-0.5">
-                      <span className="text-xs font-bold text-[#dfbe7e] flex items-center gap-1.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#c5a059]" />
+                      <span className="text-xs font-bold text-[#30231F] flex items-center gap-1.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#C87552]" />
                         <span>Client Accepted Quotation</span>
                       </span>
-                      <p className="text-[11px] text-neutral-300">
+                      <p className="text-[11px] text-[#56443E]">
                         Move this approved commission into active store orders to start studio crafting and tracking.
                       </p>
                     </div>
@@ -744,7 +744,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                       type="button"
                       onClick={handleConvertToOrder}
                       disabled={isConvertingToOrder || !editPrice}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-[#071915] font-display text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg shrink-0 transition-all disabled:opacity-50"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg shrink-0 transition-all disabled:opacity-50"
                     >
                       <ShoppingBag className="w-4 h-4" />
                       <span>{isConvertingToOrder ? 'Processing...' : 'Move to Active Orders'}</span>
@@ -755,23 +755,23 @@ export const AdminCustomRequestsList: React.FC = () => {
 
               {/* ADMIN CONTROLS FORM: FINAL PRICE & DELIVERY */}
 
-              <form onSubmit={handleSaveAdminUpdates} className="bg-[#071915] rounded-2xl p-5 border border-[#c5a059]/40 space-y-4">
-                <div className="flex items-center justify-between pb-2 border-b border-[#0f3830]">
-                  <span className="text-xs uppercase tracking-wider text-[#dfbe7e] font-bold flex items-center gap-1.5">
-                    <Edit3 className="w-4 h-4 text-[#c5a059]" />
+              <form onSubmit={handleSaveAdminUpdates} className="bg-[#F9F5EE] rounded-2xl p-5 border border-[#B69B7D]/50 space-y-4">
+                <div className="flex items-center justify-between pb-2 border-b border-[#B69B7D]/30">
+                  <span className="text-xs uppercase tracking-wider text-[#30231F] font-bold flex items-center gap-1.5">
+                    <Edit3 className="w-4 h-4 text-[#C87552]" />
                     <span>Business Owner & Pricing Controls</span>
                   </span>
-                  <span className="text-[10px] text-neutral-400">Strictly Admin Controlled</span>
+                  <span className="text-[10px] text-[#8E7356]">Strictly Admin Controlled</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Final Quoted Price */}
                   <div>
-                    <label className="block text-xs font-semibold text-neutral-200 mb-1.5">
+                    <label className="block text-xs font-semibold text-[#30231F] mb-1.5">
                       Final Agreed Price (₹) *
                     </label>
                     <div className="relative">
-                      <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 font-bold">
+                      <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8E7356] font-bold">
                         ₹
                       </span>
                       <input
@@ -779,17 +779,17 @@ export const AdminCustomRequestsList: React.FC = () => {
                         placeholder="e.g. 5499"
                         value={editPrice}
                         onChange={(e) => setEditPrice(e.target.value)}
-                        className="w-full pl-8 pr-4 py-2.5 rounded-xl bg-[#0c2c25] border border-[#0f3830] text-sm font-bold text-[#dfbe7e] focus:outline-none focus:border-[#c5a059]"
+                        className="w-full pl-8 pr-4 py-2.5 rounded-xl bg-white border border-[#B69B7D]/50 text-sm font-bold text-[#30231F] focus:outline-none focus:border-[#C87552]"
                       />
                     </div>
-                    <span className="text-[10px] text-neutral-400 mt-1 block">
+                    <span className="text-[10px] text-[#8E7356] mt-1 block">
                       Customers cannot modify this price.
                     </span>
                   </div>
 
                   {/* Estimated Delivery Time */}
                   <div>
-                    <label className="block text-xs font-semibold text-neutral-200 mb-1.5">
+                    <label className="block text-xs font-semibold text-[#30231F] mb-1.5">
                       Estimated Delivery / Crafting Time
                     </label>
                     <input
@@ -797,20 +797,20 @@ export const AdminCustomRequestsList: React.FC = () => {
                       placeholder="e.g. 5-7 days curing + 3 days express transit"
                       value={editDelivery}
                       onChange={(e) => setEditDelivery(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl bg-[#0c2c25] border border-[#0f3830] text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                     />
                   </div>
                 </div>
 
                 {/* Status Selector */}
                 <div>
-                  <label className="block text-xs font-semibold text-neutral-200 mb-1.5">
+                  <label className="block text-xs font-semibold text-[#30231F] mb-1.5">
                     Request Lifecycle Status
                   </label>
                   <select
                     value={editStatus}
                     onChange={(e) => setEditStatus(e.target.value as CustomRequestStatus)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#0c2c25] border border-[#0f3830] text-xs font-semibold text-white focus:outline-none focus:border-[#c5a059]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#B69B7D]/50 text-xs font-semibold text-[#30231F] focus:outline-none focus:border-[#C87552]"
                   >
                     {ALL_STATUSES.map((st) => (
                       <option key={st} value={st}>
@@ -822,7 +822,7 @@ export const AdminCustomRequestsList: React.FC = () => {
 
                 {/* Internal Admin Notes */}
                 <div>
-                  <label className="block text-xs font-semibold text-neutral-200 mb-1.5">
+                  <label className="block text-xs font-semibold text-[#30231F] mb-1.5">
                     Internal Atelier Notes (Private to Admin)
                   </label>
                   <textarea
@@ -830,7 +830,7 @@ export const AdminCustomRequestsList: React.FC = () => {
                     placeholder="e.g. Customer approved on call; using deep green pigment #4 and natural quartz rock..."
                     value={editAdminNotes}
                     onChange={(e) => setEditAdminNotes(e.target.value)}
-                    className="w-full p-3 rounded-xl bg-[#0c2c25] border border-[#0f3830] text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                    className="w-full p-3 rounded-xl bg-white border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                   />
                 </div>
 
@@ -838,14 +838,14 @@ export const AdminCustomRequestsList: React.FC = () => {
                   <button
                     type="button"
                     onClick={closeManageModal}
-                    className="px-5 py-2.5 rounded-xl text-neutral-400 hover:text-white text-xs font-semibold"
+                    className="px-5 py-2.5 rounded-xl text-[#8E7356] hover:text-[#30231F] text-xs font-semibold"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isSaving}
-                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-[#071915] font-display text-xs font-bold uppercase tracking-wider transition-colors disabled:opacity-50"
+                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider transition-colors disabled:opacity-50"
                   >
                     <span>{isSaving ? 'Saving...' : 'Save Changes'}</span>
                   </button>

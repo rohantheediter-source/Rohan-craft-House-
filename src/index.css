@@ -3,9 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-espresso: #30231F;
+    --color-espresso-hover: #221815;
+    --color-espresso-soft: #56443E;
+    --color-terracotta: #C87552;
+    --color-terracotta-hover: #B05E3D;
+    --color-champagne: #F4EBDD;
+    --color-champagne-soft: #F9F5EE;
+    --color-taupe: #B69B7D;
+    --color-taupe-deep: #8E7356;
+    --color-white: #FFFFFF;
+  }
+
   html {
     scroll-behavior: smooth;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: var(--color-champagne);
+    color: var(--color-espresso);
   }
 
   h1, h2, h3, .font-display {
@@ -18,49 +33,50 @@
   }
 }
 
-/* Custom Luxury Scrollbar */
+/* Custom Earthy Luxury Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1ede6;
+  background: #F4EBDD;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c5a059;
+  background: #B69B7D;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9d7c38;
+  background: #C87552;
 }
 
-/* Glassmorphism & Luxury Elements */
+/* Glassmorphism & Earthy Luxury Elements */
 .glass-luxury {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(197, 160, 89, 0.2);
+  border: 1px solid rgba(182, 155, 125, 0.35);
 }
 
 .glass-dark {
-  background: rgba(14, 23, 20, 0.88);
+  background: rgba(48, 35, 31, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(197, 160, 89, 0.3);
+  border: 1px solid rgba(182, 155, 125, 0.45);
 }
 
-.gold-gradient-text {
-  background: linear-gradient(135deg, #dfbe7e 0%, #c5a059 50%, #9d7c38 100%);
+.gold-gradient-text,
+.earthy-gradient-text {
+  background: linear-gradient(135deg, #30231F 0%, #8E7356 48%, #C87552 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-border-glow {
-  box-shadow: 0 0 20px rgba(197, 160, 89, 0.25);
-  border: 1px solid rgba(197, 160, 89, 0.4);
+  box-shadow: 0 12px 28px -8px rgba(48, 35, 31, 0.14);
+  border: 1px solid rgba(182, 155, 125, 0.5);
 }
 
 /* Image zoom hover effect */

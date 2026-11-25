@@ -171,19 +171,19 @@ export const AdminProductForm: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-[#0f3830]">
+      <div className="flex items-center justify-between pb-4 border-b border-[#B69B7D]/35">
         <div className="flex items-center gap-3">
           <Link
             to="/admin/products"
-            className="p-2 rounded-xl bg-[#0b241e] text-neutral-400 hover:text-white border border-[#c5a059]/30"
+            className="p-2 rounded-xl bg-white text-[#56443E] hover:text-[#C87552] border border-[#B69B7D]/50 shadow-sm"
           >
             <ArrowLeft className="w-4 h-4" />
           </Link>
           <div>
-            <span className="text-[10px] uppercase tracking-widest text-[#dfbe7e] font-mono">
+            <span className="text-[10px] uppercase tracking-widest text-[#8E7356] font-mono">
               {isEditing ? 'UPDATE MASTERPIECE' : 'NEW STUDIO CREATION'}
             </span>
-            <h1 className="font-display text-2xl font-bold text-white">
+            <h1 className="font-display text-2xl font-bold text-[#30231F]">
               {isEditing ? `Edit: ${name}` : 'Add New Product to Catalog'}
             </h1>
           </div>
@@ -192,13 +192,13 @@ export const AdminProductForm: React.FC = () => {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Main Details Card */}
-        <div className="bg-[#0b241e] border border-[#c5a059]/30 rounded-2xl p-6 sm:p-8 space-y-4">
-          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#dfbe7e] mb-4 pb-2 border-b border-[#0f3830]">
+        <div className="bg-white border border-[#B69B7D]/45 rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#30231F] mb-4 pb-2 border-b border-[#B69B7D]/30">
             Basic Information
           </h2>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Artwork Title *
             </label>
             <input
@@ -207,13 +207,13 @@ export const AdminProductForm: React.FC = () => {
               onChange={(e) => handleNameChange(e.target.value)}
               required
               placeholder="e.g. Celestial Nebula Geode Wall Clock"
-              className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+              className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
             />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 URL Slug *
               </label>
               <input
@@ -221,19 +221,19 @@ export const AdminProductForm: React.FC = () => {
                 value={slug}
                 onChange={(e) => setSlug(e.target.value)}
                 required
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-neutral-300 focus:outline-none focus:border-[#c5a059]"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Artisan Discipline / Category *
               </label>
               <select
                 value={categoryId}
                 onChange={(e) => setCategoryId(e.target.value)}
                 required
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059] cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] cursor-pointer"
               >
                 {categories.map((c) => (
                   <option key={c.id} value={c.id}>
@@ -246,7 +246,7 @@ export const AdminProductForm: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Selling Price (INR ₹) *
               </label>
               <input
@@ -257,12 +257,12 @@ export const AdminProductForm: React.FC = () => {
                 onChange={(e) => setPrice(e.target.value)}
                 required
                 placeholder="4999"
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs font-bold text-[#dfbe7e] focus:outline-none focus:border-[#c5a059]"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs font-bold text-[#30231F] focus:outline-none focus:border-[#C87552]"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Compare-at Original Price (INR ₹)
               </label>
               <input
@@ -272,12 +272,12 @@ export const AdminProductForm: React.FC = () => {
                 value={compareAtPrice}
                 onChange={(e) => setCompareAtPrice(e.target.value)}
                 placeholder="6499"
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-neutral-400 focus:outline-none focus:border-[#c5a059]"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#56443E] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Stock Quantity *
               </label>
               <input
@@ -286,21 +286,21 @@ export const AdminProductForm: React.FC = () => {
                 value={stock}
                 onChange={(e) => setStock(e.target.value)}
                 required
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
               />
             </div>
           </div>
         </div>
 
         {/* Product Media & Image Upload */}
-        <div className="bg-[#0b241e] border border-[#c5a059]/30 rounded-2xl p-6 sm:p-8 space-y-4">
-          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#dfbe7e] mb-4 pb-2 border-b border-[#0f3830]">
+        <div className="bg-white border border-[#B69B7D]/45 rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#30231F] mb-4 pb-2 border-b border-[#B69B7D]/30">
             Product Imagery & Supabase Storage
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
             {/* Image Preview */}
-            <div className="relative aspect-square max-w-[200px] rounded-2xl overflow-hidden bg-[#071915] border border-neutral-700 flex items-center justify-center">
+            <div className="relative aspect-square max-w-[200px] rounded-2xl overflow-hidden bg-[#F9F5EE] border border-[#B69B7D]/45 flex items-center justify-center">
               {imageUrl ? (
                 <img
                   src={imageUrl}
@@ -318,11 +318,11 @@ export const AdminProductForm: React.FC = () => {
             {/* Upload & URL Input */}
             <div className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                   Upload Image File (Supabase Storage)
                 </label>
-                <label className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#071915] border border-dashed border-neutral-600 hover:border-[#c5a059] text-xs text-neutral-300 cursor-pointer transition-colors">
-                  <Upload className="w-4 h-4 text-[#dfbe7e]" />
+                <label className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#F9F5EE] border border-dashed border-[#B69B7D]/60 hover:border-[#C87552] text-xs text-[#30231F] cursor-pointer transition-colors">
+                  <Upload className="w-4 h-4 text-[#C87552]" />
                   <span>{isUploadingImage ? 'Uploading image...' : 'Choose JPG, PNG, or WebP'}</span>
                   <input
                     type="file"
@@ -335,7 +335,7 @@ export const AdminProductForm: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                   Or Image Path / Remote URL
                 </label>
                 <input
@@ -343,7 +343,7 @@ export const AdminProductForm: React.FC = () => {
                   value={imageUrl}
                   onChange={(e) => setImageUrl(e.target.value)}
                   placeholder="/images/products/..."
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-neutral-300 focus:outline-none focus:border-[#c5a059]"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
                 />
               </div>
             </div>
@@ -351,14 +351,14 @@ export const AdminProductForm: React.FC = () => {
         </div>
 
         {/* Specifications & Copy */}
-        <div className="bg-[#0b241e] border border-[#c5a059]/30 rounded-2xl p-6 sm:p-8 space-y-4">
-          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#dfbe7e] mb-4 pb-2 border-b border-[#0f3830]">
+        <div className="bg-white border border-[#B69B7D]/45 rounded-2xl p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#30231F] mb-4 pb-2 border-b border-[#B69B7D]/30">
             Artisan Specifications
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Dimensions
               </label>
               <input
@@ -366,25 +366,25 @@ export const AdminProductForm: React.FC = () => {
                 value={dimensions}
                 onChange={(e) => setDimensions(e.target.value)}
                 placeholder="16 inches diameter, 18mm thickness"
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
                 Materials
               </label>
               <input
                 type="text"
                 value={material}
                 onChange={(e) => setMaterial(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Description
             </label>
             <textarea
@@ -392,12 +392,12 @@ export const AdminProductForm: React.FC = () => {
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
               placeholder="Describe the resin clarity, natural inclusions, and overall artistic aura..."
-              className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+              className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Atelier Story / Craftsmanship Notes
             </label>
             <textarea
@@ -405,14 +405,14 @@ export const AdminProductForm: React.FC = () => {
               onChange={(e) => setStory(e.target.value)}
               rows={2}
               placeholder="Notes on the curing ritual, raw crystals, and botanical foraging..."
-              className="w-full px-4 py-2.5 rounded-xl bg-[#071915] border border-neutral-700 text-xs text-white focus:outline-none focus:border-[#c5a059]"
+              className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552]"
             />
           </div>
         </div>
 
         {/* Visibility & Badges */}
-        <div className="bg-[#0b241e] border border-[#c5a059]/30 rounded-2xl p-6 sm:p-8">
-          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#dfbe7e] mb-4 pb-2 border-b border-[#0f3830]">
+        <div className="bg-white border border-[#B69B7D]/45 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <h2 className="font-display text-sm font-bold uppercase tracking-wider text-[#30231F] mb-4 pb-2 border-b border-[#B69B7D]/30">
             Storefront Visibility & Badges
           </h2>
 
@@ -422,9 +422,9 @@ export const AdminProductForm: React.FC = () => {
                 type="checkbox"
                 checked={isActive}
                 onChange={(e) => setIsActive(e.target.checked)}
-                className="w-4 h-4 rounded text-[#c5a059] focus:ring-[#c5a059]"
+                className="w-4 h-4 rounded text-[#C87552] focus:ring-[#C87552] accent-[#C87552]"
               />
-              <span className="font-semibold text-neutral-300">Published / Active</span>
+              <span className="font-semibold text-[#30231F]">Published / Active</span>
             </label>
 
             <label className="flex items-center gap-2.5 cursor-pointer">
@@ -432,9 +432,9 @@ export const AdminProductForm: React.FC = () => {
                 type="checkbox"
                 checked={isFeatured}
                 onChange={(e) => setIsFeatured(e.target.checked)}
-                className="w-4 h-4 rounded text-[#c5a059] focus:ring-[#c5a059]"
+                className="w-4 h-4 rounded text-[#C87552] focus:ring-[#C87552] accent-[#C87552]"
               />
-              <span className="font-semibold text-neutral-300">Featured Atelier Piece</span>
+              <span className="font-semibold text-[#30231F]">Featured Atelier Piece</span>
             </label>
 
             <label className="flex items-center gap-2.5 cursor-pointer">
@@ -442,9 +442,9 @@ export const AdminProductForm: React.FC = () => {
                 type="checkbox"
                 checked={isBestseller}
                 onChange={(e) => setIsBestseller(e.target.checked)}
-                className="w-4 h-4 rounded text-[#c5a059] focus:ring-[#c5a059]"
+                className="w-4 h-4 rounded text-[#C87552] focus:ring-[#C87552] accent-[#C87552]"
               />
-              <span className="font-semibold text-neutral-300">Bestseller Badge</span>
+              <span className="font-semibold text-[#30231F]">Bestseller Badge</span>
             </label>
 
             <label className="flex items-center gap-2.5 cursor-pointer">
@@ -452,9 +452,9 @@ export const AdminProductForm: React.FC = () => {
                 type="checkbox"
                 checked={isNewArrival}
                 onChange={(e) => setIsNewArrival(e.target.checked)}
-                className="w-4 h-4 rounded text-[#c5a059] focus:ring-[#c5a059]"
+                className="w-4 h-4 rounded text-[#C87552] focus:ring-[#C87552] accent-[#C87552]"
               />
-              <span className="font-semibold text-neutral-300">New Arrival Badge</span>
+              <span className="font-semibold text-[#30231F]">New Arrival Badge</span>
             </label>
           </div>
         </div>
@@ -463,14 +463,14 @@ export const AdminProductForm: React.FC = () => {
         <div className="flex items-center justify-end gap-4 pt-4">
           <Link
             to="/admin/products"
-            className="px-6 py-3 rounded-xl border border-neutral-700 text-xs font-semibold text-neutral-300 hover:bg-[#0b241e]"
+            className="px-6 py-3 rounded-xl border border-[#B69B7D]/60 text-xs font-semibold text-[#30231F] hover:bg-[#F9F5EE]"
           >
             Cancel
           </Link>
           <button
             type="submit"
             disabled={isSaving}
-            className="flex items-center gap-2 px-8 py-3 rounded-xl bg-[#c5a059] hover:bg-[#dfbe7e] text-[#071915] font-display text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-gold-glow disabled:opacity-50"
+            className="flex items-center gap-2 px-8 py-3 rounded-xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider transition-all shadow-md disabled:opacity-50"
           >
             <Save className="w-4 h-4" />
             <span>{isSaving ? 'Committing to Database...' : isEditing ? 'Save Changes' : 'Publish Product'}</span>

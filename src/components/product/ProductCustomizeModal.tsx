@@ -176,25 +176,25 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-fadeIn">
-      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#c5a059]/40 overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#B69B7D]/60 overflow-hidden my-8 max-h-[90vh] flex flex-col">
         {/* Header Bar */}
-        <div className="bg-[#07241e] text-[#dfbe7e] px-6 py-4 flex items-center justify-between border-b border-[#c5a059]/30 shrink-0">
+        <div className="bg-[#30231F] text-[#F4EBDD] px-6 py-4 flex items-center justify-between border-b border-[#B69B7D]/40 shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#0b3b33] border border-[#c5a059] flex items-center justify-center text-[#dfbe7e] shadow-sm">
+            <div className="w-9 h-9 rounded-xl bg-[#221815] border border-[#B69B7D] flex items-center justify-center text-[#C87552] shadow-sm">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-display text-sm sm:text-base font-bold tracking-widest uppercase">
                 Bespoke Atelier Customization
               </h3>
-              <p className="text-[10px] text-neutral-300 tracking-wider uppercase font-mono">
+              <p className="text-[10px] text-[#B69B7D] tracking-wider uppercase font-mono">
                 {product.name}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
+            className="p-2 rounded-full text-[#F4EBDD]/75 hover:text-white hover:bg-white/10 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -206,21 +206,21 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
           {step === 'form' && (
             <form onSubmit={handleProceedToSummary} className="space-y-6">
               {/* Product Reference Card */}
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/45">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-16 h-16 rounded-xl object-cover border border-neutral-200 shadow-sm"
                 />
                 <div className="flex-1 min-w-0">
-                  <span className="text-[10px] uppercase tracking-wider text-[#856338] font-bold block">
+                  <span className="text-[10px] uppercase tracking-wider text-[#8E7356] font-bold block">
                     Base Model • {product.category_name}
                   </span>
                   <h4 className="font-display text-sm font-bold text-neutral-900 truncate">
                     {product.name}
                   </h4>
                   <div className="flex items-center gap-3 text-xs mt-0.5">
-                    <span className="font-bold text-[#0b3b33]">Catalog Base: {formatCurrency(product.price)}</span>
+                    <span className="font-bold text-[#30231F]">Catalog Base: {formatCurrency(product.price)}</span>
                     {selectedVariant && (
                       <span className="text-neutral-500">• {selectedVariant}</span>
                     )}
@@ -229,10 +229,10 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
               </div>
 
               {/* CRITICAL BUSINESS DISCLOSURE BANNER */}
-              <div className="p-4 rounded-2xl bg-amber-50/90 border border-amber-200/80 text-amber-900 text-xs flex items-start gap-3">
-                <Info className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+              <div className="p-4 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/60 text-[#30231F] text-xs flex items-start gap-3">
+                <Info className="w-4 h-4 text-[#C87552] shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <span className="font-bold block uppercase tracking-wider text-[11px] text-amber-800">
+                  <span className="font-bold block uppercase tracking-wider text-[11px] text-[#30231F]">
                     Artisan Pricing Approval Notice
                   </span>
                   <p className="leading-relaxed">
@@ -254,7 +254,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       placeholder="Your Full Name *"
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] focus:border-transparent outline-none bg-white"
+                      className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none bg-[#F9F5EE]"
                     />
                   </div>
                   <div>
@@ -264,7 +264,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       placeholder="WhatsApp Phone Number *"
                       value={customerPhone}
                       onChange={(e) => setCustomerPhone(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] focus:border-transparent outline-none bg-white"
+                      className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none bg-[#F9F5EE]"
                     />
                   </div>
                 </div>
@@ -274,7 +274,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                     placeholder="Email Address (Optional, for formal PDF quote)"
                     value={customerEmail}
                     onChange={(e) => setCustomerEmail(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] focus:border-transparent outline-none bg-white"
+                    className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none bg-[#F9F5EE]"
                   />
                 </div>
               </div>
@@ -282,7 +282,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
               {/* Section B: Color Selection */}
               <div className="space-y-2 pt-2">
                 <label className="block text-xs font-bold uppercase tracking-wider text-neutral-800 flex items-center gap-1.5">
-                  <Palette className="w-3.5 h-3.5 text-[#856338]" />
+                  <Palette className="w-3.5 h-3.5 text-[#8E7356]" />
                   <span>2. Preferred Color Palette</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -293,8 +293,8 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       onClick={() => setSelectedColor(palette)}
                       className={`px-3 py-2 rounded-xl text-left text-xs transition-all border ${
                         selectedColor === palette
-                          ? 'bg-[#0b3b33] text-[#dfbe7e] border-[#c5a059] font-bold shadow-sm'
-                          : 'bg-[#FAF8F5] text-neutral-700 border-neutral-200 hover:border-neutral-400'
+                          ? 'bg-[#C87552] text-white border-[#C87552] font-bold shadow-sm'
+                          : 'bg-[#F9F5EE] text-[#30231F] border-[#B69B7D]/45 hover:border-[#B69B7D]'
                       }`}
                     >
                       {palette}
@@ -306,14 +306,14 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                   placeholder="Or describe specific pigment / metallic flake shades..."
                   value={customColorText}
                   onChange={(e) => setCustomColorText(e.target.value)}
-                  className="w-full mt-2 px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                  className="w-full mt-2 px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                 />
               </div>
 
               {/* Section C: Dimensions / Size */}
               <div className="space-y-2 pt-2">
                 <label className="block text-xs font-bold uppercase tracking-wider text-neutral-800 flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-[#856338]" />
+                  <Layers className="w-3.5 h-3.5 text-[#8E7356]" />
                   <span>3. Preferred Size or Dimensions</span>
                 </label>
                 <input
@@ -327,15 +327,15 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                   }
                   value={preferredSize}
                   onChange={(e) => setPreferredSize(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                 />
               </div>
 
               {/* Product-Specific Customization Controls (Filtered by Product Category) */}
               {isClock && (
-                <div className="space-y-3 p-4 rounded-2xl bg-[#0b3b33]/5 border border-[#c5a059]/30">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#0b3b33] flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-[#856338]" />
+                <div className="space-y-3 p-4 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/50">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#30231F] flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#8E7356]" />
                     <span>Wall Clock Atelier Specifications</span>
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -346,7 +346,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       <select
                         value={clockHandsFinish}
                         onChange={(e) => setClockHandsFinish(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-neutral-300 text-xs bg-white text-neutral-800 focus:ring-2 focus:ring-[#0b3b33]"
+                        className="w-full px-3 py-2 rounded-xl border border-[#B69B7D]/50 text-xs bg-white text-[#30231F] focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552]"
                       >
                         <option>Silent Sweep • Polished 24K Gold Hands</option>
                         <option>Silent Sweep • Mirror Silver Hands</option>
@@ -360,7 +360,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       <select
                         value={clockDialStyle}
                         onChange={(e) => setClockDialStyle(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-neutral-300 text-xs bg-white text-neutral-800 focus:ring-2 focus:ring-[#0b3b33]"
+                        className="w-full px-3 py-2 rounded-xl border border-[#B69B7D]/50 text-xs bg-white text-[#30231F] focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552]"
                       >
                         <option>Roman Numerals (Gold Acrylic)</option>
                         <option>Minimalist Line Dash Markers</option>
@@ -373,9 +373,9 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
               )}
 
               {isJewelry && (
-                <div className="space-y-3 p-4 rounded-2xl bg-[#0b3b33]/5 border border-[#c5a059]/30">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#0b3b33] flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-[#856338]" />
+                <div className="space-y-3 p-4 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/50">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#30231F] flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-[#8E7356]" />
                     <span>Jewelry Setting & Botanical Inclusions</span>
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -386,7 +386,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       <select
                         value={jewelryFinding}
                         onChange={(e) => setJewelryFinding(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-neutral-300 text-xs bg-white text-neutral-800 focus:ring-2 focus:ring-[#0b3b33]"
+                        className="w-full px-3 py-2 rounded-xl border border-[#B69B7D]/50 text-xs bg-white text-[#30231F] focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552]"
                       >
                         <option>24K Gold-Plated Setting (Hypoallergenic)</option>
                         <option>925 Sterling Silver Setting</option>
@@ -400,7 +400,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       <select
                         value={botanicalInclusion}
                         onChange={(e) => setBotanicalInclusion(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-neutral-300 text-xs bg-white text-neutral-800 focus:ring-2 focus:ring-[#0b3b33]"
+                        className="w-full px-3 py-2 rounded-xl border border-[#B69B7D]/50 text-xs bg-white text-[#30231F] focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552]"
                       >
                         <option>Preserved Rose Petals & Gold Flakes</option>
                         <option>Baby's Breath (Gypsophila) & Silver Leaf</option>
@@ -413,9 +413,9 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
               )}
 
               {isPlatter && (
-                <div className="space-y-3 p-4 rounded-2xl bg-[#0b3b33]/5 border border-[#c5a059]/30">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#0b3b33] flex items-center gap-1.5">
-                    <Layers className="w-3.5 h-3.5 text-[#856338]" />
+                <div className="space-y-3 p-4 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/50">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#30231F] flex items-center gap-1.5">
+                    <Layers className="w-3.5 h-3.5 text-[#8E7356]" />
                     <span>Platter Rim & Hardware Finish</span>
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -426,7 +426,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       <select
                         value={platterEdgeTrim}
                         onChange={(e) => setPlatterEdgeTrim(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-neutral-300 text-xs bg-white text-neutral-800 focus:ring-2 focus:ring-[#0b3b33]"
+                        className="w-full px-3 py-2 rounded-xl border border-[#B69B7D]/50 text-xs bg-white text-[#30231F] focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552]"
                       >
                         <option>Hand-Gilded 24K Gold Leaf Rim</option>
                         <option>Raw Natural Agate Geode Edge</option>
@@ -441,7 +441,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                       <select
                         value={platterHandles}
                         onChange={(e) => setPlatterHandles(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl border border-neutral-300 text-xs bg-white text-neutral-800 focus:ring-2 focus:ring-[#0b3b33]"
+                        className="w-full px-3 py-2 rounded-xl border border-[#B69B7D]/50 text-xs bg-white text-[#30231F] focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552]"
                       >
                         <option>Polished Vintage Brass Handles</option>
                         <option>Natural Quartz Cluster Knob Handles</option>
@@ -456,7 +456,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
 
               <div className="space-y-2 pt-2">
                 <label className="block text-xs font-bold uppercase tracking-wider text-neutral-800 flex items-center gap-1.5">
-                  <FileText className="w-3.5 h-3.5 text-[#856338]" />
+                  <FileText className="w-3.5 h-3.5 text-[#8E7356]" />
                   <span>4. Custom Name, Monogram or Inscription</span>
                 </label>
                 <input
@@ -464,7 +464,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                   placeholder="e.g. 'The Kapoors • 2024' or couple initials in gold acrylic"
                   value={customText}
                   onChange={(e) => setCustomText(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                 />
               </div>
 
@@ -478,14 +478,14 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                   placeholder="e.g., Heavy geode crystal cluster on top-right, translucent resin ripples, metallic gold rim beveling..."
                   value={designPreferences}
                   onChange={(e) => setDesignPreferences(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                 />
                 <textarea
                   rows={2}
                   placeholder="Any deadline or special requirements (e.g. Wedding gift needed by 25th)..."
                   value={additionalNotes}
                   onChange={(e) => setAdditionalNotes(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                 />
               </div>
 
@@ -495,7 +495,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-800 mb-1.5">
                     Quantity
                   </label>
-                  <div className="flex items-center border border-neutral-300 rounded-xl bg-[#FAF8F5] overflow-hidden">
+                  <div className="flex items-center border border-[#B69B7D]/50 rounded-xl bg-[#F9F5EE] overflow-hidden">
                     <button
                       type="button"
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -521,8 +521,8 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                     Reference Photo (Optional)
                   </label>
                   <div className="flex items-center gap-3">
-                    <label className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-dashed border-neutral-300 hover:border-[#0b3b33] cursor-pointer bg-[#FAF8F5] text-xs text-neutral-600 transition-colors">
-                      <Upload className="w-4 h-4 text-[#856338]" />
+                    <label className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-dashed border-[#B69B7D]/60 hover:border-[#C87552] cursor-pointer bg-[#F9F5EE] text-xs text-[#56443E] transition-colors">
+                      <Upload className="w-4 h-4 text-[#8E7356]" />
                       <span>{isUploadingImage ? 'Uploading image...' : uploadedImageFile ? uploadedImageFile.name : 'Upload sample photo'}</span>
                       <input
                         type="file"
@@ -553,7 +553,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                 </button>
                 <button
                   type="submit"
-                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#dfbe7e] font-display text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all border border-[#c5a059]/40"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
                 >
                   <span>Review Customization Summary</span>
                   <ChevronRight className="w-4 h-4" />
@@ -566,7 +566,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
           {step === 'summary' && (
             <div className="space-y-6">
               <div className="text-center max-w-md mx-auto">
-                <div className="w-12 h-12 rounded-full bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] flex items-center justify-center mx-auto mb-3 shadow-md">
+                <div className="w-12 h-12 rounded-full bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] flex items-center justify-center mx-auto mb-3 shadow-md">
                   <Sparkles className="w-6 h-6" />
                 </div>
                 <h4 className="font-display text-lg font-bold text-neutral-900">
@@ -578,7 +578,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
               </div>
 
               {/* Summary Details Card */}
-              <div className="bg-[#FAF8F5] rounded-2xl p-5 border border-neutral-200/80 space-y-3 text-xs">
+              <div className="bg-[#F9F5EE] rounded-2xl p-5 border border-[#B69B7D]/45 space-y-3 text-xs">
                 <div className="flex justify-between pb-3 border-b border-neutral-200">
                   <span className="text-neutral-500">Base Product:</span>
                   <span className="font-bold text-neutral-900 text-right">{product.name}</span>
@@ -649,15 +649,15 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
               </div>
 
               {/* Crucial Price Disclaimer Notice */}
-              <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1.5">
-                <span className="font-bold flex items-center gap-1.5 text-amber-800">
-                  <ShieldCheck className="w-4 h-4 text-amber-600" />
+              <div className="p-4 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/60 text-[#30231F] text-xs space-y-1.5">
+                <span className="font-bold flex items-center gap-1.5 text-[#30231F]">
+                  <ShieldCheck className="w-4 h-4 text-[#C87552]" />
                   Atelier Price & Delivery Notice
                 </span>
                 <p className="leading-relaxed">
                   "Your custom design request will be reviewed by our team. Final pricing and delivery details will be shared with you through WhatsApp."
                 </p>
-                <p className="text-[11px] text-amber-700/90 pt-1">
+                <p className="text-[11px] text-[#56443E] pt-1">
                   * Note: Opening WhatsApp does not confirm an order immediately. You can review the pre-filled message and tap send. You may also send additional reference photos directly in the WhatsApp chat.
                 </p>
               </div>
@@ -687,11 +687,11 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
           {/* STEP 3: Submitted Confirmation State */}
           {step === 'submitted' && (
             <div className="py-6 text-center space-y-5">
-              <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-md">
+              <div className="w-16 h-16 rounded-full bg-[#C87552]/12 text-[#C87552] border border-[#C87552]/35 flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#856338] font-bold block mb-1">
+                <span className="text-[10px] uppercase tracking-widest text-[#8E7356] font-bold block mb-1">
                   Request Dispatched to Atelier
                 </span>
                 <h4 className="font-display text-xl font-bold text-neutral-900">
@@ -702,18 +702,18 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-neutral-200 max-w-md mx-auto text-xs text-neutral-600 text-left space-y-2">
-                <span className="font-bold text-neutral-900 block">Next Steps:</span>
+              <div className="p-4 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/45 max-w-md mx-auto text-xs text-[#56443E] text-left space-y-2">
+                <span className="font-bold text-[#30231F] block">Next Steps:</span>
                 <div className="flex items-start gap-2">
-                  <span className="w-4 h-4 rounded-full bg-[#0b3b33] text-[#dfbe7e] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">1</span>
+                  <span className="w-4 h-4 rounded-full bg-[#30231F] text-[#F4EBDD] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">1</span>
                   <span>Tap <strong>Send</strong> in your WhatsApp chat with {WHATSAPP_DISPLAY_NUMBER}.</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="w-4 h-4 rounded-full bg-[#0b3b33] text-[#dfbe7e] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">2</span>
+                  <span className="w-4 h-4 rounded-full bg-[#30231F] text-[#F4EBDD] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">2</span>
                   <span>Attach any high-resolution photos or inspiration images in the chat.</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="w-4 h-4 rounded-full bg-[#0b3b33] text-[#dfbe7e] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">3</span>
+                  <span className="w-4 h-4 rounded-full bg-[#30231F] text-[#F4EBDD] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">3</span>
                   <span>Our artisan team will review and quote your final personalized price and delivery timeline.</span>
                 </div>
               </div>
@@ -731,7 +731,7 @@ export const ProductCustomizeModal: React.FC<ProductCustomizeModalProps> = ({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="px-6 py-3 rounded-2xl bg-[#0b3b33] text-[#dfbe7e] font-display text-xs font-bold uppercase tracking-wider"
+                  className="px-6 py-3 rounded-2xl bg-[#30231F] hover:bg-[#221815] text-white font-display text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
                 >
                   Back to Artwork
                 </button>

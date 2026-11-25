@@ -93,16 +93,16 @@ export const RegisterPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F5] min-h-[85vh] flex items-center justify-center py-16 px-4">
-      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-neutral-200/80 shadow-luxury">
+    <div className="bg-[#F4EBDD] min-h-[85vh] flex items-center justify-center py-16 px-4">
+      <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 border border-[#B69B7D]/45 shadow-luxury">
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] mb-4 shadow-sm">
-            <Sparkles className="w-6 h-6" />
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] mb-4 shadow-sm">
+            <Sparkles className="w-6 h-6 text-[#C87552]" />
           </div>
-          <h1 className="font-display text-2xl font-bold text-[#07241e]">
+          <h1 className="font-display text-2xl font-bold text-[#30231F]">
             Join The Atelier Circle
           </h1>
-          <p className="font-serif-luxury text-sm text-neutral-500 mt-1">
+          <p className="font-serif-luxury text-sm text-[#56443E] mt-1">
             Create your collector profile to track bespoke orders and curate your wishlist.
           </p>
         </div>
@@ -121,28 +121,28 @@ export const RegisterPage: React.FC = () => {
         {/* 3. Existing Registration Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Full Name *
             </label>
             <div className="relative">
-              <User className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+              <User className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
               <input
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 required
                 placeholder="Collector or Gifting Name"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] focus:ring-1 focus:ring-[#C87552]/30 transition-colors"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Email Address *
             </label>
             <div className="relative">
-              <Mail className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+              <Mail className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
               <input
                 type="email"
                 value={email}
@@ -150,17 +150,17 @@ export const RegisterPage: React.FC = () => {
                 required
                 autoComplete="off"
                 placeholder="Enter your email"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] focus:ring-1 focus:ring-[#C87552]/30 transition-colors"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Password (Min 6 Characters) *
             </label>
             <div className="relative">
-              <Lock className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+              <Lock className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
               <input
                 type="password"
                 value={password}
@@ -168,17 +168,17 @@ export const RegisterPage: React.FC = () => {
                 required
                 autoComplete="new-password"
                 placeholder="Create a password"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] focus:ring-1 focus:ring-[#C87552]/30 transition-colors"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#30231F] mb-1.5">
               Confirm Password *
             </label>
             <div className="relative">
-              <Lock className="w-4 h-4 text-neutral-400 absolute left-3.5 top-3" />
+              <Lock className="w-4 h-4 text-[#8E7356] absolute left-3.5 top-3" />
               <input
                 type="password"
                 value={confirmPassword}
@@ -186,7 +186,7 @@ export const RegisterPage: React.FC = () => {
                 required
                 autoComplete="new-password"
                 placeholder="Re-enter your password"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:outline-none focus:border-[#C87552] focus:ring-1 focus:ring-[#C87552]/30 transition-colors"
               />
             </div>
           </div>
@@ -194,19 +194,19 @@ export const RegisterPage: React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full mt-4 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#f7f4ee] font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg border border-[#c5a059]/40 disabled:opacity-50"
+            className="w-full mt-4 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-[0.16em] transition-all shadow-md hover:shadow-lg disabled:opacity-50"
           >
             <span>{isSubmitting ? 'Creating Profile...' : 'Complete Registration'}</span>
-            <ArrowRight className="w-4 h-4 text-[#dfbe7e]" />
+            <ArrowRight className="w-4 h-4 text-white" />
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-neutral-100 text-center text-xs text-neutral-500">
+        <div className="mt-8 pt-6 border-t border-[#B69B7D]/25 text-center text-xs text-[#56443E]">
           <span>Already registered with Rohan Craft House? </span>
           <Link
             to={searchParams.get('redirect') ? `/login?redirect=${encodeURIComponent(searchParams.get('redirect')!)}` : '/login'}
             state={location.state}
-            className="font-bold text-[#0b3b33] hover:underline"
+            className="font-bold text-[#C87552] hover:text-[#B05E3D] hover:underline"
           >
             Sign In Here
           </Link>

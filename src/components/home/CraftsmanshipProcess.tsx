@@ -30,16 +30,16 @@ export const CraftsmanshipProcess: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#FAF8F5]">
+    <section className="py-20 bg-[#F4EBDD] border-y border-[#B69B7D]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#856338] font-bold">
+          <span className="text-xs uppercase tracking-[0.25em] text-[#8E7356] font-bold">
             The Method
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e] mt-2 mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mt-2 mb-4">
             The 4-Stage Alchemical Process
           </h2>
-          <p className="font-serif-luxury text-base sm:text-lg text-neutral-600">
+          <p className="font-serif-luxury text-base sm:text-lg text-[#56443E]">
             Resin art is not simply poured; it is sculpted, tempered, and patiently guided into timeless equilibrium.
           </p>
         </div>
@@ -50,27 +50,27 @@ export const CraftsmanshipProcess: React.FC = () => {
             return (
               <div
                 key={st.step}
-                className="relative bg-white rounded-2xl p-7 border border-neutral-200/80 shadow-sm hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between"
+                className="relative bg-white rounded-2xl p-7 border border-[#B69B7D]/40 shadow-sm hover:shadow-luxury-hover transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-display text-2xl font-bold text-[#c5a059] opacity-75">
+                    <span className="font-display text-2xl font-bold text-[#C87552]">
                       {st.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-aura-100 flex items-center justify-center text-[#0b3b33] border border-aura-200">
-                      <Icon className="w-5 h-5 text-[#856338]" />
+                    <div className="w-10 h-10 rounded-xl bg-[#F4EBDD] flex items-center justify-center text-[#30231F] border border-[#B69B7D]/40">
+                      <Icon className="w-5 h-5 text-[#C87552]" />
                     </div>
                   </div>
-                  <h3 className="font-display text-base font-bold text-neutral-900 mb-2">
+                  <h3 className="font-display text-base font-bold text-[#30231F] mb-2">
                     {st.title}
                   </h3>
-                  <p className="text-xs text-neutral-500 leading-relaxed">
+                  <p className="text-xs text-[#56443E] leading-relaxed">
                     {st.desc}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-neutral-100">
-                  <span className="text-[10px] uppercase tracking-widest text-[#856338] font-semibold">
+                <div className="pt-6 mt-6 border-t border-[#B69B7D]/25">
+                  <span className="text-[10px] uppercase tracking-widest text-[#8E7356] font-semibold">
                     Studio Certified Standard
                   </span>
                 </div>

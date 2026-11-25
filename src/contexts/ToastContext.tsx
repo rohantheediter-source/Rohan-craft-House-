@@ -47,21 +47,21 @@ export const ToastProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             key={toast.id}
             className={`pointer-events-auto flex items-center justify-between p-4 rounded-xl shadow-2xl border text-sm backdrop-blur-md transition-all duration-300 transform translate-y-0 opacity-100 ${
               toast.type === 'success'
-                ? 'bg-[#0b2822]/95 border-[#c5a059] text-[#f7f4ee]'
+                ? 'bg-[#30231F]/95 border-[#B69B7D] text-[#F4EBDD]'
                 : toast.type === 'error'
-                ? 'bg-red-950/95 border-red-500/50 text-red-100'
-                : 'bg-[#121716]/95 border-neutral-700 text-neutral-100'
+                ? 'bg-[#30231F]/95 border-[#C87552] text-white'
+                : 'bg-[#30231F]/95 border-[#B69B7D]/50 text-[#F4EBDD]'
             }`}
           >
             <div className="flex items-center gap-3">
-              {toast.type === 'success' && <CheckCircle2 className="w-5 h-5 text-[#dfbe7e] shrink-0" />}
-              {toast.type === 'error' && <AlertCircle className="w-5 h-5 text-red-400 shrink-0" />}
-              {toast.type === 'info' && <Info className="w-5 h-5 text-neutral-300 shrink-0" />}
+              {toast.type === 'success' && <CheckCircle2 className="w-5 h-5 text-[#C87552] shrink-0" />}
+              {toast.type === 'error' && <AlertCircle className="w-5 h-5 text-[#C87552] shrink-0" />}
+              {toast.type === 'info' && <Info className="w-5 h-5 text-[#B69B7D] shrink-0" />}
               <span className="font-medium tracking-wide">{toast.message}</span>
             </div>
             <button
               onClick={() => removeToast(toast.id)}
-              className="p-1 text-neutral-400 hover:text-white transition-colors"
+              className="p-1 text-[#B69B7D] hover:text-white transition-colors"
             >
               <X className="w-4 h-4" />
             </button>

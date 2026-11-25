@@ -140,15 +140,15 @@ export const CustomDesignPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-10 sm:py-16">
+    <div className="bg-[#F4EBDD] min-h-screen py-10 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Luxury Hero Banner */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] text-xs font-semibold uppercase tracking-[0.2em] mb-4 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] text-xs font-semibold uppercase tracking-[0.2em] mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#C87552]" />
             <span>Option B • Bespoke Commissions</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#07241e] tracking-tight mb-4">
+          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#30231F] tracking-tight mb-4">
             Request a Custom Design
           </h1>
           <p className="font-serif-luxury text-base sm:text-xl text-neutral-600 leading-relaxed">
@@ -158,8 +158,8 @@ export const CustomDesignPage: React.FC = () => {
 
         {/* 4-Step Process Bar */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          <div className="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm flex items-start gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#0b3b33] text-[#dfbe7e] font-display font-bold text-sm flex items-center justify-center shrink-0">
+          <div className="bg-white rounded-2xl p-5 border border-[#B69B7D]/45 shadow-sm flex items-start gap-3.5">
+            <div className="w-9 h-9 rounded-xl bg-[#30231F] text-[#F4EBDD] font-display font-bold text-sm flex items-center justify-center shrink-0">
               01
             </div>
             <div>
@@ -172,8 +172,8 @@ export const CustomDesignPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm flex items-start gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#0b3b33] text-[#dfbe7e] font-display font-bold text-sm flex items-center justify-center shrink-0">
+          <div className="bg-white rounded-2xl p-5 border border-[#B69B7D]/45 shadow-sm flex items-start gap-3.5">
+            <div className="w-9 h-9 rounded-xl bg-[#30231F] text-[#F4EBDD] font-display font-bold text-sm flex items-center justify-center shrink-0">
               02
             </div>
             <div>
@@ -186,8 +186,8 @@ export const CustomDesignPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm flex items-start gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#0b3b33] text-[#dfbe7e] font-display font-bold text-sm flex items-center justify-center shrink-0">
+          <div className="bg-white rounded-2xl p-5 border border-[#B69B7D]/45 shadow-sm flex items-start gap-3.5">
+            <div className="w-9 h-9 rounded-xl bg-[#30231F] text-[#F4EBDD] font-display font-bold text-sm flex items-center justify-center shrink-0">
               03
             </div>
             <div>
@@ -200,8 +200,8 @@ export const CustomDesignPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm flex items-start gap-3.5">
-            <div className="w-9 h-9 rounded-xl bg-[#0b3b33] text-[#dfbe7e] font-display font-bold text-sm flex items-center justify-center shrink-0">
+          <div className="bg-white rounded-2xl p-5 border border-[#B69B7D]/45 shadow-sm flex items-start gap-3.5">
+            <div className="w-9 h-9 rounded-xl bg-[#30231F] text-[#F4EBDD] font-display font-bold text-sm flex items-center justify-center shrink-0">
               04
             </div>
             <div>
@@ -218,12 +218,12 @@ export const CustomDesignPage: React.FC = () => {
         {/* Main Form Container */}
         <div className="max-w-4xl mx-auto">
           {step === 'form' && (
-            <div className="bg-white rounded-3xl p-6 sm:p-12 border border-neutral-200/80 shadow-sm">
+            <div className="bg-white rounded-3xl p-6 sm:p-12 border border-[#B69B7D]/45 shadow-sm">
               {/* Mandatory Business Owner Pricing Control Banner */}
-              <div className="mb-8 p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 text-xs flex items-start gap-3.5">
-                <Info className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
+              <div className="mb-8 p-4 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/60 text-[#30231F] text-xs flex items-start gap-3.5">
+                <Info className="w-5 h-5 text-[#C87552] shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <span className="font-bold block uppercase tracking-wider text-[11px] text-amber-800">
+                  <span className="font-bold block uppercase tracking-wider text-[11px] text-[#30231F]">
                     Artisan Pricing Approval Notice
                   </span>
                   <p className="leading-relaxed">
@@ -236,7 +236,7 @@ export const CustomDesignPage: React.FC = () => {
                 {/* 1. Category Selection */}
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-900 mb-3 flex items-center gap-2">
-                    <Layers className="w-4 h-4 text-[#856338]" />
+                    <Layers className="w-4 h-4 text-[#8E7356]" />
                     <span>1. Select Desired Product Form or Category *</span>
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
@@ -247,8 +247,8 @@ export const CustomDesignPage: React.FC = () => {
                         onClick={() => setCategory(cat)}
                         className={`p-3 rounded-2xl text-left text-xs font-semibold transition-all border ${
                           category === cat
-                            ? 'bg-[#0b3b33] text-[#dfbe7e] border-[#c5a059] shadow-sm'
-                            : 'bg-[#FAF8F5] text-neutral-700 border-neutral-200 hover:border-neutral-400'
+                            ? 'bg-[#C87552] text-white border-[#C87552] shadow-sm'
+                            : 'bg-[#F9F5EE] text-[#30231F] border-[#B69B7D]/45 hover:border-[#B69B7D]'
                         }`}
                       >
                         {cat}
@@ -260,7 +260,7 @@ export const CustomDesignPage: React.FC = () => {
                 {/* 2. Design Vision Description */}
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#856338]" />
+                    <Sparkles className="w-4 h-4 text-[#8E7356]" />
                     <span>2. Describe Your Desired Design & Creative Ideas *</span>
                   </label>
                   <textarea
@@ -269,14 +269,14 @@ export const CustomDesignPage: React.FC = () => {
                     placeholder="Describe your creative ideas freely (e.g., Deep navy ocean waves with white seafoam, raw agate crystal slice centerpiece, natural wooden live-edge border, or preserving wedding vermilion roses in an eternal resin block)..."
                     value={designDescription}
                     onChange={(e) => setDesignDescription(e.target.value)}
-                    className="w-full p-4 rounded-2xl border border-neutral-300 text-xs text-neutral-800 focus:ring-2 focus:ring-[#0b3b33] focus:border-transparent outline-none leading-relaxed bg-[#FAF8F5]"
+                    className="w-full p-4 rounded-2xl border border-[#B69B7D]/50 text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none leading-relaxed bg-[#F9F5EE]"
                   />
                 </div>
 
                 {/* 3. Color Palette */}
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2 flex items-center gap-2">
-                    <Palette className="w-4 h-4 text-[#856338]" />
+                    <Palette className="w-4 h-4 text-[#8E7356]" />
                     <span>3. Preferred Color Palette</span>
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
@@ -287,8 +287,8 @@ export const CustomDesignPage: React.FC = () => {
                         onClick={() => setSelectedColor(pal)}
                         className={`p-3 rounded-xl text-left text-xs font-medium transition-all border ${
                           selectedColor === pal
-                            ? 'bg-[#0b3b33] text-[#dfbe7e] border-[#c5a059] font-bold shadow-sm'
-                            : 'bg-[#FAF8F5] text-neutral-700 border-neutral-200 hover:border-neutral-400'
+                            ? 'bg-[#C87552] text-white border-[#C87552] font-bold shadow-sm'
+                            : 'bg-[#F9F5EE] text-[#30231F] border-[#B69B7D]/45 hover:border-[#B69B7D]'
                         }`}
                       >
                         {pal}
@@ -300,7 +300,7 @@ export const CustomDesignPage: React.FC = () => {
                     placeholder="Specific color codes, pigments, metallic leaf (Gold, Silver, Rose Gold, Copper)..."
                     value={customColorText}
                     onChange={(e) => setCustomColorText(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                   />
                 </div>
 
@@ -315,7 +315,7 @@ export const CustomDesignPage: React.FC = () => {
                       placeholder="e.g. 18 Inches Round, 24x36 Inches, 3-tier platter..."
                       value={dimensions}
                       onChange={(e) => setDimensions(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                     />
                   </div>
 
@@ -328,7 +328,7 @@ export const CustomDesignPage: React.FC = () => {
                       placeholder="e.g. 'Sharma Family • Est. 2024' or Shubh Labh..."
                       value={customText}
                       onChange={(e) => setCustomText(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                     />
                   </div>
                 </div>
@@ -339,7 +339,7 @@ export const CustomDesignPage: React.FC = () => {
                     <label className="block text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2">
                       Quantity Needed
                     </label>
-                    <div className="flex items-center border border-neutral-300 rounded-xl bg-[#FAF8F5] overflow-hidden">
+                    <div className="flex items-center border border-[#B69B7D]/50 rounded-xl bg-[#F9F5EE] overflow-hidden">
                       <button
                         type="button"
                         onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -366,8 +366,8 @@ export const CustomDesignPage: React.FC = () => {
                       <span className="text-[10px] text-neutral-400 font-normal lowercase">(optional)</span>
                     </label>
                     <div className="flex items-center gap-3">
-                      <label className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-dashed border-neutral-300 hover:border-[#0b3b33] cursor-pointer bg-[#FAF8F5] text-xs text-neutral-600 transition-colors">
-                        <Upload className="w-4 h-4 text-[#856338]" />
+                      <label className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-dashed border-[#B69B7D]/60 hover:border-[#C87552] cursor-pointer bg-[#F9F5EE] text-xs text-[#56443E] transition-colors">
+                        <Upload className="w-4 h-4 text-[#8E7356]" />
                         <span className="truncate">
                           {isUploading ? 'Uploading...' : uploadedFile ? uploadedFile.name : 'Choose photo (Room decor, sketch, inspiration)'}
                         </span>
@@ -399,7 +399,7 @@ export const CustomDesignPage: React.FC = () => {
                     placeholder="e.g. We will courier dried varmala flowers next week; required before anniversary on 18th..."
                     value={additionalInstructions}
                     onChange={(e) => setAdditionalInstructions(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                    className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                   />
                 </div>
 
@@ -416,7 +416,7 @@ export const CustomDesignPage: React.FC = () => {
                         placeholder="Your Full Name *"
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                        className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                       />
                     </div>
                     <div>
@@ -426,7 +426,7 @@ export const CustomDesignPage: React.FC = () => {
                         placeholder="WhatsApp Mobile Number *"
                         value={customerPhone}
                         onChange={(e) => setCustomerPhone(e.target.value)}
-                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                        className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                       />
                     </div>
                   </div>
@@ -436,7 +436,7 @@ export const CustomDesignPage: React.FC = () => {
                       placeholder="Email Address (Optional, for formal quotation & invoices)"
                       value={customerEmail}
                       onChange={(e) => setCustomerEmail(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl border border-neutral-300 text-xs focus:ring-2 focus:ring-[#0b3b33] outline-none"
+                      className="w-full px-4 py-3 rounded-xl border border-[#B69B7D]/50 bg-[#F9F5EE] text-xs text-[#30231F] placeholder-[#8E7356]/70 focus:ring-2 focus:ring-[#C87552]/30 focus:border-[#C87552] outline-none"
                     />
                   </div>
                 </div>
@@ -448,7 +448,7 @@ export const CustomDesignPage: React.FC = () => {
                   </span>
                   <button
                     type="submit"
-                    className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#dfbe7e] font-display text-xs font-bold uppercase tracking-widest shadow-md hover:shadow-xl transition-all border border-[#c5a059]"
+                    className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-widest shadow-md hover:shadow-xl transition-all"
                   >
                     <span>Proceed to WhatsApp Summary</span>
                     <ArrowRight className="w-4 h-4" />
@@ -460,9 +460,9 @@ export const CustomDesignPage: React.FC = () => {
 
           {/* STEP 2: Summary Before WhatsApp */}
           {step === 'summary' && (
-            <div className="bg-white rounded-3xl p-6 sm:p-12 border border-neutral-200/80 shadow-sm space-y-8 animate-fadeIn">
+            <div className="bg-white rounded-3xl p-6 sm:p-12 border border-[#B69B7D]/45 shadow-sm space-y-8 animate-fadeIn">
               <div className="text-center max-w-lg mx-auto">
-                <div className="w-14 h-14 rounded-full bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] flex items-center justify-center mx-auto mb-3 shadow-md">
+                <div className="w-14 h-14 rounded-full bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] flex items-center justify-center mx-auto mb-3 shadow-md">
                   <Sparkles className="w-7 h-7" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-neutral-900">
@@ -474,7 +474,7 @@ export const CustomDesignPage: React.FC = () => {
               </div>
 
               {/* Summary Breakdown */}
-              <div className="bg-[#FAF8F5] rounded-3xl p-6 border border-neutral-200 space-y-4 text-xs">
+              <div className="bg-[#F9F5EE] rounded-3xl p-6 border border-[#B69B7D]/45 space-y-4 text-xs">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center pb-3 border-b border-neutral-200 gap-1">
                   <span className="text-neutral-500 font-semibold uppercase tracking-wider text-[10px]">Commission Type:</span>
                   <span className="font-bold text-neutral-900 text-sm">{category}</span>
@@ -530,15 +530,15 @@ export const CustomDesignPage: React.FC = () => {
               </div>
 
               {/* Crucial Pricing Disclaimer */}
-              <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-2">
-                <div className="flex items-center gap-2 font-bold text-amber-800 uppercase tracking-wider text-[11px]">
-                  <ShieldCheck className="w-4 h-4 text-amber-600" />
+              <div className="p-5 rounded-2xl bg-[#F4EBDD] border border-[#B69B7D]/60 text-[#30231F] text-xs space-y-2">
+                <div className="flex items-center gap-2 font-bold text-[#30231F] uppercase tracking-wider text-[11px]">
+                  <ShieldCheck className="w-4 h-4 text-[#C87552]" />
                   <span>Important Pricing & Quotation Notice</span>
                 </div>
                 <p className="leading-relaxed font-medium">
                   "Your custom design request will be reviewed by our team. Final pricing and delivery details will be shared with you through WhatsApp."
                 </p>
-                <p className="text-[11px] text-amber-700 leading-relaxed">
+                <p className="text-[11px] text-[#56443E] leading-relaxed">
                   Note: Clicking the button below opens WhatsApp with all your selections pre-filled into the chat. Opening WhatsApp does not finalize an order — you will have the chance to review and tap send, and attach more reference photos directly in the conversation.
                 </p>
               </div>
@@ -568,11 +568,11 @@ export const CustomDesignPage: React.FC = () => {
           {/* STEP 3: Submitted State */}
           {step === 'submitted' && (
             <div className="bg-white rounded-3xl p-8 sm:p-14 border border-neutral-200 text-center space-y-6">
-              <div className="w-20 h-20 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-md">
+              <div className="w-20 h-20 rounded-full bg-[#C87552]/12 text-[#C87552] border border-[#C87552]/35 flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#856338] font-bold block mb-1">
+                <span className="text-xs uppercase tracking-widest text-[#8E7356] font-bold block mb-1">
                   Commission Inquiry Logged
                 </span>
                 <h3 className="font-display text-2xl sm:text-3xl font-bold text-neutral-900">
@@ -583,18 +583,18 @@ export const CustomDesignPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#FAF8F5] border border-neutral-200 max-w-md mx-auto text-xs text-neutral-600 text-left space-y-3">
-                <span className="font-bold text-neutral-900 block">Next Simple Steps:</span>
+              <div className="p-5 rounded-2xl bg-[#F9F5EE] border border-[#B69B7D]/45 max-w-md mx-auto text-xs text-[#56443E] text-left space-y-3">
+                <span className="font-bold text-[#30231F] block">Next Simple Steps:</span>
                 <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#0b3b33] text-[#dfbe7e] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">1</span>
+                  <span className="w-5 h-5 rounded-full bg-[#30231F] text-[#F4EBDD] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">1</span>
                   <span>Open WhatsApp and tap <strong>Send</strong> on the prepared message to {WHATSAPP_DISPLAY_NUMBER}.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#0b3b33] text-[#dfbe7e] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">2</span>
+                  <span className="w-5 h-5 rounded-full bg-[#30231F] text-[#F4EBDD] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">2</span>
                   <span>Share any extra photos or dimension sketches directly in your chat.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#0b3b33] text-[#dfbe7e] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">3</span>
+                  <span className="w-5 h-5 rounded-full bg-[#30231F] text-[#F4EBDD] flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">3</span>
                   <span>Our senior artist will reply with your personalized quotation and crafting schedule.</span>
                 </div>
               </div>
@@ -611,7 +611,7 @@ export const CustomDesignPage: React.FC = () => {
                 </a>
                 <Link
                   to="/shop"
-                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-2xl bg-[#0b3b33] text-[#dfbe7e] font-display text-xs font-bold uppercase tracking-wider hover:bg-[#07241e] transition-all"
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-2xl bg-[#30231F] text-white font-display text-xs font-bold uppercase tracking-wider hover:bg-[#221815] transition-all shadow-sm"
                 >
                   Explore Ready Masterpieces
                 </Link>

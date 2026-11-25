@@ -24,15 +24,15 @@ export const BestsellerGrid: React.FC<BestsellerGridProps> = ({ products }) => {
   }).slice(0, 8);
 
   return (
-    <section className="py-20 bg-white border-y border-neutral-100">
+    <section className="py-20 bg-[#F4EBDD] border-y border-[#B69B7D]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-[#856338] font-bold">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#8E7356] font-bold">
               Artisan Signature
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e] mt-2">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mt-2">
               Bespoke Masterpieces
             </h2>
           </div>
@@ -45,8 +45,8 @@ export const BestsellerGrid: React.FC<BestsellerGridProps> = ({ products }) => {
                 onClick={() => setSelectedFilter(tab.value)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
                   selectedFilter === tab.value
-                    ? 'bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059]/40 shadow-sm'
-                    : 'bg-[#FAF8F5] text-neutral-600 hover:text-neutral-900 border border-neutral-200/80 hover:border-neutral-300'
+                    ? 'bg-[#C87552] text-white shadow-sm'
+                    : 'bg-white text-[#30231F] hover:text-[#C87552] border border-[#B69B7D]/40 hover:border-[#C87552]'
                 }`}
               >
                 {tab.label}
@@ -66,10 +66,10 @@ export const BestsellerGrid: React.FC<BestsellerGridProps> = ({ products }) => {
         <div className="mt-14 text-center">
           <Link
             to="/shop"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#0b3b33] hover:bg-[#07241e] text-[#f7f4ee] font-display text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 border border-[#c5a059]/40 shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#30231F] hover:bg-[#221815] text-white font-display text-xs font-bold uppercase tracking-[0.18em] transition-all duration-300 shadow-md hover:shadow-lg"
           >
             <span>View All {products.length} Handcrafted Works</span>
-            <ArrowRight className="w-4 h-4 text-[#dfbe7e]" />
+            <ArrowRight className="w-4 h-4 text-[#F4EBDD]" />
           </Link>
         </div>
       </div>

@@ -10,8 +10,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', lab
 
   return (
     <div className="flex flex-col items-center justify-center py-12 gap-3">
-      <div className={`${sizeClasses} border-2 border-aura-200 border-t-[#c5a059] rounded-full animate-spin`} />
-      {label && <p className="text-xs uppercase tracking-widest text-[#856338] font-medium">{label}</p>}
+      <div className={`${sizeClasses} border-2 border-[#B69B7D]/40 border-t-[#C87552] rounded-full animate-spin`} />
+      {label && <p className="text-xs uppercase tracking-widest text-[#8E7356] font-medium">{label}</p>}
     </div>
   );
 };

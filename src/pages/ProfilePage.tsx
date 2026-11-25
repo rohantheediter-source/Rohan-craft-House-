@@ -93,12 +93,12 @@ export const ProfilePage: React.FC = () => {
   if (!user) return null;
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen py-10 sm:py-14">
+    <div className="bg-[#F4EBDD] min-h-screen py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Profile Header */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#B69B7D]/45 shadow-sm mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-[#0b3b33] text-[#dfbe7e] border border-[#c5a059] flex items-center justify-center font-display text-2xl font-bold shadow-sm overflow-hidden shrink-0">
+            <div className="w-16 h-16 rounded-2xl bg-[#30231F] text-[#F4EBDD] border border-[#B69B7D] flex items-center justify-center font-display text-2xl font-bold shadow-sm overflow-hidden shrink-0">
               {profile?.avatar_url ? (
                 <img
                   src={profile.avatar_url}
@@ -111,7 +111,7 @@ export const ProfilePage: React.FC = () => {
               )}
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-widest text-[#856338] font-bold">
+              <span className="text-[10px] uppercase tracking-widest text-[#8E7356] font-bold">
                 Collector Account
               </span>
               <h1 className="font-display text-2xl font-bold text-neutral-900">
@@ -139,8 +139,8 @@ export const ProfilePage: React.FC = () => {
             onClick={() => setActiveTab('orders')}
             className={`flex items-center gap-2 pb-3.5 px-2 text-xs font-bold uppercase tracking-wider transition-all border-b-2 ${
               activeTab === 'orders'
-                ? 'border-[#0b3b33] text-[#0b3b33]'
-                : 'border-transparent text-neutral-400 hover:text-neutral-700'
+                ? 'border-[#C87552] text-[#30231F]'
+                : 'border-transparent text-[#8E7356] hover:text-[#30231F]'
             }`}
           >
             <Package className="w-4 h-4" />
@@ -151,8 +151,8 @@ export const ProfilePage: React.FC = () => {
             onClick={() => setActiveTab('profile')}
             className={`flex items-center gap-2 pb-3.5 px-2 text-xs font-bold uppercase tracking-wider transition-all border-b-2 ${
               activeTab === 'profile'
-                ? 'border-[#0b3b33] text-[#0b3b33]'
-                : 'border-transparent text-neutral-400 hover:text-neutral-700'
+                ? 'border-[#C87552] text-[#30231F]'
+                : 'border-transparent text-[#8E7356] hover:text-[#30231F]'
             }`}
           >
             <User className="w-4 h-4" />
@@ -167,7 +167,7 @@ export const ProfilePage: React.FC = () => {
               <LoadingSpinner label="Fetching your consignment records..." />
             ) : orders.length === 0 ? (
               <div className="bg-white rounded-3xl p-12 text-center border border-neutral-200">
-                <Package className="w-12 h-12 text-[#c5a059] mx-auto mb-4" />
+                <Package className="w-12 h-12 text-[#B69B7D] mx-auto mb-4" />
                 <h3 className="font-display text-lg font-bold text-neutral-800 mb-2">
                   No Past Orders Found
                 </h3>
@@ -176,7 +176,7 @@ export const ProfilePage: React.FC = () => {
                 </p>
                 <Link
                   to="/shop"
-                  className="inline-flex items-center px-6 py-2.5 rounded-full bg-[#0b3b33] text-[#dfbe7e] text-xs font-bold uppercase tracking-wider shadow-sm"
+                  className="inline-flex items-center px-6 py-2.5 rounded-full bg-[#C87552] hover:bg-[#B05E3D] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-colors"
                 >
                   Explore Gallery
                 </Link>
@@ -186,14 +186,14 @@ export const ProfilePage: React.FC = () => {
                 {orders.map((ord) => (
                   <div
                     key={ord.id}
-                    className="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm"
+                    className="bg-white rounded-3xl p-6 sm:p-8 border border-[#B69B7D]/45 shadow-sm"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-4 border-b border-neutral-100 gap-2">
                       <div>
                         <span className="text-[10px] uppercase tracking-wider text-neutral-400 block">
                           Consignment Docket
                         </span>
-                        <span className="font-mono text-sm font-bold text-[#0b3b33]">
+                        <span className="font-mono text-sm font-bold text-[#30231F]">
                           {ord.order_number}
                         </span>
                         <span className="text-xs text-neutral-400 ml-3">
@@ -202,12 +202,12 @@ export const ProfilePage: React.FC = () => {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 border border-emerald-200">
+                        <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#C87552]/12 text-[#B05E3D] border border-[#C87552]/35">
                           {ord.status}
                         </span>
                         <Link
                           to={`/track-order?number=${ord.order_number}`}
-                          className="flex items-center gap-1 text-xs font-bold text-[#0b3b33] hover:underline"
+                          className="flex items-center gap-1 text-xs font-bold text-[#C87552] hover:text-[#B05E3D] hover:underline"
                         >
                           <span>Live Tracking</span>
                           <ExternalLink className="w-3.5 h-3.5" />
@@ -246,7 +246,7 @@ export const ProfilePage: React.FC = () => {
                       </span>
                       <div className="text-right">
                         <span className="text-neutral-500 mr-2">Total Investment:</span>
-                        <strong className="font-display text-base text-[#0b3b33]">
+                        <strong className="font-display text-base text-[#30231F]">
                           {formatCurrency(ord.total_amount)}
                         </strong>
                       </div>
@@ -259,7 +259,7 @@ export const ProfilePage: React.FC = () => {
         )}
 
         {activeTab === 'profile' && (
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-neutral-200/80 shadow-sm max-w-xl">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#B69B7D]/45 shadow-sm max-w-xl">
             <h2 className="font-display text-base font-bold text-neutral-900 uppercase tracking-wider mb-6 pb-3 border-b border-neutral-100">
               Update Personal Details
             </h2>
@@ -272,7 +272,7 @@ export const ProfilePage: React.FC = () => {
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
 
@@ -298,16 +298,16 @@ export const ProfilePage: React.FC = () => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="+91 98765 43210"
-                  className="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-neutral-300 text-xs text-neutral-900 focus:outline-none focus:border-[#0b3b33]"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F9F5EE] border border-[#B69B7D]/50 text-xs text-[#30231F] focus:outline-none focus:border-[#C87552]"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isUpdating}
-                className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#0b3b33] hover:bg-[#07241e] text-[#f7f4ee] font-display text-xs font-bold uppercase tracking-wider shadow-sm transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#C87552] hover:bg-[#B05E3D] text-white font-display text-xs font-bold uppercase tracking-wider shadow-sm transition-all"
               >
-                <Save className="w-4 h-4 text-[#dfbe7e]" />
+                <Save className="w-4 h-4 text-white" />
                 <span>{isUpdating ? 'Saving...' : 'Save Profile Changes'}</span>
               </button>
             </form>
