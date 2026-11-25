@@ -11,6 +11,7 @@ import { EmptyState } from '../components/common/EmptyState';
 export const ShopPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get('category') || 'all';
+  const collectionParam = searchParams.get('collection') || '';
   const searchParam = searchParams.get('search') || '';
   const sortParam = searchParams.get('sort') || 'featured';
 
@@ -53,6 +54,21 @@ export const ShopPage: React.FC = () => {
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
+    // Collection alias filter (from Curated Collections showcase)
+    if (collectionParam === 'gifts') {
+      result = result.filter(
+        (p) =>
+          p.category_slug === 'bracelets-bangles' ||
+          /gift|pen|pendant|shagun|floral|bracelet|necklace|heart/i.test(p.name)
+      );
+    } else if (collectionParam === 'cups') {
+      result = result.filter(
+        (p) =>
+          p.category_slug === 'ceremonial-decor' ||
+          /coaster|platter|tray|thali|cup/i.test(p.name)
+      );
+    }
+
     // Category filter
     if (categoryParam && categoryParam !== 'all') {
       result = result.filter((p) => p.category_slug === categoryParam);
@@ -92,10 +108,11 @@ export const ShopPage: React.FC = () => {
     }
 
     return result;
-  }, [products, categoryParam, searchParam, sortParam, priceRange, inStockOnly]);
+  }, [products, categoryParam, collectionParam, searchParam, sortParam, priceRange, inStockOnly]);
 
   const handleCategorySelect = (slug: string) => {
     const newParams = new URLSearchParams(searchParams);
+    newParams.delete('collection');
     if (slug === 'all') {
       newParams.delete('category');
     } else {
@@ -135,11 +152,21 @@ export const ShopPage: React.FC = () => {
             <span>Rohan Craft House Gallery</span>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F]">
-            {currentCategory ? currentCategory.name : 'The Complete Collection'}
+            {currentCategory
+              ? currentCategory.name
+              : collectionParam === 'gifts'
+              ? 'Handcrafted Gifts Collection'
+              : collectionParam === 'cups'
+              ? 'Cups, Coasters & Tabletopware'
+              : 'The Complete Collection'}
           </h1>
           <p className="font-serif-luxury text-base sm:text-lg text-[#56443E] max-w-2xl mt-2">
             {currentCategory
               ? currentCategory.description
+              : collectionParam === 'gifts'
+              ? 'Thoughtful keepsakes, personalized resin calligraphy pens, floral jewelry sets, and festive giftables wrapped with care.'
+              : collectionParam === 'cups'
+              ? 'Artisanal tabletop trays, ceramic-pair coasters, and bespoke drinkware accents hand-finished in our studio.'
               : 'Explore our catalog of handcrafted geode wall clocks, botanical preserved jewelry, ceremonial thalis, and custom commissions.'}
           </p>
         </div>

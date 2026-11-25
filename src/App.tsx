@@ -25,6 +25,7 @@ import { ContactPage } from './pages/ContactPage';
 import { FAQPage } from './pages/FAQPage';
 import { PoliciesPage } from './pages/PoliciesPage';
 import { CustomDesignPage } from './pages/CustomDesignPage';
+import { BlogPage } from './pages/BlogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 // Admin Layout & Pages (Strictly isolated at /admin)
@@ -65,6 +66,7 @@ export const App: React.FC = () => {
                   <Route path="/forgot-password" element={<ForgotPasswordPage />} />
                   <Route path="/track-order" element={<OrderTrackingPage />} />
                   <Route path="/about" element={<AboutPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
                   <Route path="/custom-design" element={<CustomDesignPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/faq" element={<FAQPage />} />

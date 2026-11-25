@@ -87,9 +87,11 @@ export const Footer: React.FC = () => {
           {/* Brand Intro & Newsletter */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4 group">
-              <img src="/logo.svg" alt="Rohan Craft House" className="w-10 h-10 shrink-0" />
+              <div className="w-11 h-11 rounded-2xl bg-[#F4EBDD] p-1.5 border border-[#B69B7D]/60 flex items-center justify-center shrink-0">
+                <img src="/logo.svg" alt="Rohan Craft House" className="w-full h-full object-contain" />
+              </div>
               <div>
-                <span className="font-display text-xl sm:text-2xl font-bold tracking-[0.12em] text-[#F4EBDD] group-hover:text-[#C87552] transition-colors">
+                <span className="font-editorial text-xl sm:text-2xl font-bold tracking-wide text-[#F4EBDD] group-hover:text-[#C87552] transition-colors">
                   Rohan Craft House
                 </span>
                 <span className="block text-[9px] uppercase tracking-[0.26em] text-[#B69B7D]">
@@ -192,6 +194,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/about" className="hover:text-[#C87552] transition-colors">
                   Our Atelier Story
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-[#C87552] transition-colors">
+                  Craftsmanship Blog
                 </Link>
               </li>
 

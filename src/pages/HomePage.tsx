@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { HeroBanner } from '../components/home/HeroBanner';
+import { BenefitsStrip } from '../components/home/BenefitsStrip';
 import { FeaturedCollections } from '../components/home/FeaturedCollections';
 import { BestsellerGrid } from '../components/home/BestsellerGrid';
 import { BespokeCommissionBanner } from '../components/home/BespokeCommissionBanner';
@@ -27,6 +28,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <HeroBanner />
+      <BenefitsStrip />
       <FeaturedCollections />
       <BestsellerGrid products={products} />
       <BespokeCommissionBanner />

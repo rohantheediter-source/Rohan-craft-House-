@@ -47,6 +47,8 @@ export default {
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Playfair Display', 'serif'],
+        editorial: ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
+        script: ['"Great Vibes"', '"Cormorant Garamond"', 'cursive'],
         display: ['"Cinzel"', 'serif'],
         sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
       },

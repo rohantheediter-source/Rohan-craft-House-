@@ -31,6 +31,16 @@
   .font-serif-luxury {
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
+
+  .font-editorial {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', 'Cormorant Garamond', cursive;
+    letter-spacing: 0.01em;
+  }
 }
 
 /* Custom Earthy Luxury Scrollbar */

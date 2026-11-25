@@ -1,72 +1,106 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
-import { INITIAL_CATEGORIES } from '../../data/initialProducts';
+import { ArrowRight } from 'lucide-react';
+
+interface CuratedCard {
+  id: string;
+  name: string;
+  image: string;
+  alt: string;
+  href: string;
+}
+
+const CURATED_COLLECTIONS: CuratedCard[] = [
+  {
+    id: 'resin-art',
+    name: 'Resin Art',
+    image: '/images/products/da818ee20766a8244b4a924dd001d4c1.png',
+    alt: 'Handcrafted crystal geode and pressed floral resin art pieces',
+    href: '/shop?category=wall-clocks',
+  },
+  {
+    id: 'jewellery',
+    name: 'Jewellery',
+    image: '/images/products/07892a59117c401b49ffdf42a9986e04.jpg',
+    alt: 'Artisanal floral resin earrings, necklaces and keepsake suites',
+    href: '/shop?category=jewelry-sets',
+  },
+  {
+    id: 'gifts',
+    name: 'Gifts',
+    image: '/images/showcase/collection-gifts.jpg',
+    alt: 'Curated handcrafted gift boxes and personalized keepsakes',
+    href: '/shop?collection=gifts',
+  },
+  {
+    id: 'cups',
+    name: 'Cups',
+    image: '/images/showcase/collection-cups.jpg',
+    alt: 'Handcrafted ceramic cups, tabletop drinkware and resin coasters',
+    href: '/shop?collection=cups',
+  },
+  {
+    id: 'home-decor',
+    name: 'Home Décor',
+    image: '/images/showcase/collection-home-decor.jpg',
+    alt: 'Warm ambient table decor, lamps and ceremonial platters',
+    href: '/shop?category=ceremonial-decor',
+  },
+];
 
 export const FeaturedCollections: React.FC = () => {
   return (
-    <section className="py-20 bg-white">
+    <section
+      id="collections"
+      className="relative py-12 sm:py-16 bg-[#FAF6F0] border-b border-[#B69B7D]/25 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-[#8E7356] font-bold">
-              Artisan Disciplines
-            </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#30231F] mt-2">
-              Curated Collections
+        {/* Centered Header matching reference with symmetrical flanking lines & diamonds */}
+        <div className="text-center mb-9 sm:mb-11">
+          <div className="flex items-center justify-center gap-3 sm:gap-5 max-w-2xl mx-auto">
+            <div className="hidden sm:flex items-center flex-1">
+              <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#B69B7D]/70" />
+              <span className="w-1.5 h-1.5 rotate-45 bg-[#B69B7D] shrink-0" />
+            </div>
+            <h2 className="font-editorial text-3xl sm:text-4xl font-bold text-[#30231F]">
+              Our Collections
             </h2>
+            <div className="hidden sm:flex items-center flex-1">
+              <span className="w-1.5 h-1.5 rotate-45 bg-[#B69B7D] shrink-0" />
+              <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#B69B7D]/70" />
+            </div>
           </div>
-          <p className="font-serif-luxury text-base text-[#56443E] max-w-md mt-3 md:mt-0">
-            Each discipline represents a distinct confluence of chemistry, raw natural minerals, and meticulous botanical preservation.
+          <p className="text-sm text-[#56443E] mt-1.5">
+            Discover handcrafted treasures for every occasion
           </p>
         </div>
 
-        {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {INITIAL_CATEGORIES.map((cat, index) => {
-            const isLarge = index === 0;
-            return (
-              <Link
-                key={cat.id}
-                to={`/shop?category=${cat.slug}`}
-                className={`group relative overflow-hidden rounded-3xl bg-[#30231F] border border-[#B69B7D]/40 shadow-luxury hover:shadow-luxury-hover transition-all duration-500 ${
-                  isLarge ? 'sm:col-span-2 lg:col-span-2 aspect-[16/9]' : 'aspect-square'
-                }`}
-              >
-                <img
-                  src={cat.image_url}
-                  alt={cat.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#30231F]/90 via-[#30231F]/25 to-transparent" />
+        {/* Responsive 5-Card Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+          {CURATED_COLLECTIONS.map((col) => (
+            <Link
+              key={col.id}
+              to={col.href}
+              className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-[#B69B7D]/40 shadow-sm hover:shadow-luxury-hover transition-all duration-500"
+            >
+              <img
+                src={col.image}
+                alt={col.alt}
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#30231F]/45 via-[#30231F]/10 to-transparent pointer-events-none" />
 
-                {/* Content Overlay */}
-                <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between">
-                  <div className="flex justify-end">
-                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30 group-hover:bg-[#C87552] group-hover:border-[#C87552] transition-all duration-300 transform group-hover:rotate-45">
-                      <ArrowUpRight className="w-5 h-5" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <span className="text-[10px] uppercase tracking-widest text-[#F4EBDD] font-semibold">
-                      Collection {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-white mt-1 mb-2 group-hover:text-[#F4EBDD] transition-colors">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs text-[#F4EBDD]/85 line-clamp-2 max-w-lg leading-relaxed">
-                      {cat.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+              {/* Frosted Champagne Pill Button */}
+              <div className="absolute bottom-3 inset-x-3 flex justify-center">
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#F4EBDD]/92 backdrop-blur-md border border-white/75 text-xs font-semibold text-[#30231F] shadow-md group-hover:bg-[#C87552] group-hover:text-white group-hover:border-[#C87552] transition-all duration-300">
+                  <span>{col.name}</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
   );
 };
-
