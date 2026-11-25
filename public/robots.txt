@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /auth/
+Disallow: /profile
+Disallow: /cart
+Disallow: /checkout
+Disallow: /wishlist
+Disallow: /order-confirmation/
+
+Sitemap: https://rohan-craft-house.vercel.app/sitemap.xml
