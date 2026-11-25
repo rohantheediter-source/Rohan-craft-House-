@@ -16,7 +16,7 @@ export const AboutPage: React.FC = () => {
             The Soul of Liquid Glass
           </h1>
           <p className="font-serif-luxury text-lg sm:text-xl text-neutral-600 leading-relaxed">
-            Resin Aura was established to capture the ephemeral poetry of nature—fleeting bridal roses, raw mountain quartz geodes, and shimmering mineral flows—suspending them in eternal crystal serenity.
+            Rohan Craft House was established to capture the ephemeral poetry of nature—fleeting bridal roses, raw mountain quartz geodes, and shimmering mineral flows—suspending them in eternal crystal serenity.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export const AboutPage: React.FC = () => {
               A Devotion to Patient Perfection
             </h2>
             <p>
-              In an era dominated by mass manufacturing, Resin Aura champions the sanctity of the slow artisan ritual. We reject industrial shortcuts: no hurried heat curing, no artificial synthetic colorants, and no compromise on chemical purity.
+              In an era dominated by mass manufacturing, Rohan Craft House champions the sanctity of the slow artisan ritual. We reject industrial shortcuts: no hurried heat curing, no artificial synthetic colorants, and no compromise on chemical purity.
             </p>
             <p>
               Every timepiece and jewelry adornment is hand-poured in small batches within our temperature-stabilized atelier. Using museum-grade UV-resistant epoxy that resists yellowing, our pieces retain their crystal-clear transparency across decades.
@@ -58,7 +58,7 @@ export const AboutPage: React.FC = () => {
         {/* The 3 Core Tenets */}
         <div className="bg-white rounded-3xl p-8 sm:p-14 border border-neutral-200/80 shadow-sm mb-20">
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-center text-[#07241e] mb-12">
-            The Three Tenets of Resin Aura
+            The Three Tenets of Rohan Craft House
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -42,7 +42,7 @@ export const ArtisanStorySection: React.FC = () => {
           {/* Right Narrative */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <span className="text-xs uppercase tracking-[0.25em] text-[#dfbe7e] font-semibold">
-              The Resin Aura Atelier
+              The Rohan Craft House Atelier
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-3 mb-6 leading-tight">
               An Alchemical Romance of <br />
@@ -51,7 +51,7 @@ export const ArtisanStorySection: React.FC = () => {
 
             <div className="space-y-4 font-serif-luxury text-base sm:text-lg text-neutral-300 leading-relaxed mb-8">
               <p>
-                Founded upon the belief that true luxury is born in patience and reverence, <strong className="text-white">RESIN AURA</strong> transforms natural organic blossoms, raw crystal minerals, and pure gold mica into enduring bespoke treasures.
+                Founded upon the belief that true luxury is born in patience and reverence, <strong className="text-white">Rohan Craft House</strong> transforms natural organic blossoms, raw crystal minerals, and pure gold mica into enduring bespoke treasures.
               </p>
               <p>
                 Every wall clock and heirloom pendant undergoes an unhurried casting ritual: hand-foraged botanicals dehydrated in specialized silica for two weeks, cast in optical-grade UV-resistant resin, and cured in temperature-regulated drying chambers for 72 hours.

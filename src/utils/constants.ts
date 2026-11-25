@@ -1,10 +1,10 @@
 /**
- * Centralized Store & WhatsApp Configuration for RESIN AURA
+ * Centralized Store & WhatsApp Configuration for Rohan Craft House
  */
 
 const env = typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env : (process.env as any || {});
 
-export const STORE_NAME = env.VITE_STORE_NAME || 'RESIN AURA';
+export const STORE_NAME = env.VITE_STORE_NAME || 'Rohan Craft House';
 export const CURRENCY_SYMBOL = env.VITE_CURRENCY_SYMBOL || '₹';
 export const FREE_SHIPPING_THRESHOLD = Number(env.VITE_FREE_SHIPPING_THRESHOLD) || 1999;
 export const STANDARD_SHIPPING_FEE = Number(env.VITE_STANDARD_SHIPPING_FEE) || 149;

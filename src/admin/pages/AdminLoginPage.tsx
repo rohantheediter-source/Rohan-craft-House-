@@ -15,8 +15,9 @@ export const AdminLoginPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isGoogleProcessing, setIsGoogleProcessing] = useState(false);
 
-  // If already logged in and server-verified as admin, redirect to admin dashboard
+  // Set page title and redirect if already logged in as verified admin
   useEffect(() => {
+    document.title = 'Rohan Craft House | Admin Portal';
     if (!isLoading && user && isAdmin) {
       navigate('/admin', { replace: true });
     }
@@ -100,7 +101,7 @@ export const AdminLoginPage: React.FC = () => {
             <Shield className="w-7 h-7" />
           </div>
           <span className="text-[10px] uppercase tracking-[0.3em] text-[#dfbe7e] font-bold font-mono">
-            Resin Aura Management
+            Rohan Craft House Management
           </span>
           <h1 className="font-display text-2xl font-bold text-white mt-1">
             Admin Portal
@@ -220,7 +221,7 @@ export const AdminLoginPage: React.FC = () => {
       </div>
 
       <div className="text-center text-[11px] text-neutral-500">
-        Resin Aura Security Engine • Server-Side Database RLS Enforcement
+        Rohan Craft House Security Engine • Server-Side Database RLS Enforcement
       </div>
     </div>
   );

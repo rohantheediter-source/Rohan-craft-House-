@@ -81,7 +81,7 @@ export const AdminDashboardOverview: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <span className="text-[10px] uppercase tracking-[0.25em] text-[#dfbe7e] font-mono">
-            COMMAND CENTER
+            ROHAN CRAFT HOUSE COMMAND CENTER
           </span>
           <h1 className="font-display text-3xl font-bold text-white mt-1">
             Studio Overview

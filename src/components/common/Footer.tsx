@@ -21,11 +21,11 @@ export const Footer: React.FC = () => {
     try {
       await supabase.from('newsletter_subscribers').insert({ email: email.trim().toLowerCase() });
       setIsSubscribed(true);
-      success('Thank you for joining the Resin Aura inner circle');
+      success('Thank you for joining the Rohan Craft House inner circle');
       setEmail('');
     } catch (_) {
       setIsSubscribed(true);
-      success('Thank you for joining the Resin Aura inner circle');
+      success('Thank you for joining the Rohan Craft House inner circle');
       setEmail('');
     } finally {
       setIsSubmitting(false);
@@ -87,18 +87,18 @@ export const Footer: React.FC = () => {
           {/* Brand Intro & Newsletter */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="/logo.svg" alt="Resin Aura" className="w-10 h-10" />
+              <img src="/logo.svg" alt="Rohan Craft House" className="w-10 h-10 shrink-0" />
               <div>
-                <span className="font-display text-2xl font-bold tracking-[0.2em] text-[#dfbe7e]">
-                  RESIN AURA
+                <span className="font-display text-xl sm:text-2xl font-bold tracking-[0.12em] text-[#dfbe7e]">
+                  Rohan Craft House
                 </span>
-                <span className="block text-[9px] uppercase tracking-[0.3em] text-[#c5a059]">
+                <span className="block text-[9px] uppercase tracking-[0.26em] text-[#c5a059]">
                   Timeless Liquid Glass Artistry
                 </span>
               </div>
             </Link>
             <p className="text-xs text-neutral-300 leading-relaxed max-w-sm mb-6">
-              Resin Aura elevates spaces and personal aesthetics through handcrafted luxury geode wall clocks, preserved botanical jewelry, and auspicious ceremonial platters. Every piece is an original reflection of pure devotion and artistic mastery.
+              Rohan Craft House elevates spaces and personal aesthetics through handcrafted luxury geode wall clocks, preserved botanical jewelry, and auspicious ceremonial platters. Every piece is an original reflection of pure devotion and artistic mastery.
             </p>
 
             {/* Newsletter Subscription */}
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
               {isSubscribed ? (
                 <div className="flex items-center gap-2 text-xs text-[#dfbe7e] bg-[#0b3b33] p-3 rounded-xl border border-[#c5a059]/40">
                   <CheckCircle2 className="w-4 h-4 text-[#dfbe7e]" />
-                  <span>You are subscribed to the Resin Aura collector updates.</span>
+                  <span>You are subscribed to the Rohan Craft House collector updates.</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex gap-2">
@@ -180,7 +180,7 @@ export const Footer: React.FC = () => {
           {/* Company & Support */}
           <div>
             <h4 className="font-display text-xs uppercase tracking-widest text-[#dfbe7e] font-bold mb-4">
-              Resin Aura Studio
+              Rohan Craft House
             </h4>
             <ul className="space-y-2.5 text-xs text-neutral-300">
               <li>
@@ -231,12 +231,12 @@ export const Footer: React.FC = () => {
             <div className="space-y-3 text-xs text-neutral-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#c5a059] shrink-0 mt-0.5" />
-                <span>Resin Aura Studio & Foundry, Luxury Artisan Corridor, India</span>
+                <span>Rohan Craft House Studio & Foundry, Luxury Artisan Corridor, India</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#c5a059] shrink-0" />
-                <a href="mailto:concierge@resinaura.com" className="hover:text-[#dfbe7e]">
-                  concierge@resinaura.com
+                <a href="mailto:concierge@rohancrafthouse.com" className="hover:text-[#dfbe7e]">
+                  concierge@rohancrafthouse.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
@@ -258,7 +258,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Legal Copyright */}
         <div className="mt-12 pt-8 border-t border-[#0f4439] flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-400 gap-4">
-          <p>© {new Date().getFullYear()} RESIN AURA. Handcrafted with reverence. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Rohan Craft House. Handcrafted with reverence. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link to="/policies/privacy" className="hover:text-[#dfbe7e] transition-colors">
               Privacy Policy

@@ -74,7 +74,7 @@ export const BespokeCommissionBanner: React.FC = () => {
                       Two Ways to Personalize
                     </h4>
                     <span className="text-[10px] text-neutral-400 uppercase tracking-wider">
-                      Resin Aura Concierge
+                      Rohan Craft House Concierge
                     </span>
                   </div>
                 </div>

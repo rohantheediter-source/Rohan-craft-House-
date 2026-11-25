@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
@@ -22,6 +22,10 @@ export const AdminLayout: React.FC = () => {
   const { user, profile, signOut } = useAuth();
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
+  useEffect(() => {
+    document.title = 'Rohan Craft House | Admin Portal';
+  }, []);
+
   const navItems = [
     { name: 'Dashboard Overview', path: '/admin', icon: LayoutDashboard },
     { name: 'Product Catalog', path: '/admin/products', icon: Package },
@@ -43,12 +47,12 @@ export const AdminLayout: React.FC = () => {
       {/* Brand Header */}
       <div className="p-6 border-b border-[#0f3830]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-[#0b3b33] border border-[#c5a059] flex items-center justify-center text-[#dfbe7e] font-display font-bold text-lg shadow-sm">
-            RA
+          <div className="w-10 h-10 rounded-xl bg-[#0b3b33] border border-[#c5a059] flex items-center justify-center text-[#dfbe7e] font-display font-bold text-sm tracking-wider shadow-sm shrink-0">
+            RCH
           </div>
           <div>
-            <h2 className="font-display text-sm font-bold tracking-widest text-[#dfbe7e]">
-              RESIN AURA
+            <h2 className="font-display text-sm font-bold tracking-wider text-[#dfbe7e] leading-tight">
+              Rohan Craft House
             </h2>
             <span className="text-[10px] uppercase tracking-wider text-neutral-400 font-mono">
               Administrative Suite
@@ -138,8 +142,8 @@ export const AdminLayout: React.FC = () => {
           >
             {mobileSidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-          <span className="font-display font-bold text-sm tracking-wider text-[#dfbe7e]">
-            RESIN AURA ADMIN
+          <span className="font-display font-bold text-xs sm:text-sm tracking-wider text-[#dfbe7e] truncate">
+            Rohan Craft House Admin
           </span>
         </div>
 

@@ -368,7 +368,7 @@ export const CheckoutPage: React.FC = () => {
                       </span>
                     </div>
                     <p className="text-[11px] text-neutral-500 mt-0.5">
-                      VPA: <code className="bg-neutral-100 px-1 py-0.5 rounded text-neutral-800 font-bold">resinaura@upi</code>. Order will be confirmed upon transaction ID receipt.
+                      VPA: <code className="bg-neutral-100 px-1 py-0.5 rounded text-neutral-800 font-bold">rohancrafthouse@upi</code>. Order will be confirmed upon transaction ID receipt.
                     </p>
                   </div>
                 </label>

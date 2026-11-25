@@ -54,12 +54,12 @@ export const ContactPage: React.FC = () => {
                 Atelier Location
               </span>
               <h3 className="font-display text-xl font-bold text-neutral-900 mt-1 mb-3">
-                Resin Aura Studio & Foundry
+                Rohan Craft House & Foundry
               </h3>
               <p className="text-xs text-neutral-600 leading-relaxed flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#856338] shrink-0 mt-0.5" />
                 <span>
-                  Resin Aura Atelier & Creative Works<br />
+                  Rohan Craft House Atelier & Creative Works<br />
                   Artisan Enclave, Sector 14<br />
                   India
                 </span>
@@ -82,8 +82,8 @@ export const ContactPage: React.FC = () => {
                 <Mail className="w-4 h-4 text-[#856338] shrink-0" />
                 <div>
                   <span className="text-neutral-400 block text-[10px] uppercase">Direct Concierge Email</span>
-                  <a href="mailto:concierge@resinaura.com" className="font-bold text-neutral-900 hover:text-[#0b3b33]">
-                    concierge@resinaura.com
+                  <a href="mailto:concierge@rohancrafthouse.com" className="font-bold text-neutral-900 hover:text-[#0b3b33]">
+                    concierge@rohancrafthouse.com
                   </a>
                 </div>
               </div>

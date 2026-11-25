@@ -8,6 +8,7 @@ export const CustomerLayout: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'Rohan Craft House | Handcrafted Luxury Resin Art & Decor';
   }, [pathname]);
 
   return (

@@ -61,7 +61,7 @@ export const OrderConfirmationPage: React.FC = () => {
             Thank You For Honoring Handcraft
           </h1>
           <p className="font-serif-luxury text-base sm:text-lg text-neutral-600 max-w-xl mx-auto leading-relaxed mb-6">
-            Your bespoke commission has been accepted by the Resin Aura atelier. Our master artisans are now preparing your pieces for delicate inspection and secured transit packaging.
+            Your bespoke commission has been accepted by the Rohan Craft House atelier. Our master artisans are now preparing your pieces for delicate inspection and secured transit packaging.
           </p>
 
           <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-6 px-6 py-3.5 rounded-2xl bg-[#FAF8F5] border border-[#c5a059]/40 text-xs">

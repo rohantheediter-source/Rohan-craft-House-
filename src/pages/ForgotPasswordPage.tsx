@@ -50,7 +50,7 @@ export const ForgotPasswordPage: React.FC = () => {
           Reset Password
         </h1>
         <p className="font-serif-luxury text-sm text-neutral-500 mb-6">
-          Enter the email associated with your Resin Aura account. We will transmit a secure password reset link.
+          Enter the email associated with your Rohan Craft House account. We will transmit a secure password reset link.
         </p>
 
         {isSent ? (

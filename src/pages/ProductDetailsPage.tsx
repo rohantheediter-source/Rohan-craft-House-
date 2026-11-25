@@ -385,7 +385,7 @@ export const ProductDetailsPage: React.FC = () => {
               <div className="space-y-4">
                 <p>{product.story || 'Handcrafted in our boutique art studio. Each layer is poured with artist-grade non-yellowing epoxy resin, carefully cured over 72 hours, and polished by hand for a flawless liquid-glass luster.'}</p>
                 <p>
-                  Every artwork in the Resin Aura collection is made with high-clarity optical resin, 24K gold foil minerals, and naturally preserved flora. Because each step is executed by hand, slight natural variations in veining and floral geometry are celebrated hallmarks of authentic art.
+                  Every artwork in the Rohan Craft House collection is made with high-clarity optical resin, 24K gold foil minerals, and naturally preserved flora. Because each step is executed by hand, slight natural variations in veining and floral geometry are celebrated hallmarks of authentic art.
                 </p>
               </div>
             )}
@@ -406,7 +406,7 @@ export const ProductDetailsPage: React.FC = () => {
                 </div>
                 <div className="p-4 rounded-xl bg-[#FAF8F5] border border-neutral-200">
                   <span className="block text-[10px] uppercase tracking-wider text-neutral-400 font-bold mb-1">Crafting Origin</span>
-                  <p className="font-semibold text-neutral-900">Resin Aura Artisan Atelier, India</p>
+                  <p className="font-semibold text-neutral-900">Rohan Craft House Artisan Atelier, India</p>
                 </div>
               </div>
             )}

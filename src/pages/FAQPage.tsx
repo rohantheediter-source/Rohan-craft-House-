@@ -6,12 +6,12 @@ export const FAQPage: React.FC = () => {
 
   const faqs = [
     {
-      q: 'What distinguishes Resin Aura creations from generic resin products?',
+      q: 'What distinguishes Rohan Craft House creations from generic resin products?',
       a: 'We operate as an authentic fine-art atelier. We use optical-grade, low-VOC epoxy resins enriched with specialized UV-inhibitors that resist yellowing. Every piece is poured in distinct layers with real 24K gold foil minerals, genuine natural quartz crystals, and hand-foraged botanicals cured slowly over 72 hours.',
     },
     {
       q: 'Will my resin wall clock or preserved floral jewelry turn yellow over time?',
-      a: 'No. Standard craft resins lack UV stabilizers and degrade rapidly when exposed to indoor light. Resin Aura exclusively employs museum-grade UV-stable formulations engineered to maintain pristine optical transparency and color fidelity for decades.',
+      a: 'No. Standard craft resins lack UV stabilizers and degrade rapidly when exposed to indoor light. Rohan Craft House exclusively employs museum-grade UV-stable formulations engineered to maintain pristine optical transparency and color fidelity for decades.',
     },
     {
       q: 'How are delicate geode wall clocks packaged to prevent damage during shipping?',
@@ -22,7 +22,7 @@ export const FAQPage: React.FC = () => {
       a: 'Immediately after your auspicious ceremony, you send your fresh floral bouquet to our atelier via express delivery. We meticulously dehydrate every petal in moisture-absorbing silica beds for 14 days, design an initial layout preview for your approval, and cast the blooms into your chosen keepsake or clock.',
     },
     {
-      q: 'What mechanism powers Resin Aura wall clocks?',
+      q: 'What mechanism powers Rohan Craft House wall clocks?',
       a: 'We install high-torque, silent sweep quartz movements (100% tick-free). The clock hands sweep continuously and silently, ensuring peace in your bedrooms and formal salons. Powered by a standard AA battery.',
     },
     {

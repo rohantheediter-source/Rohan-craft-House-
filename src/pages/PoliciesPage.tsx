@@ -97,7 +97,7 @@ export const PoliciesPage: React.FC = () => {
               <div>
                 <h3 className="font-bold text-neutral-900 mb-2">1. Dedicated Protective Packaging</h3>
                 <p>
-                  Every Resin Aura creation, especially our oversized geode wall clocks and ceremonial platters, is packaged with extreme care. Clocks are housed inside custom high-density protective foam molds and reinforced wooden shipping crates to prevent any flex or glass impact during transit.
+                  Every Rohan Craft House creation, especially our oversized geode wall clocks and ceremonial platters, is packaged with extreme care. Clocks are housed inside custom high-density protective foam molds and reinforced wooden shipping crates to prevent any flex or glass impact during transit.
                 </p>
               </div>
               <div>
@@ -116,7 +116,7 @@ export const PoliciesPage: React.FC = () => {
               <div>
                 <h3 className="font-bold text-neutral-900 mb-2">4. Transit Insurance</h3>
                 <p>
-                  All shipments dispatched by Resin Aura are fully covered by comprehensive transit insurance. In the unlikely circumstance of damage during delivery, your piece is 100% protected.
+                  All shipments dispatched by Rohan Craft House are fully covered by comprehensive transit insurance. In the unlikely circumstance of damage during delivery, your piece is 100% protected.
                 </p>
               </div>
             </div>
@@ -140,7 +140,7 @@ export const PoliciesPage: React.FC = () => {
                 </p>
                 <ul className="list-disc pl-5 space-y-1 mt-2">
                   <li>Please record an uninterrupted unboxing video upon receiving the wooden crate or parcel.</li>
-                  <li>Notify our concierge team within 48 hours at <strong>concierge@resinaura.com</strong> or via WhatsApp at <strong>+91 83379 83439</strong> with the video clip.</li>
+                  <li>Notify our concierge team within 48 hours at <strong>concierge@rohancrafthouse.com</strong> or via WhatsApp at <strong>+91 83379 83439</strong> with the video clip.</li>
                   <li>Upon verification, we will immediately initiate a replacement build or full refund to your original payment mode.</li>
                 </ul>
               </div>
@@ -161,13 +161,13 @@ export const PoliciesPage: React.FC = () => {
               <div>
                 <h3 className="font-bold text-neutral-900 mb-2">1. Artisan Agreement</h3>
                 <p>
-                  By accessing and placing an order on the Resin Aura platform, you acknowledge and agree that each artwork is hand-poured and individually crafted by human artisans.
+                  By accessing and placing an order on the Rohan Craft House platform, you acknowledge and agree that each artwork is hand-poured and individually crafted by human artisans.
                 </p>
               </div>
               <div>
                 <h3 className="font-bold text-neutral-900 mb-2">2. Intellectual Property</h3>
                 <p>
-                  All proprietary product photography, brand imagery, logos, descriptive copy, and unique clock designs featured on this website are the intellectual property of Resin Aura. Reproduction without prior written authorization is strictly prohibited.
+                  All proprietary product photography, brand imagery, logos, descriptive copy, and unique clock designs featured on this website are the intellectual property of Rohan Craft House. Reproduction without prior written authorization is strictly prohibited.
                 </p>
               </div>
               <div>
@@ -193,7 +193,7 @@ export const PoliciesPage: React.FC = () => {
               <div>
                 <h3 className="font-bold text-neutral-900 mb-2">2. Payment Security</h3>
                 <p>
-                  Resin Aura never stores raw credit card details, debit card numbers, or banking credentials on our servers. All digital transactions are processed through encrypted, PCI-DSS compliant payment gateways.
+                  Rohan Craft House never stores raw credit card details, debit card numbers, or banking credentials on our servers. All digital transactions are processed through encrypted, PCI-DSS compliant payment gateways.
                 </p>
               </div>
               <div>

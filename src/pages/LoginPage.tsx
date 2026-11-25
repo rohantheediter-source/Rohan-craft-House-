@@ -67,7 +67,7 @@ export const LoginPage: React.FC = () => {
       if (signInError) {
         error(signInError.message || 'Invalid email or password');
       } else {
-        success('Welcome back to Resin Aura');
+        success('Welcome back to Rohan Craft House');
         const returnUrl = getReturnUrl();
         sessionStorage.removeItem('resin_aura_auth_redirect');
         navigate(returnUrl);
@@ -173,7 +173,7 @@ export const LoginPage: React.FC = () => {
         </form>
 
         <div className="mt-8 pt-6 border-t border-neutral-100 text-center text-xs text-neutral-500">
-          <span>New to Resin Aura? </span>
+          <span>New to Rohan Craft House? </span>
           <Link
             to={searchParams.get('redirect') ? `/register?redirect=${encodeURIComponent(searchParams.get('redirect')!)}` : '/register'}
             state={location.state}

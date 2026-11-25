@@ -58,7 +58,7 @@ export function formatCustomRequestWhatsAppMessage(
   const itemTitle = req.product_name || 'Bespoke Handmade Resin Artwork';
   const details = req.customization_details || {};
 
-  let msg = `✨ *RESIN AURA — BESPOKE COMMISSION INQUIRY* ✨\n`;
+  let msg = `✨ *ROHAN CRAFT HOUSE — BESPOKE COMMISSION INQUIRY* ✨\n`;
   msg += `━━━━━━━━━━━━━━━━━━━━━━\n`;
   msg += `*Request ID:* ${req.request_number}\n`;
   msg += `*Commission Type:* ${typeLabel}\n`;
@@ -128,7 +128,7 @@ export function formatCustomRequestWhatsAppMessage(
 
   msg += `━━━━━━━━━━━━━━━━━━━━━━\n`;
   msg += `💬 *Price & Production Notice:*\n`;
-  msg += `I understand that final pricing, customization charges, and delivery schedule will be quoted directly by Resin Aura atelier artisans.\n`;
+  msg += `I understand that final pricing, customization charges, and delivery schedule will be quoted directly by Rohan Craft House atelier artisans.\n`;
   msg += `Thank you!`;
 
   return msg;
@@ -143,7 +143,7 @@ export function formatAdminQuoteWhatsAppMessage(req: CustomizationRequest): stri
   const deliveryDisplay = req.estimated_delivery || '5–7 business days crafting + transit';
 
   let msg = `Greetings ${req.customer_name}! ✨\n\n`;
-  msg += `This is *RESIN AURA Luxury Atelier* regarding your custom request *${req.request_number}* for *${itemTitle}*.\n\n`;
+  msg += `This is *Rohan Craft House Luxury Atelier* regarding your custom request *${req.request_number}* for *${itemTitle}*.\n\n`;
   msg += `We have reviewed your creative requirements and are excited to bring this artwork to life for you:\n`;
   msg += `━━━━━━━━━━━━━━━━━━━━━━\n`;
   msg += `• *Final Quoted Price:* ${priceDisplay}\n`;
@@ -378,7 +378,7 @@ export const customRequestService = {
     const order = await ordersService.createOrder({
       guestName: request.customer_name,
       guestPhone: request.customer_phone,
-      guestEmail: request.customer_email || 'patron@resinaura.com',
+      guestEmail: request.customer_email || 'patron@rohancrafthouse.com',
       shippingAddress: {
         fullName: request.customer_name,
         phone: request.customer_phone,

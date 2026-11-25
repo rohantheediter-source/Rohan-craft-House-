@@ -1,4 +1,4 @@
-// Auto-generated curated product data for Resin Aura
+// Auto-generated curated product data for Rohan Craft House
 export interface Category {
   id: string;
   name: string;
@@ -93,7 +93,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     "name": "Celestial Nebula Milky Way Resin Art Clock",
     "slug": "celestial-nebula-milky-way-resin-art-clock",
     "description": "An awe-inspiring midnight celestial artwork capturing snow-capped mountain peaks beneath the swirling galaxy of the Milky Way. Encased in high-gloss resin with luminous stardust effects.",
-    "story": "Crafted as a signature piece by Resin Aura studio with premium non-yellowing artist epoxy and hand-selected minerals.",
+    "story": "Crafted as a signature piece by Rohan Craft House with premium non-yellowing artist epoxy and hand-selected minerals.",
     "price": 6999,
     "compare_at_price": 8999,
     "stock": 7,
@@ -121,7 +121,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     "name": "Imperial Emerald & 24K Gold Crystal Geode Wall Clock",
     "slug": "imperial-emerald-24k-gold-crystal-geode-wall-clock",
     "description": "The pinnacle of luxury resin artistry. Multi-dimensional emerald swirls laced with raw quartz crystals and heavy 24K gold mineral veins. Powered by silent sweep quartz movement.",
-    "story": "Crafted as a signature piece by Resin Aura studio with premium non-yellowing artist epoxy and hand-selected minerals.",
+    "story": "Crafted as a signature piece by Rohan Craft House with premium non-yellowing artist epoxy and hand-selected minerals.",
     "price": 7999,
     "compare_at_price": 9999,
     "stock": 7,
@@ -149,7 +149,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     "name": "Pink Rose Quartz Natural Edge Geode Clock",
     "slug": "pink-rose-quartz-natural-edge-geode-clock",
     "description": "Sculptural organic silhouette featuring crushed rose quartz crystal borders, mother-of-pearl shimmer center, and elegant silver Roman numerals.",
-    "story": "Crafted as a signature piece by Resin Aura studio with premium non-yellowing artist epoxy and hand-selected minerals.",
+    "story": "Crafted as a signature piece by Rohan Craft House with premium non-yellowing artist epoxy and hand-selected minerals.",
     "price": 6499,
     "compare_at_price": 7999,
     "stock": 7,
@@ -177,7 +177,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     "name": "Royal Haldi Floral Shagun Ceremonial Platter",
     "slug": "royal-haldi-floral-shagun-ceremonial-platter",
     "description": "Radiant saffron and gold resin ceremonial thali with 3D sculpted floral bowls, pearl stamen embellishments, and golden butterflies. Perfect for Haldi, weddings, and sacred pooja ceremonies.",
-    "story": "Crafted as a signature piece by Resin Aura studio with premium non-yellowing artist epoxy and hand-selected minerals.",
+    "story": "Crafted as a signature piece by Rohan Craft House with premium non-yellowing artist epoxy and hand-selected minerals.",
     "price": 2899,
     "compare_at_price": 3599,
     "stock": 7,
@@ -205,7 +205,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     "name": "Preserved Blush Floral Resin Heirloom Jewelry Suite",
     "slug": "preserved-blush-floral-resin-heirloom-jewelry-suite",
     "description": "Complete 4-piece coordinated artisan set featuring antique oxidized silver jhumkas with pearl drops, circular pendant necklace, statement ring, and adjustable hexagonal link bracelet.",
-    "story": "Crafted as a signature piece by Resin Aura studio with premium non-yellowing artist epoxy and hand-selected minerals.",
+    "story": "Crafted as a signature piece by Rohan Craft House with premium non-yellowing artist epoxy and hand-selected minerals.",
     "price": 2499,
     "compare_at_price": 3199,
     "stock": 7,
@@ -233,7 +233,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     "name": "Bespoke Diamond Dust & Glitter Resin Signature Pens",
     "slug": "bespoke-diamond-dust-glitter-resin-signature-pens",
     "description": "Handmade luxury custom writing pens infused with metallic holographic flakes, floating butterfly charms, and personalized golden lettering.",
-    "story": "Crafted as a signature piece by Resin Aura studio with premium non-yellowing artist epoxy and hand-selected minerals.",
+    "story": "Crafted as a signature piece by Rohan Craft House with premium non-yellowing artist epoxy and hand-selected minerals.",
     "price": 499,
     "compare_at_price": 699,
     "stock": 7,

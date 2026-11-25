@@ -204,7 +204,7 @@ export const OrderTrackingPage: React.FC = () => {
                   Shipping Courier & Tracking
                 </span>
                 <p className="text-neutral-700">
-                  Carrier: <strong className="text-neutral-900">{order.carrier || 'Resin Aura Priority Express Fleet'}</strong>
+                  Carrier: <strong className="text-neutral-900">{order.carrier || 'Rohan Craft House Priority Express Fleet'}</strong>
                 </p>
                 <p className="text-neutral-700">
                   Waybill Number: <strong className="font-mono text-neutral-900">{order.tracking_number || 'Generated at dispatch'}</strong>

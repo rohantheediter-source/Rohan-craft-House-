@@ -55,7 +55,7 @@ export const AuthCallbackPage: React.FC = () => {
             if (isForAdmin) {
               success('Authenticated with Google. Verifying administrative clearance...');
             } else {
-              success('Signed in with Google successfully! Welcome to Resin Aura.');
+              success('Signed in with Google successfully! Welcome to Rohan Craft House.');
             }
             navigate(targetRedirect, { replace: true });
           }

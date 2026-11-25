@@ -469,7 +469,7 @@ export const CustomDesignPage: React.FC = () => {
                   Verify Custom Commission Details
                 </h3>
                 <p className="text-xs text-neutral-500 mt-1">
-                  Review your personalized requirements below before transferring to the Resin Aura WhatsApp Concierge.
+                  Review your personalized requirements below before transferring to the Rohan Craft House WhatsApp Concierge.
                 </p>
               </div>
 
@@ -579,7 +579,7 @@ export const CustomDesignPage: React.FC = () => {
                   Request #{generatedRequestNumber}
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 max-w-lg mx-auto mt-2 leading-relaxed">
-                  Your custom design request has been saved to the Resin Aura atelier database and forwarded to WhatsApp.
+                  Your custom design request has been saved to the Rohan Craft House atelier database and forwarded to WhatsApp.
                 </p>
               </div>
 

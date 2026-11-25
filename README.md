@@ -1,12 +1,12 @@
-# RESIN AURA — Premium Bespoke E-Commerce Platform
+# Rohan Craft House — Premium Bespoke E-Commerce Platform
 
-A production-ready e-commerce platform crafted for **RESIN AURA**, an artisanal luxury brand specializing in handcrafted geode wall clocks, preserved floral jewelry suites, and ceremonial platters.
+A production-ready e-commerce platform crafted for **Rohan Craft House**, an artisanal luxury brand specializing in handcrafted geode wall clocks, preserved floral jewelry suites, and ceremonial platters.
 
 ---
 
 ## 💎 Brand Identity & Visual Aesthetic
 
-- **Brand:** RESIN AURA
+- **Brand:** Rohan Craft House
 - **Visuals:** Modern luxury aesthetic inspired by natural crystals, mineral veins, and liquid-glass resin.
 - **Palette:** Deep Emerald (`#07241e`, `#0b3b33`), Warm Champagne & 24K Gold (`#c5a059`, `#dfbe7e`), and Pearl Alabaster (`#FAF8F5`).
 - **Typography:** Display serif (`Cinzel`), Editorial serif (`Cormorant Garamond`), and modern sans (`Plus Jakarta Sans`).
@@ -110,7 +110,7 @@ As mandated, the **Admin Dashboard is strictly isolated** and never linked anywh
 ## 📁 Project Directory Structure
 
 ```
-resion-aura/
+rohan-craft-house/
 ├── index.html                   # Entry HTML with luxury Google Fonts
 ├── package.json                 # Project dependencies and scripts
 ├── vite.config.ts               # Vite bundler configuration & code splitting
@@ -120,7 +120,7 @@ resion-aura/
 ├── .env.example                 # Environment template
 │
 ├── public/
-│   ├── logo.svg                 # Resin Aura vector monogram logo
+│   ├── logo.svg                 # Rohan Craft House vector monogram logo
 │   └── images/
 │       └── products/            # 86 authentic product images copied from source
 │

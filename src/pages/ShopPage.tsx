@@ -132,7 +132,7 @@ export const ShopPage: React.FC = () => {
         <div className="mb-10 text-center sm:text-left">
           <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#856338] font-bold mb-2">
             <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
-            <span>Resin Aura Gallery</span>
+            <span>Rohan Craft House Gallery</span>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#07241e]">
             {currentCategory ? currentCategory.name : 'The Complete Collection'}

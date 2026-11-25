@@ -7,7 +7,7 @@ export const TestimonialsSection: React.FC = () => {
     {
       id: 1,
       quote:
-        'I entrusted Resin Aura with my wedding bouquet preservation. They crafted a coordinated set of oxidized floral jhumkas and a stunning geode clock. When I opened the wooden crate, tears came to my eyes. The colors of the roses and orchids are captured forever in glass clarity.',
+        'I entrusted Rohan Craft House with my wedding bouquet preservation. They crafted a coordinated set of oxidized floral jhumkas and a stunning geode clock. When I opened the wooden crate, tears came to my eyes. The colors of the roses and orchids are captured forever in glass clarity.',
       name: 'Ananya & Rohan Mehta',
       location: 'Mumbai, Maharashtra',
       item: 'Bespoke Bridal Bouquet Preservation Suite',

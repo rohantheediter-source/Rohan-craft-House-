@@ -74,18 +74,18 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Brand Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-3 group">
+          <div className="flex items-center shrink-0">
+            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
               <img
                 src="/logo.svg"
-                alt="Resin Aura Logo"
-                className="w-10 h-10 transition-transform duration-300 group-hover:scale-105"
+                alt="Rohan Craft House Logo"
+                className="w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-105 shrink-0"
               />
               <div className="flex flex-col">
-                <span className="font-display text-xl sm:text-2xl font-bold tracking-[0.2em] text-[#07241e] group-hover:text-[#0b3b33] transition-colors">
-                  RESIN AURA
+                <span className="font-display text-sm sm:text-lg xl:text-xl font-bold tracking-[0.06em] sm:tracking-[0.12em] text-[#07241e] group-hover:text-[#0b3b33] transition-colors whitespace-nowrap">
+                  Rohan Craft House
                 </span>
-                <span className="text-[9px] uppercase tracking-[0.28em] text-[#856338] font-semibold -mt-1">
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#856338] font-semibold -mt-0.5 whitespace-nowrap">
                   Artisan Luxury
                 </span>
               </div>
@@ -93,14 +93,14 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6">
             {navLinks.map((link) => {
               const isActive = location.pathname + location.search === link.href;
               return (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`text-xs uppercase tracking-widest font-semibold transition-all duration-200 py-1 border-b-2 flex items-center gap-1.5 ${
+                  className={`text-[11px] xl:text-xs uppercase tracking-wider xl:tracking-widest font-semibold transition-all duration-200 py-1 border-b-2 flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
                       ? 'border-[#c5a059] text-[#0b3b33]'
                       : 'border-transparent text-neutral-600 hover:text-[#0b3b33] hover:border-[#c5a059]/50'

@@ -118,7 +118,7 @@ export const AdminProtectedRoute: React.FC = () => {
               <span>Administrative Access Policy</span>
             </div>
             <p className="text-neutral-400 text-[11px] leading-relaxed">
-              Resin Aura strictly restricts management functions. Access is verified on the backend via server-side database access controls. Only explicitly whitelisted administrator Google accounts can access this portal.
+              Rohan Craft House strictly restricts management functions. Access is verified on the backend via server-side database access controls. Only explicitly whitelisted administrator Google accounts can access this portal.
             </p>
           </div>
 
